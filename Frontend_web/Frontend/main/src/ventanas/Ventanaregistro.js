@@ -14,9 +14,15 @@ export default function mostrarRegistro() {
 
             <button type="submit">Registrarse</button>
         </form>
+
+        <p>¿Ya tienes cuenta? <button id="btn-login">Inicia sesión</button></p>
     `;
 
     document.getElementById('form-registro').addEventListener('submit', manejarRegistro);
+    document.getElementById('btn-login').addEventListener('click', () => {
+        // Cambia a la vista de login
+        import('./VentanaLogin.js').then(modulo => modulo.default());
+    });
 }
 
 function manejarRegistro(event) {
@@ -25,7 +31,7 @@ function manejarRegistro(event) {
     const datos = {
         username: document.getElementById('username').value,
         email: document.getElementById('email').value,
-        password: document.getElementById('password').value,
+        password: document.getElementById('password').value
     };
 
     fetch('/api/registro/', {
@@ -42,8 +48,12 @@ function manejarRegistro(event) {
         return response.json();
     })
     .then(data => {
-        alert('Registro exitoso');
-        cargarVista('login'); // Redirige al login
+        alert('Registro exitoso. Ahora puedes iniciar sesión.');
+        // Redirige a la vista de login
+        import('./VentanaLogin.js').then(modulo => modulo.default());
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error en el registro:', error);
+        alert('El registro ha fallado. Intenta de nuevo.');
+    });
 }

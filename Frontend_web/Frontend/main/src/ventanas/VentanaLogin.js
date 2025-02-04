@@ -9,12 +9,17 @@ export default function mostrarLogin() {
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required><br>
 
-            <button type="submit">Iniciar Sesión</button>
+            <button type="submit">Iniciar sesión</button>
         </form>
+
+        <p>¿No tienes cuenta? <button id="btn-registro">Regístrate aquí</button></p>
     `;
 
-    // Agrega el manejador de eventos
     document.getElementById('form-login').addEventListener('submit', manejarLogin);
+    document.getElementById('btn-registro').addEventListener('click', () => {
+        // Cambia a la vista de registro
+        import('./VentanaRegistro.js').then(modulo => modulo.default());
+    });
 }
 
 function manejarLogin(event) {
@@ -34,13 +39,17 @@ function manejarLogin(event) {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Error en el inicio de sesión');
+            throw new Error('Usuario o contraseña incorrectos');
         }
         return response.json();
     })
     .then(data => {
-        alert('Inicio de sesión exitoso');
-        cargarVista('comidas'); // Redirige a la vista de comidas seguras
+        alert(`Bienvenido, ${data.username}`);
+        // Redirige a la vista de comidas seguras
+        import('./VentanaComida.js').then(modulo => modulo.default());
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error en el inicio de sesión:', error);
+        alert('Inicio de sesión fallido. Verifica tus credenciales.');
+    });
 }

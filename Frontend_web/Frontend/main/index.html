@@ -1,28 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas Seguras</title>
-    <!-- Ruta corregida para el archivo de estilos -->
-    <link rel="stylesheet" href="./src/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Comidas Seguras</h1>
-        <nav class="barra-navegacion">
-            <button data-ruta="home">Inicio</button>
-            <button data-ruta="login">Login</button>
-            <button data-ruta="registro">Registro</button>
-            <button data-ruta="comidas">Comidas Seguras</button>
-        </nav>
-    </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Aplicación de Comidas Seguras</title>
+  </head>
+  <body>
+    <div id="main-content">
+      <div class="container" id="auth-container">
+        <div class="forms-container">
+          <div class="signin-signup">
+            <!-- Formulario de inicio de sesión -->
+            <form action="#" class="sign-in-form" id="login-form">
+              <h2 class="title">Sign in</h2>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" id="login-username" required />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" id="login-password" required />
+              </div>
+              <input type="submit" value="Login" class="btn solid" />
+              <button type="button" id="skip-login" class="btn transparent">Skip Login</button>
+            </form>
 
-    <main id="main-content">
-        <!-- El contenido dinámico (home, login, registro) se cargará aquí -->
-    </main>
+            <!-- Formulario de registro -->
+            <form action="#" class="sign-up-form" id="register-form">
+              <h2 class="title">Sign up</h2>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" id="register-username" required />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email" id="register-email" required />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" id="register-password" required />
+              </div>
+              <input type="submit" class="btn" value="Sign up" />
+            </form>
+          </div>
+        </div>
 
-    <!-- Ruta corregida para el archivo JS principal -->
-    <script type="module" src="./src/index.js"></script>
-</body>
+        <div class="panels-container">
+          <div class="panel left-panel">
+            <div class="content">
+              <h3>New here?</h3>
+              <p>Join us to access personalized meal recommendations!</p>
+              <button class="btn transparent" id="sign-up-btn">Sign up</button>
+            </div>
+            <img src="./src/media/log.svg" class="image" alt="Sign up" />
+          </div>
+          <div class="panel right-panel">
+            <div class="content">
+              <h3>One of us?</h3>
+              <p>Welcome back! Log in to continue exploring safe meals.</p>
+              <button class="btn transparent" id="sign-in-btn">Sign in</button>
+            </div>
+            <img src="./src/media/register.svg" class="image" alt="Sign in" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/index.js"></script>
+  </body>
 </html>
