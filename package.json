@@ -1,0 +1,23 @@
+{
+  "name": "safebyte",
+  "version": "1.0.0",
+  "description": "Buenos días vamos a empezar con el desarrollo de la solución al problema planteado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guayamose/SafeByte.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guayamose/SafeByte/issues"
+  },
+  "homepage": "https://github.com/Guayamose/SafeByte#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
