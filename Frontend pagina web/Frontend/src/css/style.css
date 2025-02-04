@@ -1,0 +1,188 @@
+.logo {
+    width: auto;
+    height: 50px; 
+    max-width: 50%;
+    height: auto;
+}
+
+.img-custom {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border: 2px solid black; 
+}
+
+.cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; 
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookies-banner p {
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cookies-banner button {
+    margin: 0 5px;
+}
+
+/* Para pantallas con un máximo de 992px */
+@media (max-width: 992px) {
+    
+    .logo {
+        height: 40px; 
+        max-width: 40%; 
+    }
+
+    
+    .img-custom {
+        height: 200px; 
+    }
+
+    
+    .cookies-banner {
+        padding: 8px; 
+    }
+
+    .cookies-banner p {
+        font-size: 14px; 
+    }
+
+    .cookies-banner button {
+        font-size: 14px; 
+        padding: 5px 10px; 
+    }
+
+
+    .carousel-caption {
+        font-size: 14px; 
+    }
+
+
+    main.container {
+        padding: 15px; 
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    h3 {
+        font-size: 20px; 
+    }
+
+    p {
+        font-size: 14px; 
+    }
+
+
+    .contacto form {
+        padding: 15px; 
+    }
+
+    .contacto label {
+        font-size: 14px; 
+    }
+
+    .contacto input,
+    .contacto textarea {
+        font-size: 14px; 
+    }
+
+    .contacto button {
+        font-size: 14px; 
+        padding: 5px 10px; 
+    }
+
+
+    footer {
+        font-size: 14px; 
+    }
+}
+/* Para pantallas con un máximo de 768px */
+@media (max-width: 768px) {
+    
+    .logo {
+        height: 30px; 
+        max-width: 30%; 
+    }
+
+
+    .img-custom {
+        height: 150px; 
+    }
+
+
+    .cookies-banner {
+        padding: 5px; 
+    }
+
+    .cookies-banner p {
+        font-size: 12px; 
+    }
+
+    .cookies-banner button {
+        font-size: 12px; 
+        padding: 3px 8px; 
+    }
+
+
+    .carousel-caption {
+        font-size: 12px; 
+    }
+
+
+    main.container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px; 
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+
+    .contacto form {
+        padding: 10px; 
+    }
+
+    .contacto label {
+        font-size: 12px; 
+    }
+
+    .contacto input,
+    .contacto textarea {
+        font-size: 12px; 
+    }
+
+    .contacto button {
+        font-size: 12px; 
+        padding: 3px 8px; 
+    }
+
+
+    footer {
+        font-size: 12px;
+    }
+
+    /* Ajustes para la galería de equipos */
+    .row .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
