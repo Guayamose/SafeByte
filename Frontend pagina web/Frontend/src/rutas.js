@@ -1,6 +1,6 @@
 export const rutas = {
-    home: 'ventanas/Home.js',
-    login: 'ventanas/VentanaLogin.js',
-    registro: 'ventanas/VentanaRegistro.js',
-    comidas: 'ventanas/VentanaComida.js'
+    home: 'src/ventanas/Home.js',
+    login: 'src/ventanas/VentanaLogin.js',
+    registro: 'src/ventanas/VentanaRegistro.js',
+    comidas: 'src/ventanas/VentanaComida.js'
 };
