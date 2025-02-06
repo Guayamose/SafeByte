@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/home.css" />
+    <title>Home - SafeByte</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+      <div class="logo">SafeByte</div>
+      <ul class="nav-links">
+        <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
+        <li><a href="#" data-section="comidas-section" class="nav-btn">Comidas</a></li>
+        <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
+        <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
+        <li><a href="./index.html">Cerrar Sesión</a></li>
+      </ul>
+    </div>
+
+    <!-- Secciones -->
+    <section id="welcome-section" class="content-section">
+      <h1>Bienvenido a SafeByte</h1>
+      <p>
+        Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora nuestras opciones y disfruta de una experiencia personalizada.
+      </p>
+    </section>
+
+    <section id="comidas-section" class="content-section hidden">
+      <h2>Explora Comidas</h2>
+      <p>Aquí encontrarás una lista de comidas recomendadas basadas en tus alergias.</p>
+    </section>
+
+    <section id="contact-section" class="content-section hidden">
+      <h2>Contacta con Nosotros</h2>
+      <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="config-section" class="content-section hidden">
+      <h2>Configuración de Usuario</h2>
+      <p>Personaliza tus preferencias y ajusta tu perfil según tus necesidades.</p>
+      <form>
+        <input type="text" placeholder="Nombre de usuario" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <button type="submit">Guardar cambios</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 SafeByte. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para la navegación -->
+    <script>
+      const navButtons = document.querySelectorAll('.nav-btn');
+      const sections = document.querySelectorAll('.content-section');
+
+      navButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const sectionId = button.getAttribute('data-section');
+          
+          // Oculta todas las secciones
+          sections.forEach((section) => section.classList.add('hidden'));
+
+          // Muestra la sección seleccionada
+          document.getElementById(sectionId).classList.remove('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
