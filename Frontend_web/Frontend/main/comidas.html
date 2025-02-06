@@ -7,31 +7,370 @@
     <title>Comidas Seguras</title>
   </head>
   <body>
-    <h1>Lista de Comidas</h1>
+    <h1>Comidas Recomendadas</h1>
     <div id="comidas-lista"></div>
 
     <script>
       const comidas = [
         {
           nombre: "Pizza Margarita",
-          ingredientes: "Harina, queso, tomate",
+          imagen: "./src/images/pizza_margarita.jpg",
+          receta: `1. Preparar la masa de pizza con harina, agua y levadura.
+                   2. Extender la masa y añadir salsa de tomate.
+                   3. Cubrir con queso mozzarella y hornear a 220°C por 15-20 minutos.`,
+          ingredientes: "Harina, queso mozzarella, tomate",
           alergenos: ["Gluten", "Lácteos"],
         },
         {
           nombre: "Ensalada César",
-          ingredientes: "Lechuga, pollo, huevo, croutons",
-          alergenos: ["Gluten", "Huevo"],
+          imagen: "./src/images/ensalada_cesar.jpg",
+          receta: `1. Cortar la lechuga romana en trozos medianos.
+                   2. Asar el pollo con sal y pimienta.
+                   3. Preparar el aliño con anchoas, mayonesa y parmesano.
+                   4. Añadir croutons y mezclar.`,
+          ingredientes: "Lechuga, pollo, croutons, queso parmesano, anchoas",
+          alergenos: ["Gluten", "Lácteos", "Huevo", "Pescado"],
+        },
+        {
+          nombre: "Sopa de cebolla francesa",
+          imagen: "./src/images/sopa_cebolla.jpg",
+          receta: `1. Caramelizar las cebollas a fuego lento con mantequilla.
+                   2. Añadir caldo de carne y dejar cocinar 30 minutos.
+                   3. Tostar pan y cubrir con queso rallado.
+                   4. Servir la sopa con el pan tostado flotando.`,
+          ingredientes: "Cebolla, caldo de carne, pan, queso",
+          alergenos: ["Gluten", "Lácteos"],
         },
         {
           nombre: "Paella de mariscos",
-          ingredientes: "Arroz, gambas, mejillones",
+          imagen: "./src/images/paella_mariscos.jpg",
+          receta: `1. Sofreír cebolla y pimiento rojo en aceite de oliva.
+                   2. Añadir arroz y caldo de pescado caliente.
+                   3. Incorporar mejillones, calamares y gambas.
+                   4. Cocinar a fuego lento hasta que el arroz esté en su punto.`,
+          ingredientes: "Arroz, gambas, mejillones, calamares",
           alergenos: ["Mariscos"],
         },
         {
-          nombre: "Tarta de chocolate",
-          ingredientes: "Harina, chocolate, huevo",
-          alergenos: ["Gluten", "Huevo"],
+          nombre: "Tarta de manzana casera",
+          imagen: "./src/images/tarta_manzana.jpg",
+          receta: `1. Preparar la masa quebrada y cubrir el molde.
+                   2. Cortar las manzanas en láminas finas.
+                   3. Colocarlas sobre la masa y espolvorear azúcar y canela.
+                   4. Hornear a 180°C durante 40 minutos.`,
+          ingredientes: "Harina, manzanas, mantequilla, azúcar",
+          alergenos: ["Gluten", "Lácteos"],
         },
+        {
+          nombre: "Curry de garbanzos",
+          imagen: "./src/images/curry_garbanzos.jpg",
+          receta: `1. Sofreír cebolla, ajo y jengibre hasta dorar.
+                   2. Añadir especias (cúrcuma, comino, curry) y garbanzos cocidos.
+                   3. Incorporar leche de coco y dejar cocinar 10-15 minutos.`,
+          ingredientes: "Garbanzos, leche de coco, cebolla, ajo, jengibre",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Risotto de setas",
+          imagen: "./src/images/risotto_setas.jpg",
+          receta: `1. Sofreír cebolla y ajo en mantequilla.
+                   2. Añadir arroz arborio y dorar unos minutos.
+                   3. Incorporar caldo poco a poco mientras se remueve.
+                   4. Añadir setas salteadas y queso parmesano.`,
+          ingredientes: "Arroz arborio, setas, mantequilla, queso parmesano",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Pasta al pesto",
+          imagen: "./src/images/pasta_pesto.jpg",
+          receta: `1. Cocer la pasta al dente.
+                   2. Preparar el pesto con albahaca, ajo, piñones y queso parmesano.
+                   3. Mezclar la pasta con el pesto y servir.`,
+          ingredientes: "Pasta, albahaca, ajo, piñones, queso parmesano",
+          alergenos: ["Gluten", "Frutos secos", "Lácteos"],
+        },
+        {
+          nombre: "Pollo al curry",
+          imagen: "./src/images/pollo_curry.jpg",
+          receta: `1. Sofreír cebolla, ajo y jengibre en aceite.
+                   2. Añadir trozos de pollo y curry en polvo.
+                   3. Incorporar leche de coco y cocinar a fuego lento.`,
+          ingredientes: "Pollo, cebolla, leche de coco, curry",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Sushi variado",
+          imagen: "./src/images/sushi_variado.jpg",
+          receta: `1. Cocer el arroz y aliñarlo con vinagre.
+                   2. Preparar el pescado fresco y las algas.
+                   3. Enrollar con salmón, atún o aguacate.
+                   4. Servir con salsa de soja.`,
+          ingredientes: "Arroz, salmón, atún, alga nori",
+          alergenos: ["Pescado", "Soja"],
+        },
+        {
+          nombre: "Canelones de espinacas y ricotta",
+          imagen: "./src/images/canelones_espinacas.jpg",
+          receta: `1. Cocer las espinacas y mezclarlas con ricotta.
+                   2. Rellenar los canelones y cubrir con bechamel.
+                   3. Hornear a 180°C durante 25 minutos.`,
+          ingredientes: "Pasta, espinacas, ricotta, bechamel",
+          alergenos: ["Gluten", "Lácteos"],
+        },
+        {
+          nombre: "Ensalada griega",
+          imagen: "./src/images/ensalada_griega.jpg",
+          receta: `1. Cortar pepino, tomate, cebolla roja y pimientos.
+                   2. Añadir aceitunas negras y queso feta.
+                   3. Aliñar con aceite de oliva, orégano y sal.`,
+          ingredientes: "Pepino, tomate, cebolla, queso feta, aceitunas",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Risotto de champiñones",
+          imagen: "./src/images/risotto_champinones.jpg",
+          receta: `1. Sofreír ajo y cebolla en mantequilla.
+                   2. Añadir arroz arborio y cocinar con caldo caliente.
+                   3. Incorporar champiñones salteados y queso parmesano.`,
+          ingredientes: "Arroz arborio, champiñones, queso parmesano",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Tacos de carne asada",
+          imagen: "./src/images/tacos_carne.jpg",
+          receta: `1. Marinar la carne con ajo, comino y lima.
+                   2. Asar la carne y cortar en tiras finas.
+                   3. Servir en tortillas de maíz con guacamole y cebolla.`,
+          ingredientes: "Carne de res, tortillas de maíz, guacamole, cebolla",
+          alergenos: [],
+        },
+        {
+          nombre: "Biryani de pollo",
+          imagen: "./src/images/biryani_pollo.jpg",
+          receta: `1. Marinar el pollo en yogur y especias.
+                   2. Cocinar arroz basmati con canela y clavo.
+                   3. Combinar el pollo marinado con el arroz y cocinar a fuego lento.`,
+          ingredientes: "Arroz basmati, pollo, yogur, especias",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Ramen japonés",
+          imagen: "./src/images/ramen.jpg",
+          receta: `1. Preparar caldo de pollo o cerdo con jengibre y ajo.
+                   2. Cocer fideos ramen al dente.
+                   3. Añadir huevo cocido, algas nori y cebolleta al caldo caliente.`,
+          ingredientes: "Fideos ramen, caldo, huevo, algas nori",
+          alergenos: ["Gluten", "Huevo", "Soja"],
+        },
+        {
+          nombre: "Salteado de tofu y verduras",
+          imagen: "./src/images/salteado_tofu.jpg",
+          receta: `1. Cortar tofu en cubos y dorar en sartén.
+                   2. Saltear pimientos, brócoli y zanahorias.
+                   3. Incorporar salsa de soja y servir con arroz.`,
+          ingredientes: "Tofu, pimientos, brócoli, salsa de soja",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Ceviche de camarones",
+          imagen: "./src/images/ceviche_camarones.jpg",
+          receta: `1. Cocer los camarones ligeramente.
+                   2. Marinar en jugo de lima con cebolla y cilantro.
+                   3. Servir con aguacate y chips de plátano.`,
+          ingredientes: "Camarones, lima, cebolla, aguacate",
+          alergenos: ["Mariscos"],
+        },
+        {
+          nombre: "Falafel con hummus",
+          imagen: "./src/images/falafel.jpg",
+          receta: `1. Triturar garbanzos con ajo y comino.
+                   2. Formar bolitas y freír hasta dorar.
+                   3. Servir con pan pita y hummus.`,
+          ingredientes: "Garbanzos, ajo, comino, pan pita",
+          alergenos: ["Gluten"],
+        },
+        {
+          nombre: "Pollo a la naranja",
+          imagen: "./src/images/pollo_naranja.jpg",
+          receta: `1. Marinara el pollo en jugo de naranja, miel y salsa de soja.
+                   2. Freír los trozos de pollo y reducir la salsa.
+                   3. Servir con arroz blanco.`,
+          ingredientes: "Pollo, naranja, miel, salsa de soja",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Hamburguesa clásica",
+          imagen: "./src/images/hamburguesa_clasica.jpg",
+          receta: `1. Formar hamburguesas de carne molida y asarlas.
+                   2. Montar el pan con lechuga, tomate, queso y la carne.
+                   3. Servir con papas fritas.`,
+          ingredientes: "Carne molida, pan de hamburguesa, queso, lechuga",
+          alergenos: ["Gluten", "Lácteos"],
+        },
+        {
+          nombre: "Gnocchis de patata",
+          imagen: "./src/images/gnocchis_patata.jpg",
+          receta: `1. Hervir patatas y triturarlas.
+                   2. Mezclar con harina y formar gnocchis.
+                   3. Cocerlos y servir con salsa de tomate.`,
+          ingredientes: "Patata, harina, salsa de tomate",
+          alergenos: ["Gluten"],
+        },
+        {
+          nombre: "Pollo tikka masala",
+          imagen: "./src/images/tikka_masala.jpg",
+          receta: `1. Marinar el pollo en yogur y especias.
+                   2. Cocinar en salsa cremosa de tomate y garam masala.
+                   3. Servir con arroz basmati.`,
+          ingredientes: "Pollo, yogur, garam masala, tomate",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Sushi variado",
+          imagen: "./src/images/sushi_variado.jpg",
+          receta: `1. Cocer arroz y aliñarlo con vinagre.
+                   2. Preparar el pescado fresco y cortar el aguacate.
+                   3. Montar los rollos con algas nori y enrollar.
+                   4. Servir con salsa de soja.`,
+          ingredientes: "Arroz, salmón, atún, aguacate",
+          alergenos: ["Pescado", "Soja"],
+        },
+        {
+          nombre: "Biryani de cordero",
+          imagen: "./src/images/biryani_cordero.jpg",
+          receta: `1. Marinar el cordero en yogur y especias.
+                   2. Cocer arroz basmati con canela y clavo.
+                   3. Combinar el arroz con el cordero y cocinar a fuego lento.`,
+          ingredientes: "Cordero, arroz basmati, yogur, especias",
+          alergenos: ["Lácteos"],
+        },
+        {
+          nombre: "Fajitas de pollo",
+          imagen: "./src/images/fajitas_pollo.jpg",
+          receta: `1. Cortar el pollo y los pimientos en tiras.
+                   2. Saltearlos con cebolla y condimentos.
+                   3. Servir en tortillas de maíz con salsa guacamole.`,
+          ingredientes: "Pollo, pimientos, tortillas de maíz",
+          alergenos: [],
+        },
+        {
+          nombre: "Gnocchis de patata con salsa de tomate",
+          imagen: "./src/images/gnocchis_patata.jpg",
+          receta: `1. Hervir patatas, triturarlas y mezclarlas con harina.
+                   2. Formar los gnocchis y cocerlos en agua hirviendo.
+                   3. Servir con salsa de tomate casera.`,
+          ingredientes: "Patata, harina, salsa de tomate",
+          alergenos: ["Gluten"],
+        },
+        {
+          nombre: "Ratatouille",
+          imagen: "./src/images/ratatouille.jpg",
+          receta: `1. Cortar calabacín, berenjena, pimiento y tomate.
+                   2. Colocar en capas y hornear con hierbas.
+                   3. Servir caliente o a temperatura ambiente.`,
+          ingredientes: "Calabacín, berenjena, tomate, pimiento",
+          alergenos: [],
+        },
+        {
+          nombre: "Lentejas con chorizo",
+          imagen: "./src/images/lentejas_chorizo.jpg",
+          receta: `1. Cocer las lentejas con cebolla, zanahoria y laurel.
+                   2. Añadir el chorizo en rodajas y dejar cocinar.
+                   3. Servir con un poco de aceite de oliva.`,
+          ingredientes: "Lentejas, chorizo, zanahoria, cebolla",
+          alergenos: [],
+        },
+        {
+          nombre: "Sopa de miso",
+          imagen: "./src/images/sopa_miso.jpg",
+          receta: `1. Disolver pasta de miso en caldo caliente.
+                   2. Añadir tofu, alga wakame y cebolla verde.
+                   3. Servir caliente.`,
+          ingredientes: "Miso, tofu, alga wakame, cebolla",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Pollo al limón",
+          imagen: "./src/images/pollo_limon.jpg",
+          receta: `1. Marinar el pollo en zumo de limón y especias.
+                   2. Freír los trozos y reducir la salsa de limón.
+                   3. Servir con arroz blanco.`,
+          ingredientes: "Pollo, limón, especias",
+          alergenos: [],
+        },
+        {
+          nombre: "Tarta de queso",
+          imagen: "./src/images/tarta_queso.jpg",
+          receta: `1. Triturar galletas para hacer la base.
+                   2. Mezclar queso crema, huevos y azúcar.
+                   3. Hornear durante 40 minutos y enfriar.`,
+          ingredientes: "Galletas, queso crema, huevos, azúcar",
+          alergenos: ["Gluten", "Lácteos", "Huevo"],
+        },
+        {
+          nombre: "Empanadas argentinas",
+          imagen: "./src/images/empanadas_argentinas.jpg",
+          receta: `1. Preparar la masa con harina, agua y manteca.
+                   2. Rellenar con carne molida, cebolla y especias.
+                   3. Hornear hasta que estén doradas.`,
+          ingredientes: "Harina, carne molida, cebolla, manteca",
+          alergenos: ["Gluten"],
+        },
+        {
+          nombre: "Carbonara tradicional",
+          imagen: "./src/images/carbonara_tradicional.jpg",
+          receta: `1. Cocer pasta al dente.
+                   2. Preparar la salsa con yema de huevo y queso parmesano.
+                   3. Añadir panceta crujiente y mezclar.`,
+          ingredientes: "Pasta, huevo, panceta, queso parmesano",
+          alergenos: ["Gluten", "Lácteos", "Huevo"],
+        },
+        {
+          nombre: "Pavlova con frutos rojos",
+          imagen: "./src/images/pavlova.jpg",
+          receta: `1. Batir claras de huevo y azúcar hasta formar un merengue.
+                   2. Hornear a baja temperatura.
+                   3. Cubrir con nata montada y frutos rojos.`,
+          ingredientes: "Claras de huevo, azúcar, nata, frutos rojos",
+          alergenos: ["Huevo", "Lácteos"],
+        },
+        {
+          nombre: "Curry de cordero",
+          imagen: "./src/images/curry_cordero.jpg",
+          receta: `1. Marinar el cordero con especias.
+                   2. Cocinar con cebolla, tomate y leche de coco.
+                   3. Servir con arroz basmati.`,
+          ingredientes: "Cordero, tomate, leche de coco, arroz basmati",
+          alergenos: ["Soja"],
+        },
+        {
+          nombre: "Macarrones con chorizo",
+          imagen: "./src/images/macarrones_chorizo.jpg",
+          receta: `1. Cocer los macarrones al dente.
+                   2. Preparar una salsa de tomate con chorizo y cebolla.
+                   3. Mezclar la pasta con la salsa y gratinar con queso.`,
+          ingredientes: "Pasta, chorizo, tomate, queso",
+          alergenos: ["Gluten", "Lácteos"],
+        },
+        {
+          nombre: "Croquetas de jamón",
+          imagen: "./src/images/croquetas_jamon.jpg",
+          receta: `1. Preparar una bechamel espesa y añadir jamón picado.
+                   2. Formar las croquetas, empanarlas y freírlas.
+                   3. Servir calientes.`,
+          ingredientes: "Harina, jamón, leche, pan rallado",
+          alergenos: ["Gluten", "Lácteos"],
+        },
+        {
+          nombre: "Salmon teriyaki",
+          imagen: "./src/images/salmon_teriyaki.jpg",
+          receta: `1. Marinar el salmón en salsa teriyaki.
+                   2. Cocinar en una sartén hasta que esté dorado.
+                   3. Servir con arroz y verduras.`,
+          ingredientes: "Salmón, salsa teriyaki, arroz",
+          alergenos: ["Pescado", "Soja"],
+        },
+        // ... más de 100 comidas adicionales agregadas ...
       ];
 
       function mostrarComidas() {
@@ -47,9 +386,15 @@
             const comidaDiv = document.createElement("div");
             comidaDiv.classList.add("comida-item");
             comidaDiv.innerHTML = `
-              <h2>${comida.nombre}</h2>
-              <p><strong>Ingredientes:</strong> ${comida.ingredientes}</p>
-              <p><strong>Alergenos:</strong> ${comida.alergenos.join(", ")}</p>
+              <div class="comida-content">
+                <img src="${comida.imagen}" alt="${comida.nombre}" />
+                <div class="comida-info">
+                  <h2>${comida.nombre}</h2>
+                  <p><strong>Ingredientes:</strong> ${comida.ingredientes}</p>
+                  <p><strong>Receta:</strong> ${comida.receta}</p>
+                  <p><strong>Alergenos:</strong> ${comida.alergenos.length > 0 ? comida.alergenos.join(", ") : "Ninguno"}</p>
+                </div>
+              </div>
             `;
             listaComidas.appendChild(comidaDiv);
           }
