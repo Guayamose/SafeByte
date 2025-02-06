@@ -13,7 +13,7 @@
       <div class="logo">SafeByte</div>
       <ul class="nav-links">
         <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
-        <li><a href="#" data-section="comidas-section" class="nav-btn">Comidas</a></li>
+        <li><a href="./comidas.html">Comidas</a></li>
         <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
         <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
         <li><a href="./index.html">Cerrar Sesión</a></li>
@@ -26,11 +26,6 @@
       <p>
         Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora nuestras opciones y disfruta de una experiencia personalizada.
       </p>
-    </section>
-
-    <section id="comidas-section" class="content-section hidden">
-      <h2>Explora Comidas</h2>
-      <p>Aquí encontrarás una lista de comidas recomendadas basadas en tus alergias.</p>
     </section>
 
     <section id="contact-section" class="content-section hidden">
@@ -46,17 +41,60 @@
 
     <section id="config-section" class="content-section hidden">
       <h2>Configuración de Usuario</h2>
-      <p>Personaliza tus preferencias y ajusta tu perfil según tus necesidades.</p>
-      <form>
-        <input type="text" placeholder="Nombre de usuario" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <button type="submit">Guardar cambios</button>
+      <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
+
+      <form id="alergenos-form">
+        <div class="checkbox-container">
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Gluten" />
+            <span class="checkmark"></span> Gluten
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Lácteos" />
+            <span class="checkmark"></span> Lácteos
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Huevo" />
+            <span class="checkmark"></span> Huevo
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Frutos secos" />
+            <span class="checkmark"></span> Frutos secos
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Mariscos" />
+            <span class="checkmark"></span> Mariscos
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="alergeno" value="Soja" />
+            <span class="checkmark"></span> Soja
+          </label>
+        </div>
+
+        <button type="button" id="save-alergenos">Guardar preferencias</button>
       </form>
+
+      <p id="confirmation-message" style="display: none; color: green;">Preferencias guardadas con éxito.</p>
     </section>
 
     <footer>
       <p>© 2025 SafeByte. Todos los derechos reservados.</p>
     </footer>
-      <script src="./src/ventanas/Home.js"></script>
+
+    <script src="./src/ventanas/Home.js"></script>
+    <script>
+      document.getElementById("save-alergenos").addEventListener("click", () => {
+        const alergenosSeleccionados = Array.from(
+          document.querySelectorAll('input[name="alergeno"]:checked')
+        ).map((checkbox) => checkbox.value);
+
+        localStorage.setItem("alergenosSeleccionados", JSON.stringify(alergenosSeleccionados));
+
+        document.getElementById("confirmation-message").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("confirmation-message").style.display = "none";
+        }, 2000);
+      });
+    </script>
   </body>
 </html>

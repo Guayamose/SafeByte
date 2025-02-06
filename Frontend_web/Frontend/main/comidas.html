@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/comida.css" />
+    <title>Comidas Seguras</title>
+  </head>
+  <body>
+    <h1>Lista de Comidas</h1>
+    <div id="comidas-lista"></div>
+
+    <script>
+      const comidas = [
+        {
+          nombre: "Pizza Margarita",
+          ingredientes: "Harina, queso, tomate",
+          alergenos: ["Gluten", "Lácteos"],
+        },
+        {
+          nombre: "Ensalada César",
+          ingredientes: "Lechuga, pollo, huevo, croutons",
+          alergenos: ["Gluten", "Huevo"],
+        },
+        {
+          nombre: "Paella de mariscos",
+          ingredientes: "Arroz, gambas, mejillones",
+          alergenos: ["Mariscos"],
+        },
+        {
+          nombre: "Tarta de chocolate",
+          ingredientes: "Harina, chocolate, huevo",
+          alergenos: ["Gluten", "Huevo"],
+        },
+      ];
+
+      function mostrarComidas() {
+        const listaComidas = document.getElementById("comidas-lista");
+        listaComidas.innerHTML = "";
+
+        const alergenosUsuario = JSON.parse(localStorage.getItem("alergenosSeleccionados")) || [];
+
+        comidas.forEach((comida) => {
+          const tieneAlergeno = comida.alergenos.some((alergeno) => alergenosUsuario.includes(alergeno));
+
+          if (!tieneAlergeno) {
+            const comidaDiv = document.createElement("div");
+            comidaDiv.classList.add("comida-item");
+            comidaDiv.innerHTML = `
+              <h2>${comida.nombre}</h2>
+              <p><strong>Ingredientes:</strong> ${comida.ingredientes}</p>
+              <p><strong>Alergenos:</strong> ${comida.alergenos.join(", ")}</p>
+            `;
+            listaComidas.appendChild(comidaDiv);
+          }
+        });
+      }
+
+      window.onload = mostrarComidas;
+    </script>
+  </body>
+</html>
