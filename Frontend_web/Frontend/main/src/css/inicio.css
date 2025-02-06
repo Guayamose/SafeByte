@@ -128,13 +128,13 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  color: #08932b;
+  border-color: #047621;
 }
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #08a82e;
   border: none;
   outline: none;
   height: 49px;
@@ -148,7 +148,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #117639;
 }
 .panels-container {
   position: absolute;
@@ -168,7 +168,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg, #04450b 0%, #40ff53 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -397,28 +397,5 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
-  .container.sign-up-mode .signin-signup {
-    left: 25%;
-}
-
-.container.sign-up-mode form.sign-up-form {
-    opacity: 1;
-    z-index: 2;
-}
-
-.container.sign-up-mode form.sign-in-form {
-    opacity: 0;
-    z-index: 1;
-}
-
-#skip-login {
-    display: block;
-    margin-top: 15px;
-    background-color: transparent;
-    color: #333;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
+  
 }
