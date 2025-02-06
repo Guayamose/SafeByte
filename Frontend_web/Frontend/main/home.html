@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/home.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Home - SafeByte</title>
   </head>
   <body>
@@ -56,23 +57,6 @@
     <footer>
       <p>© 2025 SafeByte. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- JavaScript para la navegación -->
-    <script>
-      const navButtons = document.querySelectorAll('.nav-btn');
-      const sections = document.querySelectorAll('.content-section');
-
-      navButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const sectionId = button.getAttribute('data-section');
-          
-          // Oculta todas las secciones
-          sections.forEach((section) => section.classList.add('hidden'));
-
-          // Muestra la sección seleccionada
-          document.getElementById(sectionId).classList.remove('hidden');
-        });
-      });
-    </script>
+      <script src="./src/ventanas/Home.js"></script>
   </body>
 </html>

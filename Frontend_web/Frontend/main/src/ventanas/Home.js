@@ -1,28 +1,15 @@
-// Seleccionar enlaces y secciones
-const homeLink = document.querySelector("#home-link");
-const comidasLink = document.querySelector("#comidas-link");
-const contactLink = document.querySelector("#contact-link");
-const configLink = document.querySelector("#config-link");
 
-const homeSection = document.querySelector("#main-content");
-const comidasSection = document.querySelector("#comidas-section");
-const contactSection = document.querySelector("#contact-section");
-const configSection = document.querySelector("#config-section");
+      const navButtons = document.querySelectorAll('.nav-btn');
+      const sections = document.querySelectorAll('.content-section');
 
-// Función para mostrar solo la sección seleccionada
-function showSection(section) {
-  // Ocultar todas las secciones
-  homeSection.classList.add("hidden");
-  comidasSection.classList.add("hidden");
-  contactSection.classList.add("hidden");
-  configSection.classList.add("hidden");
+      navButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const sectionId = button.getAttribute('data-section');
+          
+          // Oculta todas las secciones
+          sections.forEach((section) => section.classList.add('hidden'));
 
-  // Mostrar la sección seleccionada
-  section.classList.remove("hidden");
-}
-
-// Agregar eventos de clic
-homeLink.addEventListener("click", () => showSection(homeSection));
-comidasLink.addEventListener("click", () => showSection(comidasSection));
-contactLink.addEventListener("click", () => showSection(contactSection));
-configLink.addEventListener("click", () => showSection(configSection));
+          // Muestra la sección seleccionada
+          document.getElementById(sectionId).classList.remove('hidden');
+        });
+      });
