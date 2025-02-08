@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/home.css" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <title>Home - SafeByte</title>
-  </head>
-  <body>
-    <!-- Barra de navegación -->
-    <div class="navbar">
-      <div class="logo">SafeByte</div>
-      <ul class="nav-links">
-        <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
-        <li><a href="./comidas.html">Comidas</a></li>
-        <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
-        <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
-        <li><a href="./index.html">Cerrar Sesión</a></li>
-      </ul>
-    </div>
 
-    <!-- Secciones -->
-    <section id="welcome-section" class="content-section">
-      <h1>Bienvenido a SafeByte</h1>
-      <p>
-        Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora nuestras opciones y disfruta de una experiencia personalizada.
-      </p>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/home.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <title>Home - SafeByte</title>
+</head>
 
-    <section id="contact-section" class="content-section hidden">
-      <h2>Contacta con Nosotros</h2>
-      <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
-      <form>
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <textarea placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+<body>
 
-    <section id="config-section" class="content-section hidden">
-      <h2>Configuración de Usuario</h2>
-      <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
+  <div class="navbar">
+    <div class="logo">SafeByte</div>
+    <ul class="nav-links">
+      <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
+      <li><a href="./comidas.html">Comidas</a></li>
+      <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
+      <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
+      <li><a href="./index.html">Cerrar Sesión</a></li>
+    </ul>
+  </div>
 
-      <form id="alergenos-form">
-        <div class="checkbox-container">
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Gluten" />
-            <span class="checkmark"></span> Gluten
-          </label>
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Lácteos" />
-            <span class="checkmark"></span> Lácteos
-          </label>
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Huevo" />
-            <span class="checkmark"></span> Huevo
-          </label>
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Frutos secos" />
-            <span class="checkmark"></span> Frutos secos
-          </label>
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Mariscos" />
-            <span class="checkmark"></span> Mariscos
-          </label>
-          <label class="custom-checkbox">
-            <input type="checkbox" name="alergeno" value="Soja" />
-            <span class="checkmark"></span> Soja
-          </label>
-        </div>
+  <!-- Secciones -->
+  <section id="welcome-section" class="content-section">
+    <h1>Bienvenido a SafeByte</h1>
+    <p>
+      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora
+      nuestras opciones y disfruta de una experiencia personalizada.
+    </p>
+  </section>
 
-        <button type="button" id="save-alergenos">Guardar preferencias</button>
-      </form>
+  <section id="contact-section" class="content-section hidden">
+    <h2>Contacta con Nosotros</h2>
+    <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-      <p id="confirmation-message" style="display: none; color: green;">Preferencias guardadas con éxito.</p>
-    </section>
+  <section id="config-section" class="content-section hidden">
+    <h2>Configuración de Usuario</h2>
+    <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
 
-    <footer>
-      <p>© 2025 SafeByte. Todos los derechos reservados.</p>
-    </footer>
+    <form id="alergenos-form">
+      <div class="checkbox-container">
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Gluten" />
+          <span class="checkmark"></span> Gluten
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Lácteos" />
+          <span class="checkmark"></span> Lácteos
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Huevo" />
+          <span class="checkmark"></span> Huevo
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Frutos secos" />
+          <span class="checkmark"></span> Frutos secos
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Mariscos" />
+          <span class="checkmark"></span> Mariscos
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="alergeno" value="Soja" />
+          <span class="checkmark"></span> Soja
+        </label>
+      </div>
 
-    <script src="./src/ventanas/Home.js"></script>
-    <script>
-      document.getElementById("save-alergenos").addEventListener("click", () => {
-        const alergenosSeleccionados = Array.from(
-          document.querySelectorAll('input[name="alergeno"]:checked')
-        ).map((checkbox) => checkbox.value);
+      <button type="button" id="save-alergenos">Guardar preferencias</button>
+    </form>
 
-        localStorage.setItem("alergenosSeleccionados", JSON.stringify(alergenosSeleccionados));
+    <p id="confirmation-message" style="display: none; color: green;">Preferencias guardadas con éxito.</p>
+  </section>
 
-        document.getElementById("confirmation-message").style.display = "block";
-        setTimeout(() => {
-          document.getElementById("confirmation-message").style.display = "none";
-        }, 2000);
-      });
-    </script>
-  </body>
+  <footer>
+    <p>© 2025 SafeByte. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="./src/ventanas/Home.js"></script>
+  <script>
+    document.getElementById("save-alergenos").addEventListener("click", () => {
+      const alergenosSeleccionados = Array.from(
+        document.querySelectorAll('input[name="alergeno"]:checked')
+      ).map((checkbox) => checkbox.value);
+
+      localStorage.setItem("alergenosSeleccionados", JSON.stringify(alergenosSeleccionados));
+
+      document.getElementById("confirmation-message").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("confirmation-message").style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+
 </html>

@@ -2,15 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/css/comida.css" />
-  <title>FOOD DNA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/comida.css">
+  <title>FOOD DNA - Comidas</title>
 </head>
 
 <body>
+  <a href="./home.html" id="back-button">Volver al Menú Principal</a>
   <h1>Comidas Recomendadas</h1>
+
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar comidas...">
+  </div>
+
   <div id="comidas-lista"></div>
+
+  <!-- Modal de comida -->
+  <div id="modal-comida">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <img id="modal-img" src="" alt="Comida ampliada">
+      <h2 id="modal-title"></h2>
+      <p><strong>Ingredientes:</strong> <span id="modal-ingredientes"></span></p>
+      <p><strong>Receta:</strong> <span id="modal-receta"></span></p>
+    </div>
+  </div>
+
   <!-- Apartir de aqui todas las comidas estan hechas con IA, le di una estructura, unos pasos, y le di paginas web con muchisimas recetas/comidas -->
   <script>
     const comidas = [
@@ -713,15 +731,6 @@
         alergenos: ["Mariscos"]
       },
       {
-        nombre: "Polenta cremosa con setas",
-        imagen: "./src/media/comidas/polenta_setas.jpg",
-        receta: `1. Cocinar la polenta en caldo caliente hasta obtener una textura cremosa.
-           2. Saltear las setas con ajo y perejil.
-           3. Servir la polenta con las setas por encima.`,
-        ingredientes: "Polenta, setas, ajo, caldo",
-        alergenos: []
-      },
-      {
         nombre: "Berenjenas rellenas de carne",
         imagen: "./src/media/comidas/berenjenas_rellenas.jpg",
         receta: `1. Partir las berenjenas por la mitad y vaciarlas.
@@ -837,15 +846,6 @@
            3. Servir con pan tostado.`,
         ingredientes: "Mejillones, ajo, vino blanco, perejil",
         alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Rollitos de primavera",
-        imagen: "./src/media/comidas/rollitos_primavera.jpg",
-        receta: `1. Rellenar la masa de rollitos con carne y vegetales.
-           2. Enrollar y sellar los bordes.
-           3. Freír en aceite caliente hasta dorar.`,
-        ingredientes: "Masa de rollito, carne, repollo, zanahorias",
-        alergenos: ["Gluten"]
       },
       {
         nombre: "Pollo al ajillo",
