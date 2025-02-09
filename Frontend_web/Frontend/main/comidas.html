@@ -9,1909 +9,1928 @@
 </head>
 
 <body>
+  <!-- Botón para volver al menú principal -->
   <a href="./home.html" id="back-button">Volver al Menú Principal</a>
+
+  <!-- Título principal -->
   <h1>Comidas Recomendadas</h1>
 
+  <!-- Barra de búsqueda -->
   <div id="search-bar">
     <input type="text" id="search-input" placeholder="Buscar comidas...">
   </div>
 
-  <div id="comidas-lista"></div>
+  <!-- Contenedor para las tarjetas de comidas -->
+  <div id="comidas-lista" class="grid-container"></div>
 
-  <!-- Modal de comida -->
-  <div id="modal-comida">
-    <div class="modal-content">
-      <span class="close-button" id="close-modal">&times;</span>
-      <img id="modal-img" src="" alt="Comida ampliada">
-      <h2 id="modal-title"></h2>
-      <p><strong>Ingredientes:</strong> <span id="modal-ingredientes"></span></p>
-      <p><strong>Receta:</strong> <span id="modal-receta"></span></p>
-    </div>
+  <!-- Modal para ver detalles de una comida -->
+
+<!-- Modal de comida -->
+<div id="modal-comida" class="hidden">
+  <div class="modal-content">
+    <span class="close-button" id="close-modal">&times;</span>
+    <img id="modal-img" src="" alt="Comida ampliada">
+    <h2 id="modal-title"></h2>
+    <p><strong>Ingredientes:</strong> <span id="modal-ingredientes"></span></p>
+    <p><strong>Receta:</strong> <span id="modal-receta"></span></p>
+    <p><strong>Alergenos:</strong> <span id="modal-alergenos"></span></p>
   </div>
+</div>
 
-  <!-- Apartir de aqui todas las comidas estan hechas con IA, le di una estructura, unos pasos, y le di paginas web con muchisimas recetas/comidas -->
-  <script>
-    const comidas = [
-      {
-        nombre: "Pizza Margarita",
-        imagen: "./src/media/comidas/pizza_margarita.jpg",
-        receta: `1. Preparar la masa de pizza con harina, agua y levadura.
+
+
+
+
+  <!-- Archivo de JavaScript -->
+  <script src="./src/ventanas/comida.js"></script>
+  <script src="./src/funciones/filtrocomidas.js"></script>
+</body>
+
+</html>
+
+
+<!-- Apartir de aqui todas las comidas estan hechas con IA, le di una estructura, unos pasos, y le di paginas web con muchisimas recetas/comidas -->
+<script>
+  const comidas = [
+    {
+      nombre: "Pizza Margarita",
+      imagen: "./src/media/comidas/pizza_margarita.jpg",
+      receta: `1. Preparar la masa de pizza con harina, agua y levadura.
                    2. Extender la masa y añadir salsa de tomate.
                    3. Cubrir con queso mozzarella y hornear a 220°C por 15-20 minutos.`,
-        ingredientes: "Harina, queso mozzarella, tomate",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Ensalada César",
-        imagen: "./src/media/comidas/ensalada_cesar.jpg",
-        receta: `1. Cortar la lechuga romana en trozos medianos.
+      ingredientes: "Harina, queso mozzarella, tomate",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Ensalada César",
+      imagen: "./src/media/comidas/ensalada_cesar.jpg",
+      receta: `1. Cortar la lechuga romana en trozos medianos.
                    2. Asar el pollo con sal y pimienta.
                    3. Preparar el aliño con anchoas, mayonesa y parmesano.
                    4. Añadir croutons y mezclar.`,
-        ingredientes: "Lechuga, pollo, croutons, queso parmesano, anchoas",
-        alergenos: ["Gluten", "Lácteos", "Huevo", "Pescado"],
-      },
-      {
-        nombre: "Sopa de cebolla francesa",
-        imagen: "./src/media/comidas/sopa_cebolla.jpg",
-        receta: `1. Caramelizar las cebollas a fuego lento con mantequilla.
+      ingredientes: "Lechuga, pollo, croutons, queso parmesano, anchoas",
+      alergenos: ["Gluten", "Lácteos", "Huevo", "Pescado"],
+    },
+    {
+      nombre: "Sopa de cebolla francesa",
+      imagen: "./src/media/comidas/sopa_cebolla.jpg",
+      receta: `1. Caramelizar las cebollas a fuego lento con mantequilla.
                    2. Añadir caldo de carne y dejar cocinar 30 minutos.
                    3. Tostar pan y cubrir con queso rallado.
                    4. Servir la sopa con el pan tostado flotando.`,
-        ingredientes: "Cebolla, caldo de carne, pan, queso",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Paella de mariscos",
-        imagen: "./src/media/comidas/paella_mariscos.jpg",
-        receta: `1. Sofreír cebolla y pimiento rojo en aceite de oliva.
+      ingredientes: "Cebolla, caldo de carne, pan, queso",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Paella de mariscos",
+      imagen: "./src/media/comidas/paella_mariscos.jpg",
+      receta: `1. Sofreír cebolla y pimiento rojo en aceite de oliva.
                    2. Añadir arroz y caldo de pescado caliente.
                    3. Incorporar mejillones, calamares y gambas.
                    4. Cocinar a fuego lento hasta que el arroz esté en su punto.`,
-        ingredientes: "Arroz, gambas, mejillones, calamares",
-        alergenos: ["Mariscos"],
-      },
-      {
-        nombre: "Tarta de manzana casera",
-        imagen: "./src/media/comidas/tarta_manzana.jpg",
-        receta: `1. Preparar la masa quebrada y cubrir el molde.
+      ingredientes: "Arroz, gambas, mejillones, calamares",
+      alergenos: ["Mariscos"],
+    },
+    {
+      nombre: "Tarta de manzana casera",
+      imagen: "./src/media/comidas/tarta_manzana.jpg",
+      receta: `1. Preparar la masa quebrada y cubrir el molde.
                    2. Cortar las manzanas en láminas finas.
                    3. Colocarlas sobre la masa y espolvorear azúcar y canela.
                    4. Hornear a 180°C durante 40 minutos.`,
-        ingredientes: "Harina, manzanas, mantequilla, azúcar",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Curry de garbanzos",
-        imagen: "./src/media/comidas/curry_garbanzos.jpg",
-        receta: `1. Sofreír cebolla, ajo y jengibre hasta dorar.
+      ingredientes: "Harina, manzanas, mantequilla, azúcar",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Curry de garbanzos",
+      imagen: "./src/media/comidas/curry_garbanzos.jpg",
+      receta: `1. Sofreír cebolla, ajo y jengibre hasta dorar.
                    2. Añadir especias (cúrcuma, comino, curry) y garbanzos cocidos.
                    3. Incorporar leche de coco y dejar cocinar 10-15 minutos.`,
-        ingredientes: "Garbanzos, leche de coco, cebolla, ajo, jengibre",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Risotto de setas",
-        imagen: "./src/media/comidas/risotto_setas.jpg",
-        receta: `1. Sofreír cebolla y ajo en mantequilla.
+      ingredientes: "Garbanzos, leche de coco, cebolla, ajo, jengibre",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Risotto de setas",
+      imagen: "./src/media/comidas/risotto_setas.jpg",
+      receta: `1. Sofreír cebolla y ajo en mantequilla.
                    2. Añadir arroz arborio y dorar unos minutos.
                    3. Incorporar caldo poco a poco mientras se remueve.
                    4. Añadir setas salteadas y queso parmesano.`,
-        ingredientes: "Arroz arborio, setas, mantequilla, queso parmesano",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Pasta al pesto",
-        imagen: "./src/media/comidas/pasta_pesto.jpg",
-        receta: `1. Cocer la pasta al dente.
+      ingredientes: "Arroz arborio, setas, mantequilla, queso parmesano",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Pasta al pesto",
+      imagen: "./src/media/comidas/pasta_pesto.jpg",
+      receta: `1. Cocer la pasta al dente.
                    2. Preparar el pesto con albahaca, ajo, piñones y queso parmesano.
                    3. Mezclar la pasta con el pesto y servir.`,
-        ingredientes: "Pasta, albahaca, ajo, piñones, queso parmesano",
-        alergenos: ["Gluten", "Frutos secos", "Lácteos"],
-      },
-      {
-        nombre: "Pollo al curry",
-        imagen: "./src/media/comidas/pollo_curry.jpg",
-        receta: `1. Sofreír cebolla, ajo y jengibre en aceite.
+      ingredientes: "Pasta, albahaca, ajo, piñones, queso parmesano",
+      alergenos: ["Gluten", "Frutos secos", "Lácteos"],
+    },
+    {
+      nombre: "Pollo al curry",
+      imagen: "./src/media/comidas/pollo_curry.jpg",
+      receta: `1. Sofreír cebolla, ajo y jengibre en aceite.
                    2. Añadir trozos de pollo y curry en polvo.
                    3. Incorporar leche de coco y cocinar a fuego lento.`,
-        ingredientes: "Pollo, cebolla, leche de coco, curry",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Sushi variado",
-        imagen: "./src/media/comidas/sushi_variado.jpg",
-        receta: `1. Cocer el arroz y aliñarlo con vinagre.
+      ingredientes: "Pollo, cebolla, leche de coco, curry",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Sushi variado",
+      imagen: "./src/media/comidas/sushi_variado.jpg",
+      receta: `1. Cocer el arroz y aliñarlo con vinagre.
                    2. Preparar el pescado fresco y las algas.
                    3. Enrollar con salmón, atún o aguacate.
                    4. Servir con salsa de soja.`,
-        ingredientes: "Arroz, salmón, atún, alga nori",
-        alergenos: ["Pescado", "Soja"],
-      },
-      {
-        nombre: "Canelones de espinacas y ricotta",
-        imagen: "./src/media/comidas/canelones_espinacas.jpg",
-        receta: `1. Cocer las espinacas y mezclarlas con ricotta.
+      ingredientes: "Arroz, salmón, atún, alga nori",
+      alergenos: ["Pescado", "Soja"],
+    },
+    {
+      nombre: "Canelones de espinacas y ricotta",
+      imagen: "./src/media/comidas/canelones_espinacas.jpg",
+      receta: `1. Cocer las espinacas y mezclarlas con ricotta.
                    2. Rellenar los canelones y cubrir con bechamel.
                    3. Hornear a 180°C durante 25 minutos.`,
-        ingredientes: "Pasta, espinacas, ricotta, bechamel",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Ensalada griega",
-        imagen: "./src/media/comidas/ensalada_griega.jpg",
-        receta: `1. Cortar pepino, tomate, cebolla roja y pimientos.
+      ingredientes: "Pasta, espinacas, ricotta, bechamel",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Ensalada griega",
+      imagen: "./src/media/comidas/ensalada_griega.jpg",
+      receta: `1. Cortar pepino, tomate, cebolla roja y pimientos.
                    2. Añadir aceitunas negras y queso feta.
                    3. Aliñar con aceite de oliva, orégano y sal.`,
-        ingredientes: "Pepino, tomate, cebolla, queso feta, aceitunas",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Risotto de champiñones",
-        imagen: "./src/media/comidas/risotto_champinones.jpg",
-        receta: `1. Sofreír ajo y cebolla en mantequilla.
+      ingredientes: "Pepino, tomate, cebolla, queso feta, aceitunas",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Risotto de champiñones",
+      imagen: "./src/media/comidas/risotto_champinones.jpg",
+      receta: `1. Sofreír ajo y cebolla en mantequilla.
                    2. Añadir arroz arborio y cocinar con caldo caliente.
                    3. Incorporar champiñones salteados y queso parmesano.`,
-        ingredientes: "Arroz arborio, champiñones, queso parmesano",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Tacos de carne asada",
-        imagen: "./src/media/comidas/tacos_carne.jpg",
-        receta: `1. Marinar la carne con ajo, comino y lima.
+      ingredientes: "Arroz arborio, champiñones, queso parmesano",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Tacos de carne asada",
+      imagen: "./src/media/comidas/tacos_carne.jpg",
+      receta: `1. Marinar la carne con ajo, comino y lima.
                    2. Asar la carne y cortar en tiras finas.
                    3. Servir en tortillas de maíz con guacamole y cebolla.`,
-        ingredientes: "Carne de res, tortillas de maíz, guacamole, cebolla",
-        alergenos: [],
-      },
-      {
-        nombre: "Biryani de pollo",
-        imagen: "./src/media/comidas/biryani_pollo.jpg",
-        receta: `1. Marinar el pollo en yogur y especias.
+      ingredientes: "Carne de res, tortillas de maíz, guacamole, cebolla",
+      alergenos: [],
+    },
+    {
+      nombre: "Biryani de pollo",
+      imagen: "./src/media/comidas/biryani_pollo.jpg",
+      receta: `1. Marinar el pollo en yogur y especias.
                    2. Cocinar arroz basmati con canela y clavo.
                    3. Combinar el pollo marinado con el arroz y cocinar a fuego lento.`,
-        ingredientes: "Arroz basmati, pollo, yogur, especias",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Ramen japonés",
-        imagen: "./src/media/comidas/ramen.jpg",
-        receta: `1. Preparar caldo de pollo o cerdo con jengibre y ajo.
+      ingredientes: "Arroz basmati, pollo, yogur, especias",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Ramen japonés",
+      imagen: "./src/media/comidas/ramen.jpg",
+      receta: `1. Preparar caldo de pollo o cerdo con jengibre y ajo.
                    2. Cocer fideos ramen al dente.
                    3. Añadir huevo cocido, algas nori y cebolleta al caldo caliente.`,
-        ingredientes: "Fideos ramen, caldo, huevo, algas nori",
-        alergenos: ["Gluten", "Huevo", "Soja"],
-      },
-      {
-        nombre: "Salteado de tofu y verduras",
-        imagen: "./src/media/comidas/salteado_tofu.jpg",
-        receta: `1. Cortar tofu en cubos y dorar en sartén.
+      ingredientes: "Fideos ramen, caldo, huevo, algas nori",
+      alergenos: ["Gluten", "Huevo", "Soja"],
+    },
+    {
+      nombre: "Salteado de tofu y verduras",
+      imagen: "./src/media/comidas/salteado_tofu.jpg",
+      receta: `1. Cortar tofu en cubos y dorar en sartén.
                    2. Saltear pimientos, brócoli y zanahorias.
                    3. Incorporar salsa de soja y servir con arroz.`,
-        ingredientes: "Tofu, pimientos, brócoli, salsa de soja",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Ceviche de camarones",
-        imagen: "./src/media/comidas/ceviche_camarones.jpg",
-        receta: `1. Cocer los camarones ligeramente.
+      ingredientes: "Tofu, pimientos, brócoli, salsa de soja",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Ceviche de camarones",
+      imagen: "./src/media/comidas/ceviche_camarones.jpg",
+      receta: `1. Cocer los camarones ligeramente.
                    2. Marinar en jugo de lima con cebolla y cilantro.
                    3. Servir con aguacate y chips de plátano.`,
-        ingredientes: "Camarones, lima, cebolla, aguacate",
-        alergenos: ["Mariscos"],
-      },
-      {
-        nombre: "Falafel con hummus",
-        imagen: "./src/media/comidas/falafel.jpg",
-        receta: `1. Triturar garbanzos con ajo y comino.
+      ingredientes: "Camarones, lima, cebolla, aguacate",
+      alergenos: ["Mariscos"],
+    },
+    {
+      nombre: "Falafel con hummus",
+      imagen: "./src/media/comidas/falafel.jpg",
+      receta: `1. Triturar garbanzos con ajo y comino.
                    2. Formar bolitas y freír hasta dorar.
                    3. Servir con pan pita y hummus.`,
-        ingredientes: "Garbanzos, ajo, comino, pan pita",
-        alergenos: ["Gluten"],
-      },
-      {
-        nombre: "Pollo a la naranja",
-        imagen: "./src/media/comidas/pollo_naranja.jpg",
-        receta: `1. Marinara el pollo en jugo de naranja, miel y salsa de soja.
+      ingredientes: "Garbanzos, ajo, comino, pan pita",
+      alergenos: ["Gluten"],
+    },
+    {
+      nombre: "Pollo a la naranja",
+      imagen: "./src/media/comidas/pollo_naranja.jpg",
+      receta: `1. Marinara el pollo en jugo de naranja, miel y salsa de soja.
                    2. Freír los trozos de pollo y reducir la salsa.
                    3. Servir con arroz blanco.`,
-        ingredientes: "Pollo, naranja, miel, salsa de soja",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Hamburguesa clásica",
-        imagen: "./src/media/comidas/hamburguesa_clasica.jpg",
-        receta: `1. Formar hamburguesas de carne molida y asarlas.
+      ingredientes: "Pollo, naranja, miel, salsa de soja",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Hamburguesa clásica",
+      imagen: "./src/media/comidas/hamburguesa_clasica.jpg",
+      receta: `1. Formar hamburguesas de carne molida y asarlas.
                    2. Montar el pan con lechuga, tomate, queso y la carne.
                    3. Servir con papas fritas.`,
-        ingredientes: "Carne molida, pan de hamburguesa, queso, lechuga",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Gnocchis de patata",
-        imagen: "./src/media/comidas/gnocchis_patata.jpg",
-        receta: `1. Hervir patatas y triturarlas.
+      ingredientes: "Carne molida, pan de hamburguesa, queso, lechuga",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Gnocchis de patata",
+      imagen: "./src/media/comidas/gnocchis_patata.jpg",
+      receta: `1. Hervir patatas y triturarlas.
                    2. Mezclar con harina y formar gnocchis.
                    3. Cocerlos y servir con salsa de tomate.`,
-        ingredientes: "Patata, harina, salsa de tomate",
-        alergenos: ["Gluten"],
-      },
-      {
-        nombre: "Pollo tikka masala",
-        imagen: "./src/media/comidas/tikka_masala.jpg",
-        receta: `1. Marinar el pollo en yogur y especias.
+      ingredientes: "Patata, harina, salsa de tomate",
+      alergenos: ["Gluten"],
+    },
+    {
+      nombre: "Pollo tikka masala",
+      imagen: "./src/media/comidas/tikka_masala.jpg",
+      receta: `1. Marinar el pollo en yogur y especias.
                    2. Cocinar en salsa cremosa de tomate y garam masala.
                    3. Servir con arroz basmati.`,
-        ingredientes: "Pollo, yogur, garam masala, tomate",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Biryani de cordero",
-        imagen: "./src/media/comidas/biryani_cordero.jpg",
-        receta: `1. Marinar el cordero en yogur y especias.
+      ingredientes: "Pollo, yogur, garam masala, tomate",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Biryani de cordero",
+      imagen: "./src/media/comidas/biryani_cordero.jpg",
+      receta: `1. Marinar el cordero en yogur y especias.
                    2. Cocer arroz basmati con canela y clavo.
                    3. Combinar el arroz con el cordero y cocinar a fuego lento.`,
-        ingredientes: "Cordero, arroz basmati, yogur, especias",
-        alergenos: ["Lácteos"],
-      },
-      {
-        nombre: "Fajitas de pollo",
-        imagen: "./src/media/comidas/fajitas_pollo.jpg",
-        receta: `1. Cortar el pollo y los pimientos en tiras.
+      ingredientes: "Cordero, arroz basmati, yogur, especias",
+      alergenos: ["Lácteos"],
+    },
+    {
+      nombre: "Fajitas de pollo",
+      imagen: "./src/media/comidas/fajitas_pollo.jpg",
+      receta: `1. Cortar el pollo y los pimientos en tiras.
                    2. Saltearlos con cebolla y condimentos.
                    3. Servir en tortillas de maíz con salsa guacamole.`,
-        ingredientes: "Pollo, pimientos, tortillas de maíz",
-        alergenos: [],
-      },
-      {
-        nombre: "Ratatouille",
-        imagen: "./src/media/comidas/ratatouille.jpg",
-        receta: `1. Cortar calabacín, berenjena, pimiento y tomate.
+      ingredientes: "Pollo, pimientos, tortillas de maíz",
+      alergenos: [],
+    },
+    {
+      nombre: "Ratatouille",
+      imagen: "./src/media/comidas/ratatouille.jpg",
+      receta: `1. Cortar calabacín, berenjena, pimiento y tomate.
                    2. Colocar en capas y hornear con hierbas.
                    3. Servir caliente o a temperatura ambiente.`,
-        ingredientes: "Calabacín, berenjena, tomate, pimiento",
-        alergenos: [],
-      },
-      {
-        nombre: "Lentejas con chorizo",
-        imagen: "./src/media/comidas/lentejas_chorizo.jpg",
-        receta: `1. Cocer las lentejas con cebolla, zanahoria y laurel.
+      ingredientes: "Calabacín, berenjena, tomate, pimiento",
+      alergenos: [],
+    },
+    {
+      nombre: "Lentejas con chorizo",
+      imagen: "./src/media/comidas/lentejas_chorizo.jpg",
+      receta: `1. Cocer las lentejas con cebolla, zanahoria y laurel.
                    2. Añadir el chorizo en rodajas y dejar cocinar.
                    3. Servir con un poco de aceite de oliva.`,
-        ingredientes: "Lentejas, chorizo, zanahoria, cebolla",
-        alergenos: [],
-      },
-      {
-        nombre: "Sopa de miso",
-        imagen: "./src/media/comidas/sopa_miso.jpg",
-        receta: `1. Disolver pasta de miso en caldo caliente.
+      ingredientes: "Lentejas, chorizo, zanahoria, cebolla",
+      alergenos: [],
+    },
+    {
+      nombre: "Sopa de miso",
+      imagen: "./src/media/comidas/sopa_miso.jpg",
+      receta: `1. Disolver pasta de miso en caldo caliente.
                    2. Añadir tofu, alga wakame y cebolla verde.
                    3. Servir caliente.`,
-        ingredientes: "Miso, tofu, alga wakame, cebolla",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Pollo al limón",
-        imagen: "./src/media/comidas/pollo_limon.jpg",
-        receta: `1. Marinar el pollo en zumo de limón y especias.
+      ingredientes: "Miso, tofu, alga wakame, cebolla",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Pollo al limón",
+      imagen: "./src/media/comidas/pollo_limon.jpg",
+      receta: `1. Marinar el pollo en zumo de limón y especias.
                    2. Freír los trozos y reducir la salsa de limón.
                    3. Servir con arroz blanco.`,
-        ingredientes: "Pollo, limón, especias",
-        alergenos: [],
-      },
-      {
-        nombre: "Tarta de queso",
-        imagen: "./src/media/comidas/tarta_queso.jpg",
-        receta: `1. Triturar galletas para hacer la base.
+      ingredientes: "Pollo, limón, especias",
+      alergenos: [],
+    },
+    {
+      nombre: "Tarta de queso",
+      imagen: "./src/media/comidas/tarta_queso.jpg",
+      receta: `1. Triturar galletas para hacer la base.
                    2. Mezclar queso crema, huevos y azúcar.
                    3. Hornear durante 40 minutos y enfriar.`,
-        ingredientes: "Galletas, queso crema, huevos, azúcar",
-        alergenos: ["Gluten", "Lácteos", "Huevo"],
-      },
-      {
-        nombre: "Empanadas argentinas",
-        imagen: "./src/media/comidas/empanadas_argentinas.jpg",
-        receta: `1. Preparar la masa con harina, agua y manteca.
+      ingredientes: "Galletas, queso crema, huevos, azúcar",
+      alergenos: ["Gluten", "Lácteos", "Huevo"],
+    },
+    {
+      nombre: "Empanadas argentinas",
+      imagen: "./src/media/comidas/empanadas_argentinas.jpg",
+      receta: `1. Preparar la masa con harina, agua y manteca.
                    2. Rellenar con carne molida, cebolla y especias.
                    3. Hornear hasta que estén doradas.`,
-        ingredientes: "Harina, carne molida, cebolla, manteca",
-        alergenos: ["Gluten"],
-      },
-      {
-        nombre: "Carbonara tradicional",
-        imagen: "./src/media/comidas/carbonara_tradicional.jpg",
-        receta: `1. Cocer pasta al dente.
+      ingredientes: "Harina, carne molida, cebolla, manteca",
+      alergenos: ["Gluten"],
+    },
+    {
+      nombre: "Carbonara tradicional",
+      imagen: "./src/media/comidas/carbonara_tradicional.jpg",
+      receta: `1. Cocer pasta al dente.
                    2. Preparar la salsa con yema de huevo y queso parmesano.
                    3. Añadir panceta crujiente y mezclar.`,
-        ingredientes: "Pasta, huevo, panceta, queso parmesano",
-        alergenos: ["Gluten", "Lácteos", "Huevo"],
-      },
-      {
-        nombre: "Pavlova con frutos rojos",
-        imagen: "./src/media/comidas/pavlova.jpg",
-        receta: `1. Batir claras de huevo y azúcar hasta formar un merengue.
+      ingredientes: "Pasta, huevo, panceta, queso parmesano",
+      alergenos: ["Gluten", "Lácteos", "Huevo"],
+    },
+    {
+      nombre: "Pavlova con frutos rojos",
+      imagen: "./src/media/comidas/pavlova.jpg",
+      receta: `1. Batir claras de huevo y azúcar hasta formar un merengue.
                    2. Hornear a baja temperatura.
                    3. Cubrir con nata montada y frutos rojos.`,
-        ingredientes: "Claras de huevo, azúcar, nata, frutos rojos",
-        alergenos: ["Huevo", "Lácteos"],
-      },
-      {
-        nombre: "Curry de cordero",
-        imagen: "./src/media/comidas/curry_cordero.jpg",
-        receta: `1. Marinar el cordero con especias.
+      ingredientes: "Claras de huevo, azúcar, nata, frutos rojos",
+      alergenos: ["Huevo", "Lácteos"],
+    },
+    {
+      nombre: "Curry de cordero",
+      imagen: "./src/media/comidas/curry_cordero.jpg",
+      receta: `1. Marinar el cordero con especias.
                    2. Cocinar con cebolla, tomate y leche de coco.
                    3. Servir con arroz basmati.`,
-        ingredientes: "Cordero, tomate, leche de coco, arroz basmati",
-        alergenos: ["Soja"],
-      },
-      {
-        nombre: "Macarrones con chorizo",
-        imagen: "./src/media/comidas/macarrones_chorizo.jpg",
-        receta: `1. Cocer los macarrones al dente.
+      ingredientes: "Cordero, tomate, leche de coco, arroz basmati",
+      alergenos: ["Soja"],
+    },
+    {
+      nombre: "Macarrones con chorizo",
+      imagen: "./src/media/comidas/macarrones_chorizo.jpg",
+      receta: `1. Cocer los macarrones al dente.
                    2. Preparar una salsa de tomate con chorizo y cebolla.
                    3. Mezclar la pasta con la salsa y gratinar con queso.`,
-        ingredientes: "Pasta, chorizo, tomate, queso",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Croquetas de jamón",
-        imagen: "./src/media/comidas/croquetas_jamon.jpg",
-        receta: `1. Preparar una bechamel espesa y añadir jamón picado.
+      ingredientes: "Pasta, chorizo, tomate, queso",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Croquetas de jamón",
+      imagen: "./src/media/comidas/croquetas_jamon.jpg",
+      receta: `1. Preparar una bechamel espesa y añadir jamón picado.
                    2. Formar las croquetas, empanarlas y freírlas.
                    3. Servir calientes.`,
-        ingredientes: "Harina, jamón, leche, pan rallado",
-        alergenos: ["Gluten", "Lácteos"],
-      },
-      {
-        nombre: "Salmon teriyaki",
-        imagen: "./src/media/comidas/salmon_teriyaki.jpg",
-        receta: `1. Marinar el salmón en salsa teriyaki.
+      ingredientes: "Harina, jamón, leche, pan rallado",
+      alergenos: ["Gluten", "Lácteos"],
+    },
+    {
+      nombre: "Salmon teriyaki",
+      imagen: "./src/media/comidas/salmon_teriyaki.jpg",
+      receta: `1. Marinar el salmón en salsa teriyaki.
                    2. Cocinar en una sartén hasta que esté dorado.
                    3. Servir con arroz y verduras.`,
-        ingredientes: "Salmón, salsa teriyaki, arroz",
-        alergenos: ["Pescado", "Soja"],
-      },
-      {
-        nombre: "Pollo a la brasa con papas",
-        imagen: "./src/media/comidas/pollo_brasas.jpg",
-        receta: `1. Marinar el pollo con ajo, limón, comino y pimentón.
+      ingredientes: "Salmón, salsa teriyaki, arroz",
+      alergenos: ["Pescado", "Soja"],
+    },
+    {
+      nombre: "Pollo a la brasa con papas",
+      imagen: "./src/media/comidas/pollo_brasas.jpg",
+      receta: `1. Marinar el pollo con ajo, limón, comino y pimentón.
            2. Asar el pollo en el horno o a la parrilla.
            3. Servir con papas asadas y ensalada.`,
-        ingredientes: "Pollo, ajo, limón, comino, papas",
-        alergenos: []
-      },
-      {
-        nombre: "Tacos al pastor",
-        imagen: "./src/media/comidas/tacos_pastor.jpg",
-        receta: `1. Marinar la carne de cerdo con achiote y jugo de piña.
+      ingredientes: "Pollo, ajo, limón, comino, papas",
+      alergenos: []
+    },
+    {
+      nombre: "Tacos al pastor",
+      imagen: "./src/media/comidas/tacos_pastor.jpg",
+      receta: `1. Marinar la carne de cerdo con achiote y jugo de piña.
            2. Asar la carne y cortarla en tiras finas.
            3. Servir en tortillas con cebolla y cilantro.`,
-        ingredientes: "Cerdo, tortillas, piña, cebolla, cilantro",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Bacalao a la vizcaína",
-        imagen: "./src/media/comidas/bacalao_vizcaina.jpg",
-        receta: `1. Remojar el bacalao durante 24 horas para desalarlo.
+      ingredientes: "Cerdo, tortillas, piña, cebolla, cilantro",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Bacalao a la vizcaína",
+      imagen: "./src/media/comidas/bacalao_vizcaina.jpg",
+      receta: `1. Remojar el bacalao durante 24 horas para desalarlo.
            2. Preparar una salsa con cebolla, pimiento rojo y tomate.
            3. Cocinar el bacalao en la salsa a fuego lento.`,
-        ingredientes: "Bacalao, cebolla, pimiento rojo, tomate",
-        alergenos: ["Pescado"]
-      },
-      {
-        nombre: "Arepas venezolanas",
-        imagen: "./src/media/comidas/arepas.jpg",
-        receta: `1. Preparar la masa de arepas con harina de maíz y agua.
+      ingredientes: "Bacalao, cebolla, pimiento rojo, tomate",
+      alergenos: ["Pescado"]
+    },
+    {
+      nombre: "Arepas venezolanas",
+      imagen: "./src/media/comidas/arepas.jpg",
+      receta: `1. Preparar la masa de arepas con harina de maíz y agua.
            2. Formar las arepas y cocinarlas en una plancha.
            3. Rellenar con carne mechada, queso o aguacate.`,
-        ingredientes: "Harina de maíz, queso, carne mechada",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Boeuf bourguignon",
-        imagen: "./src/media/comidas/boeuf_bourguignon.jpg",
-        receta: `1. Dorar la carne de res en una sartén.
+      ingredientes: "Harina de maíz, queso, carne mechada",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Boeuf bourguignon",
+      imagen: "./src/media/comidas/boeuf_bourguignon.jpg",
+      receta: `1. Dorar la carne de res en una sartén.
            2. Cocinar con vino tinto, champiñones, zanahorias y cebolla.
            3. Cocinar a fuego lento hasta que la carne esté tierna.`,
-        ingredientes: "Carne de res, vino tinto, champiñones, cebolla",
-        alergenos: []
-      },
-      {
-        nombre: "Cuscús marroquí con vegetales",
-        imagen: "./src/media/comidas/cuscus_vegetales.jpg",
-        receta: `1. Cocer el cuscús siguiendo las instrucciones del paquete.
+      ingredientes: "Carne de res, vino tinto, champiñones, cebolla",
+      alergenos: []
+    },
+    {
+      nombre: "Cuscús marroquí con vegetales",
+      imagen: "./src/media/comidas/cuscus_vegetales.jpg",
+      receta: `1. Cocer el cuscús siguiendo las instrucciones del paquete.
            2. Saltear zanahorias, calabacín, cebolla y garbanzos.
            3. Mezclar con el cuscús y servir con especias.`,
-        ingredientes: "Cuscús, zanahoria, calabacín, cebolla, garbanzos",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Kebab de cordero",
-        imagen: "./src/media/comidas/kebab_cordero.jpg",
-        receta: `1. Marinar el cordero con especias como comino y pimentón.
+      ingredientes: "Cuscús, zanahoria, calabacín, cebolla, garbanzos",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Kebab de cordero",
+      imagen: "./src/media/comidas/kebab_cordero.jpg",
+      receta: `1. Marinar el cordero con especias como comino y pimentón.
            2. Ensartar la carne en brochetas y asarlas.
            3. Servir con pan pita y salsa de yogur.`,
-        ingredientes: "Cordero, pan pita, yogur, especias",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Tiramisú clásico",
-        imagen: "./src/media/comidas/tiramisu.jpg",
-        receta: `1. Batir yemas de huevo con azúcar y mascarpone.
+      ingredientes: "Cordero, pan pita, yogur, especias",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Tiramisú clásico",
+      imagen: "./src/media/comidas/tiramisu.jpg",
+      receta: `1. Batir yemas de huevo con azúcar y mascarpone.
            2. Mojar bizcochos en café y montar capas con la crema.
            3. Espolvorear cacao por encima y refrigerar.`,
-        ingredientes: "Mascarpone, bizcochos, café, huevos, azúcar",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Baba ganoush",
-        imagen: "./src/media/comidas/baba_ganoush.jpg",
-        receta: `1. Asar berenjenas hasta que estén tiernas.
+      ingredientes: "Mascarpone, bizcochos, café, huevos, azúcar",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Baba ganoush",
+      imagen: "./src/media/comidas/baba_ganoush.jpg",
+      receta: `1. Asar berenjenas hasta que estén tiernas.
            2. Mezclar la pulpa con tahini, ajo y zumo de limón.
            3. Servir con pan pita y aceite de oliva.`,
-        ingredientes: "Berenjenas, tahini, ajo, limón, pan pita",
-        alergenos: ["Gluten", "Sésamo"]
-      },
-      {
-        nombre: "Fideuà de mariscos",
-        imagen: "./src/media/comidas/fideua.jpg",
-        receta: `1. Sofreír fideos finos con ajo y pimiento.
+      ingredientes: "Berenjenas, tahini, ajo, limón, pan pita",
+      alergenos: ["Gluten", "Sésamo"]
+    },
+    {
+      nombre: "Fideuà de mariscos",
+      imagen: "./src/media/comidas/fideua.jpg",
+      receta: `1. Sofreír fideos finos con ajo y pimiento.
            2. Añadir caldo de pescado y mariscos variados.
            3. Cocinar hasta que los fideos estén al dente.`,
-        ingredientes: "Fideos, gambas, mejillones, pimiento",
-        alergenos: ["Gluten", "Mariscos"]
-      },
-      {
-        nombre: "Gumbo de Louisiana",
-        imagen: "./src/media/comidas/gumbo.jpg",
-        receta: `1. Preparar un roux con harina y mantequilla.
+      ingredientes: "Fideos, gambas, mejillones, pimiento",
+      alergenos: ["Gluten", "Mariscos"]
+    },
+    {
+      nombre: "Gumbo de Louisiana",
+      imagen: "./src/media/comidas/gumbo.jpg",
+      receta: `1. Preparar un roux con harina y mantequilla.
            2. Añadir apio, pimiento y cebolla, junto con pollo y mariscos.
            3. Cocinar a fuego lento y servir con arroz.`,
-        ingredientes: "Pollo, mariscos, apio, pimiento, arroz",
-        alergenos: ["Gluten", "Mariscos"]
-      },
-      {
-        nombre: "Chiles en nogada",
-        imagen: "./src/media/comidas/chiles_nogada.jpg",
-        receta: `1. Asar los chiles poblanos y rellenarlos con carne y frutos secos.
+      ingredientes: "Pollo, mariscos, apio, pimiento, arroz",
+      alergenos: ["Gluten", "Mariscos"]
+    },
+    {
+      nombre: "Chiles en nogada",
+      imagen: "./src/media/comidas/chiles_nogada.jpg",
+      receta: `1. Asar los chiles poblanos y rellenarlos con carne y frutos secos.
            2. Preparar la salsa de nogada con nueces y crema.
            3. Servir los chiles cubiertos con la salsa y granada.`,
-        ingredientes: "Chiles poblanos, carne, nueces, crema",
-        alergenos: ["Frutos secos", "Lácteos"]
-      },
-      {
-        nombre: "Gazpacho andaluz",
-        imagen: "./src/media/comidas/gazpacho.jpg",
-        receta: `1. Triturar tomate, pepino, pimiento, cebolla y ajo.
+      ingredientes: "Chiles poblanos, carne, nueces, crema",
+      alergenos: ["Frutos secos", "Lácteos"]
+    },
+    {
+      nombre: "Gazpacho andaluz",
+      imagen: "./src/media/comidas/gazpacho.jpg",
+      receta: `1. Triturar tomate, pepino, pimiento, cebolla y ajo.
            2. Aliñar con aceite de oliva, vinagre y sal.
            3. Enfriar antes de servir.`,
-        ingredientes: "Tomate, pepino, pimiento, cebolla, ajo",
-        alergenos: []
-      },
-      {
-        nombre: "Canelones de atún",
-        imagen: "./src/media/comidas/canelones_atun.jpg",
-        receta: `1. Preparar los canelones con pasta cocida.
+      ingredientes: "Tomate, pepino, pimiento, cebolla, ajo",
+      alergenos: []
+    },
+    {
+      nombre: "Canelones de atún",
+      imagen: "./src/media/comidas/canelones_atun.jpg",
+      receta: `1. Preparar los canelones con pasta cocida.
            2. Rellenar con una mezcla de atún, tomate y cebolla.
            3. Cubrir con bechamel y gratinar.`,
-        ingredientes: "Atún, pasta, tomate, bechamel",
-        alergenos: ["Gluten", "Pescado", "Lácteos"]
-      },
-      {
-        nombre: "Polenta con champiñones",
-        imagen: "./src/media/comidas/polenta_champinones.jpg",
-        receta: `1. Cocinar la polenta en agua o caldo caliente.
+      ingredientes: "Atún, pasta, tomate, bechamel",
+      alergenos: ["Gluten", "Pescado", "Lácteos"]
+    },
+    {
+      nombre: "Polenta con champiñones",
+      imagen: "./src/media/comidas/polenta_champinones.jpg",
+      receta: `1. Cocinar la polenta en agua o caldo caliente.
            2. Saltear los champiñones con ajo y perejil.
            3. Servir la polenta con los champiñones por encima.`,
-        ingredientes: "Polenta, champiñones, ajo, perejil",
-        alergenos: []
-      },
-      {
-        nombre: "Baklava",
-        imagen: "./src/media/comidas/baklava.jpg",
-        receta: `1. Preparar capas de masa filo con mantequilla.
+      ingredientes: "Polenta, champiñones, ajo, perejil",
+      alergenos: []
+    },
+    {
+      nombre: "Baklava",
+      imagen: "./src/media/comidas/baklava.jpg",
+      receta: `1. Preparar capas de masa filo con mantequilla.
            2. Rellenar con una mezcla de nueces y miel.
            3. Hornear hasta que esté dorado y bañar con almíbar.`,
-        ingredientes: "Masa filo, nueces, miel, mantequilla",
-        alergenos: ["Gluten", "Frutos secos", "Lácteos"]
-      },
-      {
-        nombre: "Churrasco con chimichurri",
-        imagen: "./src/media/comidas/churrasco.jpg",
-        receta: `1. Marinar la carne con ajo, perejil, orégano y aceite.
+      ingredientes: "Masa filo, nueces, miel, mantequilla",
+      alergenos: ["Gluten", "Frutos secos", "Lácteos"]
+    },
+    {
+      nombre: "Churrasco con chimichurri",
+      imagen: "./src/media/comidas/churrasco.jpg",
+      receta: `1. Marinar la carne con ajo, perejil, orégano y aceite.
            2. Asar el churrasco a la parrilla.
            3. Servir con chimichurri y papas.`,
-        ingredientes: "Carne de res, ajo, perejil, aceite",
-        alergenos: []
-      },
-      {
-        nombre: "Rollo de primavera vietnamita",
-        imagen: "./src/media/comidas/rollo_primavera.jpg",
-        receta: `1. Hidratar papel de arroz y rellenar con camarones, fideos y vegetales.
+      ingredientes: "Carne de res, ajo, perejil, aceite",
+      alergenos: []
+    },
+    {
+      nombre: "Rollo de primavera vietnamita",
+      imagen: "./src/media/comidas/rollo_primavera.jpg",
+      receta: `1. Hidratar papel de arroz y rellenar con camarones, fideos y vegetales.
            2. Enrollar y servir con salsa de maní o soja.`,
-        ingredientes: "Papel de arroz, camarones, zanahoria, fideos",
-        alergenos: ["Mariscos", "Soja"]
-      },
-      {
-        nombre: "Pato a la naranja",
-        imagen: "./src/media/comidas/pato_naranja.jpg",
-        receta: `1. Asar el pato en el horno.
+      ingredientes: "Papel de arroz, camarones, zanahoria, fideos",
+      alergenos: ["Mariscos", "Soja"]
+    },
+    {
+      nombre: "Pato a la naranja",
+      imagen: "./src/media/comidas/pato_naranja.jpg",
+      receta: `1. Asar el pato en el horno.
            2. Preparar la salsa de naranja con vino y miel.
            3. Servir el pato bañado con la salsa.`,
-        ingredientes: "Pato, naranja, vino, miel",
-        alergenos: []
-      },
-      {
-        nombre: "Albondigas suecas",
-        imagen: "./src/media/comidas/albondigas_suecas.jpg",
-        receta: `1. Preparar las albóndigas con carne molida y especias.
+      ingredientes: "Pato, naranja, vino, miel",
+      alergenos: []
+    },
+    {
+      nombre: "Albondigas suecas",
+      imagen: "./src/media/comidas/albondigas_suecas.jpg",
+      receta: `1. Preparar las albóndigas con carne molida y especias.
            2. Cocinarlas y cubrirlas con una salsa cremosa.
            3. Servir con puré de papas.`,
-        ingredientes: "Carne molida, crema, puré de papas",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Estofado de ternera",
-        imagen: "./src/media/comidas/estofado_ternera.jpg",
-        receta: `1. Dorar la ternera en una olla con aceite.
+      ingredientes: "Carne molida, crema, puré de papas",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Estofado de ternera",
+      imagen: "./src/media/comidas/estofado_ternera.jpg",
+      receta: `1. Dorar la ternera en una olla con aceite.
            2. Añadir cebolla, zanahorias y apio, y cocinar a fuego lento.
            3. Incorporar caldo de carne y vino tinto, y cocer durante 2 horas.`,
-        ingredientes: "Ternera, cebolla, zanahoria, vino tinto, caldo de carne",
-        alergenos: []
-      },
-      {
-        nombre: "Hummus clásico",
-        imagen: "./src/media/comidas/hummus.jpg",
-        receta: `1. Triturar garbanzos cocidos con ajo, tahini y limón.
+      ingredientes: "Ternera, cebolla, zanahoria, vino tinto, caldo de carne",
+      alergenos: []
+    },
+    {
+      nombre: "Hummus clásico",
+      imagen: "./src/media/comidas/hummus.jpg",
+      receta: `1. Triturar garbanzos cocidos con ajo, tahini y limón.
            2. Añadir aceite de oliva y mezclar hasta obtener una textura cremosa.
            3. Servir con pan pita o verduras crudas.`,
-        ingredientes: "Garbanzos, tahini, limón, ajo",
-        alergenos: ["Sésamo"]
-      },
-      {
-        nombre: "Cazuela de mariscos",
-        imagen: "./src/media/comidas/cazuela_mariscos.jpg",
-        receta: `1. Sofreír cebolla, ajo y pimiento.
+      ingredientes: "Garbanzos, tahini, limón, ajo",
+      alergenos: ["Sésamo"]
+    },
+    {
+      nombre: "Cazuela de mariscos",
+      imagen: "./src/media/comidas/cazuela_mariscos.jpg",
+      receta: `1. Sofreír cebolla, ajo y pimiento.
            2. Añadir mariscos variados y cocinar con caldo de pescado.
            3. Servir con un toque de perejil fresco.`,
-        ingredientes: "Mariscos, cebolla, pimiento, ajo",
-        alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Pasta con espárragos y limón",
-        imagen: "./src/media/comidas/pasta_esparragos.jpg",
-        receta: `1. Cocer la pasta al dente.
+      ingredientes: "Mariscos, cebolla, pimiento, ajo",
+      alergenos: ["Mariscos"]
+    },
+    {
+      nombre: "Pasta con espárragos y limón",
+      imagen: "./src/media/comidas/pasta_esparragos.jpg",
+      receta: `1. Cocer la pasta al dente.
            2. Saltear los espárragos en aceite de oliva con ajo.
            3. Mezclar con la pasta y añadir jugo de limón y queso parmesano.`,
-        ingredientes: "Pasta, espárragos, ajo, limón, queso parmesano",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Pollo satay con salsa de maní",
-        imagen: "./src/media/comidas/pollo_satay.jpg",
-        receta: `1. Marinar el pollo en una mezcla de ajo, jengibre y salsa de soja.
+      ingredientes: "Pasta, espárragos, ajo, limón, queso parmesano",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Pollo satay con salsa de maní",
+      imagen: "./src/media/comidas/pollo_satay.jpg",
+      receta: `1. Marinar el pollo en una mezcla de ajo, jengibre y salsa de soja.
            2. Ensartar en brochetas y asar.
            3. Servir con una salsa de maní cremosa.`,
-        ingredientes: "Pollo, salsa de soja, maní, ajo",
-        alergenos: ["Soja", "Frutos secos"]
-      },
-      {
-        nombre: "Pimientos rellenos de quinoa",
-        imagen: "./src/media/comidas/pimientos_rellenos.jpg",
-        receta: `1. Cocer la quinoa y mezclarla con cebolla, tomate y especias.
+      ingredientes: "Pollo, salsa de soja, maní, ajo",
+      alergenos: ["Soja", "Frutos secos"]
+    },
+    {
+      nombre: "Pimientos rellenos de quinoa",
+      imagen: "./src/media/comidas/pimientos_rellenos.jpg",
+      receta: `1. Cocer la quinoa y mezclarla con cebolla, tomate y especias.
            2. Rellenar los pimientos y hornear durante 30 minutos.
            3. Servir calientes.`,
-        ingredientes: "Pimientos, quinoa, cebolla, tomate",
-        alergenos: []
-      },
-      {
-        nombre: "Empanadas de espinacas y queso",
-        imagen: "./src/media/comidas/empanadas_espinacas.jpg",
-        receta: `1. Preparar una masa con harina y mantequilla.
+      ingredientes: "Pimientos, quinoa, cebolla, tomate",
+      alergenos: []
+    },
+    {
+      nombre: "Empanadas de espinacas y queso",
+      imagen: "./src/media/comidas/empanadas_espinacas.jpg",
+      receta: `1. Preparar una masa con harina y mantequilla.
            2. Rellenar con espinacas cocidas y queso feta.
            3. Hornear hasta que estén doradas.`,
-        ingredientes: "Harina, espinacas, queso feta",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Lasaña de carne",
-        imagen: "./src/media/comidas/lasana_carne.jpg",
-        receta: `1. Cocinar la carne molida con tomate y cebolla.
+      ingredientes: "Harina, espinacas, queso feta",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Lasaña de carne",
+      imagen: "./src/media/comidas/lasana_carne.jpg",
+      receta: `1. Cocinar la carne molida con tomate y cebolla.
            2. Montar capas de pasta, carne y bechamel.
            3. Hornear a 180°C durante 40 minutos.`,
-        ingredientes: "Carne molida, pasta, bechamel, tomate",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Tallarines con salsa Alfredo",
-        imagen: "./src/media/comidas/tallarines_alfredo.jpg",
-        receta: `1. Cocer los tallarines al dente.
+      ingredientes: "Carne molida, pasta, bechamel, tomate",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Tallarines con salsa Alfredo",
+      imagen: "./src/media/comidas/tallarines_alfredo.jpg",
+      receta: `1. Cocer los tallarines al dente.
            2. Preparar la salsa Alfredo con nata, mantequilla y queso parmesano.
            3. Mezclar con los tallarines y servir.`,
-        ingredientes: "Tallarines, nata, mantequilla, queso parmesano",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Sopa minestrone",
-        imagen: "./src/media/comidas/sopa_minestrone.jpg",
-        receta: `1. Sofreír cebolla, apio y zanahoria.
+      ingredientes: "Tallarines, nata, mantequilla, queso parmesano",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Sopa minestrone",
+      imagen: "./src/media/comidas/sopa_minestrone.jpg",
+      receta: `1. Sofreír cebolla, apio y zanahoria.
            2. Añadir tomate, caldo y pasta pequeña.
            3. Incorporar alubias y espinacas, y cocinar hasta que la pasta esté lista.`,
-        ingredientes: "Cebolla, apio, tomate, pasta, alubias",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Crepes de jamón y queso",
-        imagen: "./src/media/comidas/crepes_jamon.jpg",
-        receta: `1. Preparar la masa de crepes y cocinarlos en una sartén.
+      ingredientes: "Cebolla, apio, tomate, pasta, alubias",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Crepes de jamón y queso",
+      imagen: "./src/media/comidas/crepes_jamon.jpg",
+      receta: `1. Preparar la masa de crepes y cocinarlos en una sartén.
            2. Rellenar con jamón cocido y queso rallado.
            3. Doblar los crepes y servir calientes.`,
-        ingredientes: "Harina, leche, huevos, jamón, queso",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Bacalao dorado",
-        imagen: "./src/media/comidas/bacalao_dorado.jpg",
-        receta: `1. Desmenuzar el bacalao desalado.
+      ingredientes: "Harina, leche, huevos, jamón, queso",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Bacalao dorado",
+      imagen: "./src/media/comidas/bacalao_dorado.jpg",
+      receta: `1. Desmenuzar el bacalao desalado.
            2. Sofreír con cebolla y patatas paja.
            3. Incorporar huevo batido y cocinar hasta cuajar.`,
-        ingredientes: "Bacalao, patatas, huevos, cebolla",
-        alergenos: ["Pescado", "Huevo"]
-      },
-      {
-        nombre: "Albóndigas en salsa de tomate",
-        imagen: "./src/media/comidas/albondigas_tomate.jpg",
-        receta: `1. Formar las albóndigas con carne molida y pan rallado.
+      ingredientes: "Bacalao, patatas, huevos, cebolla",
+      alergenos: ["Pescado", "Huevo"]
+    },
+    {
+      nombre: "Albóndigas en salsa de tomate",
+      imagen: "./src/media/comidas/albondigas_tomate.jpg",
+      receta: `1. Formar las albóndigas con carne molida y pan rallado.
            2. Freír y cocinar en salsa de tomate casera.
            3. Servir con arroz o puré.`,
-        ingredientes: "Carne molida, pan rallado, tomate",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Tabbouleh",
-        imagen: "./src/media/comidas/tabbouleh.jpg",
-        receta: `1. Cocer el bulgur y dejar enfriar.
+      ingredientes: "Carne molida, pan rallado, tomate",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Tabbouleh",
+      imagen: "./src/media/comidas/tabbouleh.jpg",
+      receta: `1. Cocer el bulgur y dejar enfriar.
            2. Mezclar con perejil, menta, tomate y cebolla.
            3. Aliñar con aceite de oliva y limón.`,
-        ingredientes: "Bulgur, tomate, perejil, menta, cebolla",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Ternera con brócoli estilo chino",
-        imagen: "./src/media/comidas/ternera_brocoli.jpg",
-        receta: `1. Marinar la ternera con salsa de soja y jengibre.
+      ingredientes: "Bulgur, tomate, perejil, menta, cebolla",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Ternera con brócoli estilo chino",
+      imagen: "./src/media/comidas/ternera_brocoli.jpg",
+      receta: `1. Marinar la ternera con salsa de soja y jengibre.
            2. Saltearla rápidamente con brócoli.
            3. Servir con arroz blanco.`,
-        ingredientes: "Ternera, brócoli, salsa de soja",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Pulpo a la gallega",
-        imagen: "./src/media/comidas/pulpo_gallega.jpg",
-        receta: `1. Cocer el pulpo hasta que esté tierno.
+      ingredientes: "Ternera, brócoli, salsa de soja",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Pulpo a la gallega",
+      imagen: "./src/media/comidas/pulpo_gallega.jpg",
+      receta: `1. Cocer el pulpo hasta que esté tierno.
            2. Cortar en rodajas y espolvorear con pimentón.
            3. Servir con patatas cocidas.`,
-        ingredientes: "Pulpo, patatas, pimentón",
-        alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Calamares a la romana",
-        imagen: "./src/media/comidas/calamares_romana.jpg",
-        receta: `1. Cortar los calamares en aros.
+      ingredientes: "Pulpo, patatas, pimentón",
+      alergenos: ["Mariscos"]
+    },
+    {
+      nombre: "Calamares a la romana",
+      imagen: "./src/media/comidas/calamares_romana.jpg",
+      receta: `1. Cortar los calamares en aros.
            2. Pasarlos por harina y freírlos en aceite caliente.
            3. Servir con limón.`,
-        ingredientes: "Calamares, harina, limón",
-        alergenos: ["Gluten", "Mariscos"]
-      },
-      {
-        nombre: "Ñoquis con salsa de pesto",
-        imagen: "./src/media/comidas/gnocchi_pesto.jpg",
-        receta: `1. Hervir los ñoquis en agua con sal.
+      ingredientes: "Calamares, harina, limón",
+      alergenos: ["Gluten", "Mariscos"]
+    },
+    {
+      nombre: "Ñoquis con salsa de pesto",
+      imagen: "./src/media/comidas/gnocchi_pesto.jpg",
+      receta: `1. Hervir los ñoquis en agua con sal.
            2. Preparar el pesto con albahaca, piñones y queso.
            3. Mezclar los ñoquis con la salsa.`,
-        ingredientes: "Ñoquis, albahaca, queso parmesano, piñones",
-        alergenos: ["Gluten", "Frutos secos", "Lácteos"]
-      },
-      {
-        nombre: "Cordero asado al romero",
-        imagen: "./src/media/comidas/cordero_asado.jpg",
-        receta: `1. Marinar el cordero con ajo, romero y aceite.
+      ingredientes: "Ñoquis, albahaca, queso parmesano, piñones",
+      alergenos: ["Gluten", "Frutos secos", "Lácteos"]
+    },
+    {
+      nombre: "Cordero asado al romero",
+      imagen: "./src/media/comidas/cordero_asado.jpg",
+      receta: `1. Marinar el cordero con ajo, romero y aceite.
            2. Asar en el horno a baja temperatura.
            3. Servir con patatas asadas.`,
-        ingredientes: "Cordero, ajo, romero, patatas",
-        alergenos: []
-      },
-      {
-        nombre: "Paella mixta",
-        imagen: "./src/media/comidas/paella_mixta.jpg",
-        receta: `1. Sofreír pollo, conejo y mariscos en una paellera.
+      ingredientes: "Cordero, ajo, romero, patatas",
+      alergenos: []
+    },
+    {
+      nombre: "Paella mixta",
+      imagen: "./src/media/comidas/paella_mixta.jpg",
+      receta: `1. Sofreír pollo, conejo y mariscos en una paellera.
            2. Añadir pimientos y judías verdes.
            3. Incorporar arroz y caldo de pollo, y cocinar a fuego lento.`,
-        ingredientes: "Pollo, conejo, mariscos, arroz, pimiento",
-        alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Berenjenas rellenas de carne",
-        imagen: "./src/media/comidas/berenjenas_rellenas.jpg",
-        receta: `1. Partir las berenjenas por la mitad y vaciarlas.
+      ingredientes: "Pollo, conejo, mariscos, arroz, pimiento",
+      alergenos: ["Mariscos"]
+    },
+    {
+      nombre: "Berenjenas rellenas de carne",
+      imagen: "./src/media/comidas/berenjenas_rellenas.jpg",
+      receta: `1. Partir las berenjenas por la mitad y vaciarlas.
            2. Sofreír la carne molida con cebolla y tomate.
            3. Rellenar las berenjenas y gratinar con queso.`,
-        ingredientes: "Berenjenas, carne molida, cebolla, queso",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Arroz chaufa",
-        imagen: "./src/media/comidas/arroz_chaufa.jpg",
-        receta: `1. Sofreír cebolla, ajo y jengibre.
+      ingredientes: "Berenjenas, carne molida, cebolla, queso",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Arroz chaufa",
+      imagen: "./src/media/comidas/arroz_chaufa.jpg",
+      receta: `1. Sofreír cebolla, ajo y jengibre.
            2. Añadir el arroz cocido y mezclar con pollo y tortilla de huevo.
            3. Incorporar salsa de soja y cebolla verde.`,
-        ingredientes: "Arroz, pollo, huevo, salsa de soja",
-        alergenos: ["Soja", "Huevo"]
-      },
-      {
-        nombre: "Ceviche mixto",
-        imagen: "./src/media/comidas/ceviche_mixto.jpg",
-        receta: `1. Marinar pescado, camarones y calamares en jugo de limón.
+      ingredientes: "Arroz, pollo, huevo, salsa de soja",
+      alergenos: ["Soja", "Huevo"]
+    },
+    {
+      nombre: "Ceviche mixto",
+      imagen: "./src/media/comidas/ceviche_mixto.jpg",
+      receta: `1. Marinar pescado, camarones y calamares en jugo de limón.
            2. Añadir cebolla roja, cilantro y maíz.
            3. Servir con batata cocida.`,
-        ingredientes: "Pescado, camarones, limón, cebolla",
-        alergenos: ["Pescado", "Mariscos"]
-      },
-      {
-        nombre: "Raviolis de espinacas y ricotta",
-        imagen: "./src/media/comidas/raviolis_espinacas.jpg",
-        receta: `1. Preparar una masa fresca para raviolis.
+      ingredientes: "Pescado, camarones, limón, cebolla",
+      alergenos: ["Pescado", "Mariscos"]
+    },
+    {
+      nombre: "Raviolis de espinacas y ricotta",
+      imagen: "./src/media/comidas/raviolis_espinacas.jpg",
+      receta: `1. Preparar una masa fresca para raviolis.
            2. Rellenar con una mezcla de espinacas y ricotta.
            3. Cocer los raviolis y servir con salsa de tomate.`,
-        ingredientes: "Pasta fresca, espinacas, ricotta",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Salteado de verduras al wok",
-        imagen: "./src/media/comidas/salteado_verduras.jpg",
-        receta: `1. Cortar pimientos, brócoli, zanahorias y calabacín.
+      ingredientes: "Pasta fresca, espinacas, ricotta",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Salteado de verduras al wok",
+      imagen: "./src/media/comidas/salteado_verduras.jpg",
+      receta: `1. Cortar pimientos, brócoli, zanahorias y calabacín.
            2. Saltear en el wok con ajo y salsa de soja.
            3. Servir caliente con arroz o fideos.`,
-        ingredientes: "Pimientos, brócoli, zanahorias, salsa de soja",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Tarta de limón merengada",
-        imagen: "./src/media/comidas/tarta_limon.jpg",
-        receta: `1. Preparar una base de galletas trituradas.
+      ingredientes: "Pimientos, brócoli, zanahorias, salsa de soja",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Tarta de limón merengada",
+      imagen: "./src/media/comidas/tarta_limon.jpg",
+      receta: `1. Preparar una base de galletas trituradas.
            2. Hacer una crema de limón con huevos y azúcar.
            3. Cubrir con merengue y hornear hasta dorar.`,
-        ingredientes: "Galletas, limón, huevos, azúcar",
-        alergenos: ["Gluten", "Huevo"]
-      },
-      {
-        nombre: "Coq au vin",
-        imagen: "./src/media/comidas/coq_au_vin.jpg",
-        receta: `1. Marinar el pollo en vino tinto durante 12 horas.
+      ingredientes: "Galletas, limón, huevos, azúcar",
+      alergenos: ["Gluten", "Huevo"]
+    },
+    {
+      nombre: "Coq au vin",
+      imagen: "./src/media/comidas/coq_au_vin.jpg",
+      receta: `1. Marinar el pollo en vino tinto durante 12 horas.
            2. Cocinar con cebolla, champiñones y panceta.
            3. Servir con puré de papas.`,
-        ingredientes: "Pollo, vino tinto, cebolla, champiñones",
-        alergenos: []
-      },
-      {
-        nombre: "Quesadillas de pollo",
-        imagen: "./src/media/comidas/quesadillas_pollo.jpg",
-        receta: `1. Cocinar el pollo desmenuzado con especias.
+      ingredientes: "Pollo, vino tinto, cebolla, champiñones",
+      alergenos: []
+    },
+    {
+      nombre: "Quesadillas de pollo",
+      imagen: "./src/media/comidas/quesadillas_pollo.jpg",
+      receta: `1. Cocinar el pollo desmenuzado con especias.
            2. Colocar en tortillas de trigo junto con queso.
            3. Cocinar en sartén hasta que el queso se derrita.`,
-        ingredientes: "Tortillas de trigo, pollo, queso",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Goulash húngaro",
-        imagen: "./src/media/comidas/goulash.jpg",
-        receta: `1. Dorar la carne de res en una olla.
+      ingredientes: "Tortillas de trigo, pollo, queso",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Goulash húngaro",
+      imagen: "./src/media/comidas/goulash.jpg",
+      receta: `1. Dorar la carne de res en una olla.
            2. Añadir cebolla, pimiento y paprika.
            3. Cocinar a fuego lento con caldo hasta que la carne esté tierna.`,
-        ingredientes: "Carne de res, cebolla, pimiento, paprika",
-        alergenos: []
-      },
-      {
-        nombre: "Dulce de leche casero",
-        imagen: "./src/media/comidas/dulce_leche.jpg",
-        receta: `1. Cocinar leche, azúcar y bicarbonato a fuego lento.
+      ingredientes: "Carne de res, cebolla, pimiento, paprika",
+      alergenos: []
+    },
+    {
+      nombre: "Dulce de leche casero",
+      imagen: "./src/media/comidas/dulce_leche.jpg",
+      receta: `1. Cocinar leche, azúcar y bicarbonato a fuego lento.
            2. Remover constantemente hasta obtener una textura espesa.
            3. Dejar enfriar antes de consumir.`,
-        ingredientes: "Leche, azúcar, bicarbonato",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Curry de coliflor y garbanzos",
-        imagen: "./src/media/comidas/curry_coliflor.jpg",
-        receta: `1. Sofreír cebolla y ajo con especias.
+      ingredientes: "Leche, azúcar, bicarbonato",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Curry de coliflor y garbanzos",
+      imagen: "./src/media/comidas/curry_coliflor.jpg",
+      receta: `1. Sofreír cebolla y ajo con especias.
            2. Añadir coliflor y garbanzos cocidos.
            3. Incorporar leche de coco y dejar cocinar a fuego lento.`,
-        ingredientes: "Coliflor, garbanzos, leche de coco",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Pierogi polacos",
-        imagen: "./src/media/comidas/pierogi.jpg",
-        receta: `1. Preparar una masa fresca y cortarla en círculos.
+      ingredientes: "Coliflor, garbanzos, leche de coco",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Pierogi polacos",
+      imagen: "./src/media/comidas/pierogi.jpg",
+      receta: `1. Preparar una masa fresca y cortarla en círculos.
            2. Rellenar con puré de papas y queso.
            3. Cocer en agua hirviendo y dorar en mantequilla.`,
-        ingredientes: "Harina, papas, queso, mantequilla",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Mejillones al vapor",
-        imagen: "./src/media/comidas/mejillones_vapor.jpg",
-        receta: `1. Lavar bien los mejillones y quitar las barbas.
+      ingredientes: "Harina, papas, queso, mantequilla",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Mejillones al vapor",
+      imagen: "./src/media/comidas/mejillones_vapor.jpg",
+      receta: `1. Lavar bien los mejillones y quitar las barbas.
            2. Cocinar al vapor con ajo, vino blanco y perejil.
            3. Servir con pan tostado.`,
-        ingredientes: "Mejillones, ajo, vino blanco, perejil",
-        alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Pollo al ajillo",
-        imagen: "./src/media/comidas/pollo_ajillo.jpg",
-        receta: `1. Dorar trozos de pollo en aceite.
+      ingredientes: "Mejillones, ajo, vino blanco, perejil",
+      alergenos: ["Mariscos"]
+    },
+    {
+      nombre: "Pollo al ajillo",
+      imagen: "./src/media/comidas/pollo_ajillo.jpg",
+      receta: `1. Dorar trozos de pollo en aceite.
            2. Añadir ajo, vino blanco y perejil.
            3. Cocinar hasta que el pollo esté tierno.`,
-        ingredientes: "Pollo, ajo, vino blanco, perejil",
-        alergenos: []
-      },
-      {
-        nombre: "Focaccia italiana",
-        imagen: "./src/media/comidas/focaccia.jpg",
-        receta: `1. Preparar una masa de pan con harina y levadura.
+      ingredientes: "Pollo, ajo, vino blanco, perejil",
+      alergenos: []
+    },
+    {
+      nombre: "Focaccia italiana",
+      imagen: "./src/media/comidas/focaccia.jpg",
+      receta: `1. Preparar una masa de pan con harina y levadura.
            2. Extenderla en una bandeja y añadir romero y aceite de oliva.
            3. Hornear hasta que esté dorada.`,
-        ingredientes: "Harina, aceite de oliva, romero",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Moussaka griega",
-        imagen: "./src/media/comidas/moussaka.jpg",
-        receta: `1. Alternar capas de berenjenas, carne molida y bechamel.
+      ingredientes: "Harina, aceite de oliva, romero",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Moussaka griega",
+      imagen: "./src/media/comidas/moussaka.jpg",
+      receta: `1. Alternar capas de berenjenas, carne molida y bechamel.
            2. Hornear a 180°C durante 45 minutos.
            3. Servir caliente.`,
-        ingredientes: "Berenjenas, carne molida, bechamel, tomate",
-        alergenos: ["Lácteos", "Gluten"]
-      },
-      {
-        nombre: "Zarzuela de mariscos",
-        imagen: "./src/media/comidas/zarzuela_mariscos.jpg",
-        receta: `1. Sofreír ajo, cebolla y pimiento en aceite de oliva.
+      ingredientes: "Berenjenas, carne molida, bechamel, tomate",
+      alergenos: ["Lácteos", "Gluten"]
+    },
+    {
+      nombre: "Zarzuela de mariscos",
+      imagen: "./src/media/comidas/zarzuela_mariscos.jpg",
+      receta: `1. Sofreír ajo, cebolla y pimiento en aceite de oliva.
            2. Añadir calamares, mejillones, gambas y pescado blanco.
            3. Cocinar con vino blanco y tomate triturado.`,
-        ingredientes: "Calamares, mejillones, gambas, pescado blanco, pimiento",
-        alergenos: ["Mariscos", "Pescado"]
-      },
-      {
-        nombre: "Sopa de fideos china",
-        imagen: "./src/media/comidas/sopa_fideos_china.jpg",
-        receta: `1. Preparar un caldo de pollo con jengibre y cebolla.
+      ingredientes: "Calamares, mejillones, gambas, pescado blanco, pimiento",
+      alergenos: ["Mariscos", "Pescado"]
+    },
+    {
+      nombre: "Sopa de fideos china",
+      imagen: "./src/media/comidas/sopa_fideos_china.jpg",
+      receta: `1. Preparar un caldo de pollo con jengibre y cebolla.
            2. Cocer fideos de arroz al dente.
            3. Servir el caldo con fideos y vegetales salteados.`,
-        ingredientes: "Fideos de arroz, pollo, jengibre, cebolla",
-        alergenos: []
-      },
-      {
-        nombre: "Huevos rancheros",
-        imagen: "./src/media/comidas/huevos_rancheros.jpg",
-        receta: `1. Freír huevos en una sartén.
+      ingredientes: "Fideos de arroz, pollo, jengibre, cebolla",
+      alergenos: []
+    },
+    {
+      nombre: "Huevos rancheros",
+      imagen: "./src/media/comidas/huevos_rancheros.jpg",
+      receta: `1. Freír huevos en una sartén.
            2. Servirlos sobre tortillas con salsa de tomate y frijoles.
            3. Añadir aguacate y cilantro.`,
-        ingredientes: "Huevos, tortillas, salsa de tomate, frijoles",
-        alergenos: ["Gluten", "Huevo"]
-      },
-      {
-        nombre: "Tarta de zanahoria",
-        imagen: "./src/media/comidas/tarta_zanahoria.jpg",
-        receta: `1. Mezclar harina, zanahoria rallada y especias.
+      ingredientes: "Huevos, tortillas, salsa de tomate, frijoles",
+      alergenos: ["Gluten", "Huevo"]
+    },
+    {
+      nombre: "Tarta de zanahoria",
+      imagen: "./src/media/comidas/tarta_zanahoria.jpg",
+      receta: `1. Mezclar harina, zanahoria rallada y especias.
            2. Incorporar huevos y aceite vegetal.
            3. Hornear a 180°C y cubrir con glaseado de queso crema.`,
-        ingredientes: "Harina, zanahoria, huevos, queso crema",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Bistec a la pimienta",
-        imagen: "./src/media/comidas/bistec_pimienta.jpg",
-        receta: `1. Cocinar el bistec en una sartén caliente.
+      ingredientes: "Harina, zanahoria, huevos, queso crema",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Bistec a la pimienta",
+      imagen: "./src/media/comidas/bistec_pimienta.jpg",
+      receta: `1. Cocinar el bistec en una sartén caliente.
            2. Preparar una salsa cremosa con pimienta negra y nata.
            3. Servir con puré de papas.`,
-        ingredientes: "Bistec, nata, pimienta negra, papas",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Curry verde tailandés",
-        imagen: "./src/media/comidas/curry_verde.jpg",
-        receta: `1. Sofreír la pasta de curry verde en aceite.
+      ingredientes: "Bistec, nata, pimienta negra, papas",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Curry verde tailandés",
+      imagen: "./src/media/comidas/curry_verde.jpg",
+      receta: `1. Sofreír la pasta de curry verde en aceite.
            2. Añadir pollo y leche de coco, y cocinar a fuego lento.
            3. Incorporar albahaca tailandesa y verduras.`,
-        ingredientes: "Pasta de curry verde, pollo, leche de coco, albahaca",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Tartiflette",
-        imagen: "./src/media/comidas/tartiflette.jpg",
-        receta: `1. Cortar patatas en rodajas y cocerlas.
+      ingredientes: "Pasta de curry verde, pollo, leche de coco, albahaca",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Tartiflette",
+      imagen: "./src/media/comidas/tartiflette.jpg",
+      receta: `1. Cortar patatas en rodajas y cocerlas.
            2. Saltear cebolla y panceta.
            3. Montar capas de patata y queso reblochon, y gratinar.`,
-        ingredientes: "Patatas, panceta, queso reblochon, cebolla",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Samosas de verduras",
-        imagen: "./src/media/comidas/samosas_verduras.jpg",
-        receta: `1. Preparar un relleno con patatas, guisantes y especias.
+      ingredientes: "Patatas, panceta, queso reblochon, cebolla",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Samosas de verduras",
+      imagen: "./src/media/comidas/samosas_verduras.jpg",
+      receta: `1. Preparar un relleno con patatas, guisantes y especias.
            2. Envolver en masa filo y sellar los bordes.
            3. Freír en aceite caliente hasta dorar.`,
-        ingredientes: "Patatas, guisantes, especias, masa filo",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Enchiladas de pollo",
-        imagen: "./src/media/comidas/enchiladas.jpg",
-        receta: `1. Cocinar pollo desmenuzado con cebolla y tomate.
+      ingredientes: "Patatas, guisantes, especias, masa filo",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Enchiladas de pollo",
+      imagen: "./src/media/comidas/enchiladas.jpg",
+      receta: `1. Cocinar pollo desmenuzado con cebolla y tomate.
            2. Envolver en tortillas y cubrir con salsa roja.
            3. Hornear hasta que el queso se derrita.`,
-        ingredientes: "Pollo, tortillas, tomate, queso",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Ragú de ternera",
-        imagen: "./src/media/comidas/ragu_ternera.jpg",
-        receta: `1. Dorar la ternera en una olla con aceite.
+      ingredientes: "Pollo, tortillas, tomate, queso",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Ragú de ternera",
+      imagen: "./src/media/comidas/ragu_ternera.jpg",
+      receta: `1. Dorar la ternera en una olla con aceite.
            2. Cocinar con zanahorias, apio y tomate durante 2 horas.
            3. Servir con pasta fresca o puré.`,
-        ingredientes: "Ternera, zanahorias, apio, tomate",
-        alergenos: []
-      },
-      {
-        nombre: "Tarta Bakewell",
-        imagen: "./src/media/comidas/tarta_bakewell.jpg",
-        receta: `1. Preparar una base de masa quebrada.
+      ingredientes: "Ternera, zanahorias, apio, tomate",
+      alergenos: []
+    },
+    {
+      nombre: "Tarta Bakewell",
+      imagen: "./src/media/comidas/tarta_bakewell.jpg",
+      receta: `1. Preparar una base de masa quebrada.
            2. Rellenar con mermelada y frangipane (crema de almendra).
            3. Hornear hasta que esté dorada.`,
-        ingredientes: "Masa quebrada, mermelada, almendra",
-        alergenos: ["Gluten", "Frutos secos"]
-      },
-      {
-        nombre: "Lomo saltado",
-        imagen: "./src/media/comidas/lomo_saltado.jpg",
-        receta: `1. Saltear tiras de carne de res con cebolla y tomate.
+      ingredientes: "Masa quebrada, mermelada, almendra",
+      alergenos: ["Gluten", "Frutos secos"]
+    },
+    {
+      nombre: "Lomo saltado",
+      imagen: "./src/media/comidas/lomo_saltado.jpg",
+      receta: `1. Saltear tiras de carne de res con cebolla y tomate.
            2. Incorporar salsa de soja y vinagre.
            3. Servir con arroz blanco y papas fritas.`,
-        ingredientes: "Carne de res, cebolla, tomate, salsa de soja",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Empanadas de atún",
-        imagen: "./src/media/comidas/empanadas_atun.jpg",
-        receta: `1. Preparar una masa con harina y manteca.
+      ingredientes: "Carne de res, cebolla, tomate, salsa de soja",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Empanadas de atún",
+      imagen: "./src/media/comidas/empanadas_atun.jpg",
+      receta: `1. Preparar una masa con harina y manteca.
            2. Rellenar con atún, tomate y cebolla.
            3. Hornear hasta que estén doradas.`,
-        ingredientes: "Harina, atún, tomate, cebolla",
-        alergenos: ["Gluten", "Pescado"]
-      },
-      {
-        nombre: "Pan de plátano",
-        imagen: "./src/media/comidas/pan_platano.jpg",
-        receta: `1. Triturar plátanos maduros y mezclarlos con harina y huevos.
+      ingredientes: "Harina, atún, tomate, cebolla",
+      alergenos: ["Gluten", "Pescado"]
+    },
+    {
+      nombre: "Pan de plátano",
+      imagen: "./src/media/comidas/pan_platano.jpg",
+      receta: `1. Triturar plátanos maduros y mezclarlos con harina y huevos.
            2. Incorporar nueces y hornear a 180°C durante 45 minutos.
            3. Dejar enfriar antes de cortar.`,
-        ingredientes: "Plátanos, harina, huevos, nueces",
-        alergenos: ["Gluten", "Frutos secos", "Huevo"]
-      },
-      {
-        nombre: "Sopa de lentejas",
-        imagen: "./src/media/comidas/sopa_lentejas.jpg",
-        receta: `1. Sofreír cebolla y zanahoria en una olla.
+      ingredientes: "Plátanos, harina, huevos, nueces",
+      alergenos: ["Gluten", "Frutos secos", "Huevo"]
+    },
+    {
+      nombre: "Sopa de lentejas",
+      imagen: "./src/media/comidas/sopa_lentejas.jpg",
+      receta: `1. Sofreír cebolla y zanahoria en una olla.
            2. Añadir lentejas, caldo y laurel.
            3. Cocinar a fuego lento durante 30 minutos.`,
-        ingredientes: "Lentejas, cebolla, zanahoria, caldo",
-        alergenos: []
-      },
-      {
-        nombre: "Tarta de frambuesas",
-        imagen: "./src/media/comidas/tarta_framuesa.jpg",
-        receta: `1. Preparar una base de masa quebrada.
+      ingredientes: "Lentejas, cebolla, zanahoria, caldo",
+      alergenos: []
+    },
+    {
+      nombre: "Tarta de frambuesas",
+      imagen: "./src/media/comidas/tarta_framuesa.jpg",
+      receta: `1. Preparar una base de masa quebrada.
            2. Rellenar con una crema pastelera y frambuesas frescas.
            3. Refrigerar antes de servir.`,
-        ingredientes: "Masa quebrada, frambuesas, crema pastelera",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Pasta puttanesca",
-        imagen: "./src/media/comidas/pasta_puttanesca.jpg",
-        receta: `1. Cocer la pasta al dente.
+      ingredientes: "Masa quebrada, frambuesas, crema pastelera",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Pasta puttanesca",
+      imagen: "./src/media/comidas/pasta_puttanesca.jpg",
+      receta: `1. Cocer la pasta al dente.
            2. Preparar una salsa con tomate, anchoas, alcaparras y aceitunas.
            3. Mezclar con la pasta y servir caliente.`,
-        ingredientes: "Pasta, tomate, anchoas, alcaparras",
-        alergenos: ["Gluten", "Pescado"]
-      },
-      {
-        nombre: "Omelette de espinacas y queso",
-        imagen: "./src/media/comidas/omelette_espinacas.jpg",
-        receta: `1. Batir huevos y añadir espinacas picadas.
+      ingredientes: "Pasta, tomate, anchoas, alcaparras",
+      alergenos: ["Gluten", "Pescado"]
+    },
+    {
+      nombre: "Omelette de espinacas y queso",
+      imagen: "./src/media/comidas/omelette_espinacas.jpg",
+      receta: `1. Batir huevos y añadir espinacas picadas.
            2. Cocinar en una sartén y añadir queso rallado.
            3. Doblar la omelette y servir.`,
-        ingredientes: "Huevos, espinacas, queso",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Patatas bravas",
-        imagen: "./src/media/comidas/patatas_bravas.jpg",
-        receta: `1. Cortar las patatas en cubos y freírlas.
+      ingredientes: "Huevos, espinacas, queso",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Patatas bravas",
+      imagen: "./src/media/comidas/patatas_bravas.jpg",
+      receta: `1. Cortar las patatas en cubos y freírlas.
            2. Preparar una salsa brava con tomate, pimentón y ajo.
            3. Servir las patatas con la salsa por encima.`,
-        ingredientes: "Patatas, tomate, pimentón, ajo",
-        alergenos: []
-      },
-      {
-        nombre: "Pollo a la parrilla con chimichurri",
-        imagen: "./src/media/comidas/pollo_chimichurri.jpg",
-        receta: `1. Marinar el pollo con limón, ajo y especias.
+      ingredientes: "Patatas, tomate, pimentón, ajo",
+      alergenos: []
+    },
+    {
+      nombre: "Pollo a la parrilla con chimichurri",
+      imagen: "./src/media/comidas/pollo_chimichurri.jpg",
+      receta: `1. Marinar el pollo con limón, ajo y especias.
            2. Asar a la parrilla hasta que esté dorado.
            3. Servir con chimichurri casero.`,
-        ingredientes: "Pollo, limón, ajo, perejil",
-        alergenos: []
-      },
-      {
-        nombre: "Bruschetta de tomate y albahaca",
-        imagen: "./src/media/comidas/bruschetta.jpg",
-        receta: `1. Tostar rebanadas de pan rústico.
+      ingredientes: "Pollo, limón, ajo, perejil",
+      alergenos: []
+    },
+    {
+      nombre: "Bruschetta de tomate y albahaca",
+      imagen: "./src/media/comidas/bruschetta.jpg",
+      receta: `1. Tostar rebanadas de pan rústico.
            2. Frotar ajo sobre el pan caliente.
            3. Cubrir con tomate picado, albahaca y aceite de oliva.`,
-        ingredientes: "Pan, tomate, albahaca, ajo, aceite de oliva",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Gazpacho de sandía",
-        imagen: "./src/media/comidas/gazpacho_sandia.jpg",
-        receta: `1. Triturar sandía, tomate, pepino y cebolla.
+      ingredientes: "Pan, tomate, albahaca, ajo, aceite de oliva",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Gazpacho de sandía",
+      imagen: "./src/media/comidas/gazpacho_sandia.jpg",
+      receta: `1. Triturar sandía, tomate, pepino y cebolla.
            2. Aliñar con aceite de oliva y vinagre de jerez.
            3. Enfriar antes de servir.`,
-        ingredientes: "Sandía, tomate, pepino, cebolla",
-        alergenos: []
-      },
-      {
-        nombre: "Huevo poché con espárragos y trufa",
-        imagen: "./src/media/comidas/huevo_poche.jpg",
-        receta: `1. Cocer el huevo en agua a baja temperatura hasta cuajar.
+      ingredientes: "Sandía, tomate, pepino, cebolla",
+      alergenos: []
+    },
+    {
+      nombre: "Huevo poché con espárragos y trufa",
+      imagen: "./src/media/comidas/huevo_poche.jpg",
+      receta: `1. Cocer el huevo en agua a baja temperatura hasta cuajar.
            2. Saltear espárragos en aceite de oliva.
            3. Servir el huevo sobre los espárragos y rallar trufa encima.`,
-        ingredientes: "Huevos, espárragos, trufa, aceite de oliva",
-        alergenos: ["Huevo"]
-      },
-      {
-        nombre: "Caviar de berenjena",
-        imagen: "./src/media/comidas/caviar_berenjena.jpg",
-        receta: `1. Asar las berenjenas en el horno hasta que estén tiernas.
+      ingredientes: "Huevos, espárragos, trufa, aceite de oliva",
+      alergenos: ["Huevo"]
+    },
+    {
+      nombre: "Caviar de berenjena",
+      imagen: "./src/media/comidas/caviar_berenjena.jpg",
+      receta: `1. Asar las berenjenas en el horno hasta que estén tiernas.
            2. Triturar con ajo, limón y aceite de oliva.
            3. Servir con pan tostado.`,
-        ingredientes: "Berenjenas, ajo, limón, pan tostado",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Sopa de melón con jamón",
-        imagen: "./src/media/comidas/sopa_melon.jpg",
-        receta: `1. Triturar melón con un toque de nata.
+      ingredientes: "Berenjenas, ajo, limón, pan tostado",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Sopa de melón con jamón",
+      imagen: "./src/media/comidas/sopa_melon.jpg",
+      receta: `1. Triturar melón con un toque de nata.
            2. Servir fría y añadir lonchas finas de jamón serrano.
            3. Decorar con hojas de menta.`,
-        ingredientes: "Melón, nata, jamón serrano",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Panna cotta de vainilla",
-        imagen: "./src/media/comidas/panna_cotta.jpg",
-        receta: `1. Calentar nata con azúcar y vainilla hasta que hierva.
+      ingredientes: "Melón, nata, jamón serrano",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Panna cotta de vainilla",
+      imagen: "./src/media/comidas/panna_cotta.jpg",
+      receta: `1. Calentar nata con azúcar y vainilla hasta que hierva.
            2. Incorporar gelatina y mezclar.
            3. Refrigerar durante al menos 4 horas.`,
-        ingredientes: "Nata, azúcar, gelatina, vainilla",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Tiramisú de limón",
-        imagen: "./src/media/comidas/tiramisu_limon.jpg",
-        receta: `1. Remojar bizcochos en limoncello.
+      ingredientes: "Nata, azúcar, gelatina, vainilla",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Tiramisú de limón",
+      imagen: "./src/media/comidas/tiramisu_limon.jpg",
+      receta: `1. Remojar bizcochos en limoncello.
            2. Alternar capas de bizcochos y crema de mascarpone con limón.
            3. Refrigerar y servir frío.`,
-        ingredientes: "Bizcochos, mascarpone, limoncello",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Mousse de chocolate",
-        imagen: "./src/media/comidas/mousse_chocolate.jpg",
-        receta: `1. Fundir el chocolate con mantequilla.
+      ingredientes: "Bizcochos, mascarpone, limoncello",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Mousse de chocolate",
+      imagen: "./src/media/comidas/mousse_chocolate.jpg",
+      receta: `1. Fundir el chocolate con mantequilla.
            2. Incorporar yemas de huevo y claras montadas a punto de nieve.
            3. Refrigerar durante 2 horas antes de servir.`,
-        ingredientes: "Chocolate, huevos, mantequilla",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Crème brûlée",
-        imagen: "./src/media/comidas/creme_brulee.jpg",
-        receta: `1. Calentar nata con vainilla y azúcar.
+      ingredientes: "Chocolate, huevos, mantequilla",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Crème brûlée",
+      imagen: "./src/media/comidas/creme_brulee.jpg",
+      receta: `1. Calentar nata con vainilla y azúcar.
            2. Mezclar con yemas de huevo y hornear al baño maría.
            3. Espolvorear azúcar por encima y caramelizar.`,
-        ingredientes: "Nata, vainilla, yemas de huevo, azúcar",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Flan de coco",
-        imagen: "./src/media/comidas/flan_coco.jpg",
-        receta: `1. Mezclar leche de coco, huevos y azúcar.
+      ingredientes: "Nata, vainilla, yemas de huevo, azúcar",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Flan de coco",
+      imagen: "./src/media/comidas/flan_coco.jpg",
+      receta: `1. Mezclar leche de coco, huevos y azúcar.
            2. Verter en moldes y hornear al baño maría.
            3. Dejar enfriar y desmoldar.`,
-        ingredientes: "Leche de coco, huevos, azúcar",
-        alergenos: ["Huevo"]
-      },
-      {
-        nombre: "Granizado de limón",
-        imagen: "./src/media/comidas/granizado_limon.jpg",
-        receta: `1. Mezclar agua, jugo de limón y azúcar.
+      ingredientes: "Leche de coco, huevos, azúcar",
+      alergenos: ["Huevo"]
+    },
+    {
+      nombre: "Granizado de limón",
+      imagen: "./src/media/comidas/granizado_limon.jpg",
+      receta: `1. Mezclar agua, jugo de limón y azúcar.
            2. Congelar y remover cada 30 minutos para formar cristales.
            3. Servir con hojas de menta.`,
-        ingredientes: "Agua, limón, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Sangría tradicional",
-        imagen: "./src/media/comidas/sangria.jpg",
-        receta: `1. Mezclar vino tinto con zumo de naranja y azúcar.
+      ingredientes: "Agua, limón, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Sangría tradicional",
+      imagen: "./src/media/comidas/sangria.jpg",
+      receta: `1. Mezclar vino tinto con zumo de naranja y azúcar.
            2. Añadir frutas como melocotón, manzana y limón.
            3. Enfriar antes de servir.`,
-        ingredientes: "Vino tinto, frutas, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Margarita clásica",
-        imagen: "./src/media/comidas/margarita.jpg",
-        receta: `1. Mezclar tequila, triple sec y jugo de lima.
+      ingredientes: "Vino tinto, frutas, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Margarita clásica",
+      imagen: "./src/media/comidas/margarita.jpg",
+      receta: `1. Mezclar tequila, triple sec y jugo de lima.
            2. Agitar con hielo y colar.
            3. Servir en una copa escarchada con sal.`,
-        ingredientes: "Tequila, triple sec, lima",
-        alergenos: []
-      },
-      {
-        nombre: "Piña colada",
-        imagen: "./src/media/comidas/pina_colada.jpg",
-        receta: `1. Mezclar ron, leche de coco y jugo de piña.
+      ingredientes: "Tequila, triple sec, lima",
+      alergenos: []
+    },
+    {
+      nombre: "Piña colada",
+      imagen: "./src/media/comidas/pina_colada.jpg",
+      receta: `1. Mezclar ron, leche de coco y jugo de piña.
            2. Batir con hielo hasta obtener una textura cremosa.
            3. Decorar con una rodaja de piña.`,
-        ingredientes: "Ron, leche de coco, jugo de piña",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Mojito clásico",
-        imagen: "./src/media/comidas/mojito.jpg",
-        receta: `1. Machacar menta, azúcar y lima en un vaso.
+      ingredientes: "Ron, leche de coco, jugo de piña",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Mojito clásico",
+      imagen: "./src/media/comidas/mojito.jpg",
+      receta: `1. Machacar menta, azúcar y lima en un vaso.
            2. Añadir hielo y ron blanco.
            3. Completar con agua con gas y remover.`,
-        ingredientes: "Menta, azúcar, lima, ron blanco",
-        alergenos: []
-      },
-      {
-        nombre: "Café irlandés",
-        imagen: "./src/media/comidas/cafe_irlandes.jpg",
-        receta: `1. Preparar café fuerte.
+      ingredientes: "Menta, azúcar, lima, ron blanco",
+      alergenos: []
+    },
+    {
+      nombre: "Café irlandés",
+      imagen: "./src/media/comidas/cafe_irlandes.jpg",
+      receta: `1. Preparar café fuerte.
            2. Añadir whisky irlandés y azúcar.
            3. Cubrir con nata montada.`,
-        ingredientes: "Café, whisky, nata",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Batido de fresa y plátano",
-        imagen: "./src/media/comidas/batido_fresa_platano.jpg",
-        receta: `1. Triturar fresas y plátano con leche.
+      ingredientes: "Café, whisky, nata",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Batido de fresa y plátano",
+      imagen: "./src/media/comidas/batido_fresa_platano.jpg",
+      receta: `1. Triturar fresas y plátano con leche.
            2. Endulzar al gusto con miel o azúcar.
            3. Servir frío.`,
-        ingredientes: "Fresas, plátano, leche, miel",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Churros con chocolate caliente",
-        imagen: "./src/media/comidas/churros_chocolate.jpg",
-        receta: `1. Preparar una masa con harina, agua y sal.
+      ingredientes: "Fresas, plátano, leche, miel",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Churros con chocolate caliente",
+      imagen: "./src/media/comidas/churros_chocolate.jpg",
+      receta: `1. Preparar una masa con harina, agua y sal.
            2. Formar los churros y freírlos.
            3. Servir con chocolate caliente.`,
-        ingredientes: "Harina, agua, chocolate, azúcar",
-        alergenos: ["Gluten"]
-      },
-      {
-        nombre: "Helado de vainilla casero",
-        imagen: "./src/media/comidas/helado_vainilla.jpg",
-        receta: `1. Mezclar leche, nata, azúcar y vainilla.
+      ingredientes: "Harina, agua, chocolate, azúcar",
+      alergenos: ["Gluten"]
+    },
+    {
+      nombre: "Helado de vainilla casero",
+      imagen: "./src/media/comidas/helado_vainilla.jpg",
+      receta: `1. Mezclar leche, nata, azúcar y vainilla.
            2. Congelar removiendo cada 30 minutos.
            3. Servir con sirope de chocolate.`,
-        ingredientes: "Leche, nata, vainilla, azúcar",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Crostini de queso de cabra y miel",
-        imagen: "./src/media/comidas/crostini.jpg",
-        receta: `1. Tostar rebanadas de pan y untar queso de cabra.
+      ingredientes: "Leche, nata, vainilla, azúcar",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Crostini de queso de cabra y miel",
+      imagen: "./src/media/comidas/crostini.jpg",
+      receta: `1. Tostar rebanadas de pan y untar queso de cabra.
            2. Añadir un hilo de miel y nueces picadas.
            3. Decorar con hojas de rúcula y servir.`,
-        ingredientes: "Pan, queso de cabra, miel, nueces",
-        alergenos: ["Gluten", "Lácteos", "Frutos secos"]
-      },
-      {
-        nombre: "Rollitos de jamón y espárragos",
-        imagen: "./src/media/comidas/rollitos_jamon_esparragos.jpg",
-        receta: `1. Hervir los espárragos hasta que estén tiernos.
+      ingredientes: "Pan, queso de cabra, miel, nueces",
+      alergenos: ["Gluten", "Lácteos", "Frutos secos"]
+    },
+    {
+      nombre: "Rollitos de jamón y espárragos",
+      imagen: "./src/media/comidas/rollitos_jamon_esparragos.jpg",
+      receta: `1. Hervir los espárragos hasta que estén tiernos.
            2. Envolverlos en lonchas de jamón serrano.
            3. Saltear ligeramente y servir calientes.`,
-        ingredientes: "Espárragos, jamón serrano",
-        alergenos: []
-      },
-      {
-        nombre: "Guacamole con nachos",
-        imagen: "./src/media/comidas/guacamole.jpg",
-        receta: `1. Triturar aguacate con cebolla, tomate y cilantro.
+      ingredientes: "Espárragos, jamón serrano",
+      alergenos: []
+    },
+    {
+      nombre: "Guacamole con nachos",
+      imagen: "./src/media/comidas/guacamole.jpg",
+      receta: `1. Triturar aguacate con cebolla, tomate y cilantro.
            2. Añadir jugo de limón y sal al gusto.
            3. Servir con nachos de maíz.`,
-        ingredientes: "Aguacate, cebolla, tomate, limón",
-        alergenos: []
-      },
-      {
-        nombre: "Paté de champiñones",
-        imagen: "./src/media/comidas/pate_champinones.jpg",
-        receta: `1. Saltear champiñones con cebolla y ajo.
+      ingredientes: "Aguacate, cebolla, tomate, limón",
+      alergenos: []
+    },
+    {
+      nombre: "Paté de champiñones",
+      imagen: "./src/media/comidas/pate_champinones.jpg",
+      receta: `1. Saltear champiñones con cebolla y ajo.
            2. Triturar con nueces y un toque de crema.
            3. Servir con pan tostado.`,
-        ingredientes: "Champiñones, nueces, cebolla, crema",
-        alergenos: ["Frutos secos", "Lácteos"]
-      },
-      {
-        nombre: "Canelones dulces de manzana",
-        imagen: "./src/media/comidas/canelones_manzana.jpg",
-        receta: `1. Rellenar crepes con manzanas caramelizadas.
+      ingredientes: "Champiñones, nueces, cebolla, crema",
+      alergenos: ["Frutos secos", "Lácteos"]
+    },
+    {
+      nombre: "Canelones dulces de manzana",
+      imagen: "./src/media/comidas/canelones_manzana.jpg",
+      receta: `1. Rellenar crepes con manzanas caramelizadas.
            2. Enrollar y colocar en una fuente.
            3. Hornear durante 15 minutos y servir con canela.`,
-        ingredientes: "Crepes, manzana, azúcar, canela",
-        alergenos: ["Gluten", "Huevo"]
-      },
-      {
-        nombre: "Galletas de avena y chocolate",
-        imagen: "./src/media/comidas/galletas_avena.jpg",
-        receta: `1. Mezclar avena, harina, mantequilla y chispas de chocolate.
+      ingredientes: "Crepes, manzana, azúcar, canela",
+      alergenos: ["Gluten", "Huevo"]
+    },
+    {
+      nombre: "Galletas de avena y chocolate",
+      imagen: "./src/media/comidas/galletas_avena.jpg",
+      receta: `1. Mezclar avena, harina, mantequilla y chispas de chocolate.
            2. Formar pequeñas bolitas y aplanarlas.
            3. Hornear a 180°C durante 15 minutos.`,
-        ingredientes: "Avena, harina, mantequilla, chocolate",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Crêpes Suzette",
-        imagen: "./src/media/comidas/crepes_suzette.jpg",
-        receta: `1. Preparar crepes y reservar.
+      ingredientes: "Avena, harina, mantequilla, chocolate",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Crêpes Suzette",
+      imagen: "./src/media/comidas/crepes_suzette.jpg",
+      receta: `1. Preparar crepes y reservar.
            2. Hacer una salsa con jugo de naranja, mantequilla y azúcar.
            3. Bañar los crepes en la salsa y flambear.`,
-        ingredientes: "Crepes, naranja, mantequilla, azúcar",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Arroz con leche",
-        imagen: "./src/media/comidas/arroz_leche.jpg",
-        receta: `1. Cocer el arroz en leche con cáscara de limón y canela.
+      ingredientes: "Crepes, naranja, mantequilla, azúcar",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Arroz con leche",
+      imagen: "./src/media/comidas/arroz_leche.jpg",
+      receta: `1. Cocer el arroz en leche con cáscara de limón y canela.
            2. Añadir azúcar y seguir cocinando hasta espesar.
            3. Servir frío o caliente con canela en polvo.`,
-        ingredientes: "Arroz, leche, azúcar, limón",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Sorbet de mango",
-        imagen: "./src/media/comidas/sorbet_mango.jpg",
-        receta: `1. Triturar mango fresco con azúcar y jugo de limón.
+      ingredientes: "Arroz, leche, azúcar, limón",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Sorbet de mango",
+      imagen: "./src/media/comidas/sorbet_mango.jpg",
+      receta: `1. Triturar mango fresco con azúcar y jugo de limón.
            2. Congelar y remover cada 30 minutos.
            3. Servir con hojas de menta.`,
-        ingredientes: "Mango, azúcar, limón",
-        alergenos: []
-      },
-      {
-        nombre: "Batido de chocolate y almendra",
-        imagen: "./src/media/comidas/batido_chocolate_almendra.jpg",
-        receta: `1. Triturar leche, cacao y crema de almendra.
+      ingredientes: "Mango, azúcar, limón",
+      alergenos: []
+    },
+    {
+      nombre: "Batido de chocolate y almendra",
+      imagen: "./src/media/comidas/batido_chocolate_almendra.jpg",
+      receta: `1. Triturar leche, cacao y crema de almendra.
            2. Endulzar al gusto y servir frío.
            3. Decorar con almendras picadas.`,
-        ingredientes: "Leche, cacao, almendras",
-        alergenos: ["Lácteos", "Frutos secos"]
-      },
-      {
-        nombre: "Smoothie de frutos rojos",
-        imagen: "./src/media/comidas/smoothie_frutos_rojos.jpg",
-        receta: `1. Triturar frambuesas, fresas y arándanos con yogur.
+      ingredientes: "Leche, cacao, almendras",
+      alergenos: ["Lácteos", "Frutos secos"]
+    },
+    {
+      nombre: "Smoothie de frutos rojos",
+      imagen: "./src/media/comidas/smoothie_frutos_rojos.jpg",
+      receta: `1. Triturar frambuesas, fresas y arándanos con yogur.
            2. Endulzar al gusto y añadir hielo.
            3. Servir con hojas de menta.`,
-        ingredientes: "Frutos rojos, yogur, miel",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Sangría blanca",
-        imagen: "./src/media/comidas/sangria_blanca.jpg",
-        receta: `1. Mezclar vino blanco con melocotón y manzana.
+      ingredientes: "Frutos rojos, yogur, miel",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Sangría blanca",
+      imagen: "./src/media/comidas/sangria_blanca.jpg",
+      receta: `1. Mezclar vino blanco con melocotón y manzana.
            2. Endulzar con azúcar y añadir zumo de naranja.
            3. Enfriar antes de servir.`,
-        ingredientes: "Vino blanco, frutas, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Tequila sunrise",
-        imagen: "./src/media/comidas/tequila_sunrise.jpg",
-        receta: `1. Mezclar tequila con jugo de naranja.
+      ingredientes: "Vino blanco, frutas, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Tequila sunrise",
+      imagen: "./src/media/comidas/tequila_sunrise.jpg",
+      receta: `1. Mezclar tequila con jugo de naranja.
            2. Añadir granadina y dejar que se asiente en el fondo.
            3. Decorar con una rodaja de naranja.`,
-        ingredientes: "Tequila, jugo de naranja, granadina",
-        alergenos: []
-      },
-      {
-        nombre: "Zumo detox de espinacas y piña",
-        imagen: "./src/media/comidas/zumo_detox.jpg",
-        receta: `1. Triturar espinacas frescas, piña y jengibre.
+      ingredientes: "Tequila, jugo de naranja, granadina",
+      alergenos: []
+    },
+    {
+      nombre: "Zumo detox de espinacas y piña",
+      imagen: "./src/media/comidas/zumo_detox.jpg",
+      receta: `1. Triturar espinacas frescas, piña y jengibre.
            2. Añadir agua o leche vegetal al gusto.
            3. Servir frío.`,
-        ingredientes: "Espinacas, piña, jengibre",
-        alergenos: []
-      },
-      {
-        nombre: "Café affogato",
-        imagen: "./src/media/comidas/affogato.jpg",
-        receta: `1. Preparar un espresso fuerte.
+      ingredientes: "Espinacas, piña, jengibre",
+      alergenos: []
+    },
+    {
+      nombre: "Café affogato",
+      imagen: "./src/media/comidas/affogato.jpg",
+      receta: `1. Preparar un espresso fuerte.
            2. Colocar una bola de helado de vainilla en una taza.
            3. Verter el café caliente sobre el helado.`,
-        ingredientes: "Café, helado de vainilla",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Piña asada con miel y canela",
-        imagen: "./src/media/comidas/pina_asada.jpg",
-        receta: `1. Cortar piña en rodajas gruesas.
+      ingredientes: "Café, helado de vainilla",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Piña asada con miel y canela",
+      imagen: "./src/media/comidas/pina_asada.jpg",
+      receta: `1. Cortar piña en rodajas gruesas.
            2. Asar en una parrilla y rociar con miel y canela.
            3. Servir con helado de coco.`,
-        ingredientes: "Piña, miel, canela",
-        alergenos: []
-      },
-      {
-        nombre: "Copa de frutas tropicales",
-        imagen: "./src/media/comidas/copa_frutas.jpg",
-        receta: `1. Cortar mango, kiwi, plátano y fresas.
+      ingredientes: "Piña, miel, canela",
+      alergenos: []
+    },
+    {
+      nombre: "Copa de frutas tropicales",
+      imagen: "./src/media/comidas/copa_frutas.jpg",
+      receta: `1. Cortar mango, kiwi, plátano y fresas.
            2. Mezclar con jugo de naranja y menta fresca.
            3. Refrigerar y servir en copas.`,
-        ingredientes: "Mango, kiwi, plátano, fresas",
-        alergenos: []
-      },
-      {
-        nombre: "Tarta de chocolate y avellanas",
-        imagen: "./src/media/comidas/tarta_chocolate_avellanas.jpg",
-        receta: `1. Preparar una base de galletas y mantequilla.
+      ingredientes: "Mango, kiwi, plátano, fresas",
+      alergenos: []
+    },
+    {
+      nombre: "Tarta de chocolate y avellanas",
+      imagen: "./src/media/comidas/tarta_chocolate_avellanas.jpg",
+      receta: `1. Preparar una base de galletas y mantequilla.
            2. Rellenar con ganache de chocolate y avellanas picadas.
            3. Refrigerar y decorar con avellanas enteras.`,
-        ingredientes: "Galletas, chocolate, avellanas, mantequilla",
-        alergenos: ["Gluten", "Lácteos", "Frutos secos"]
-      },
-      {
-        nombre: "Milhojas de crema y frambuesas",
-        imagen: "./src/media/comidas/milhojas.jpg",
-        receta: `1. Hornear capas de masa de hojaldre.
+      ingredientes: "Galletas, chocolate, avellanas, mantequilla",
+      alergenos: ["Gluten", "Lácteos", "Frutos secos"]
+    },
+    {
+      nombre: "Milhojas de crema y frambuesas",
+      imagen: "./src/media/comidas/milhojas.jpg",
+      receta: `1. Hornear capas de masa de hojaldre.
            2. Alternar capas de crema pastelera y frambuesas.
            3. Espolvorear azúcar glas por encima.`,
-        ingredientes: "Hojaldre, crema pastelera, frambuesas",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Flan de queso",
-        imagen: "./src/media/comidas/flan_queso.jpg",
-        receta: `1. Batir queso crema con leche, huevos y azúcar.
+      ingredientes: "Hojaldre, crema pastelera, frambuesas",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Flan de queso",
+      imagen: "./src/media/comidas/flan_queso.jpg",
+      receta: `1. Batir queso crema con leche, huevos y azúcar.
            2. Verter en moldes y cocinar al baño maría.
            3. Dejar enfriar y desmoldar.`,
-        ingredientes: "Queso crema, leche, huevos, azúcar",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Crema de calabaza con jengibre",
-        imagen: "./src/media/comidas/crema_calabaza.jpg",
-        receta: `1. Cocer la calabaza y cebolla en caldo de verduras.
+      ingredientes: "Queso crema, leche, huevos, azúcar",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Crema de calabaza con jengibre",
+      imagen: "./src/media/comidas/crema_calabaza.jpg",
+      receta: `1. Cocer la calabaza y cebolla en caldo de verduras.
            2. Triturar junto con jengibre rallado y nata.
            3. Servir caliente con semillas de calabaza.`,
-        ingredientes: "Calabaza, cebolla, nata, jengibre",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Tempura de verduras",
-        imagen: "./src/media/comidas/tempura_verduras.jpg",
-        receta: `1. Preparar una mezcla de harina y agua fría.
+      ingredientes: "Calabaza, cebolla, nata, jengibre",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Tempura de verduras",
+      imagen: "./src/media/comidas/tempura_verduras.jpg",
+      receta: `1. Preparar una mezcla de harina y agua fría.
            2. Pasar las verduras por la masa y freírlas.
            3. Servir con salsa de soja.`,
-        ingredientes: "Harina, zanahoria, brócoli, pimientos",
-        alergenos: ["Gluten", "Soja"]
-      },
-      {
-        nombre: "Alcachofas con jamón",
-        imagen: "./src/media/comidas/alcachofas_jamon.jpg",
-        receta: `1. Cocer las alcachofas hasta que estén tiernas.
+      ingredientes: "Harina, zanahoria, brócoli, pimientos",
+      alergenos: ["Gluten", "Soja"]
+    },
+    {
+      nombre: "Alcachofas con jamón",
+      imagen: "./src/media/comidas/alcachofas_jamon.jpg",
+      receta: `1. Cocer las alcachofas hasta que estén tiernas.
            2. Saltearlas con ajo y jamón serrano.
            3. Servir con un chorrito de aceite de oliva.`,
-        ingredientes: "Alcachofas, jamón serrano, ajo",
-        alergenos: []
-      },
-      {
-        nombre: "Fresas con nata",
-        imagen: "./src/media/comidas/fresas_nata.jpg",
-        receta: `1. Lavar y cortar las fresas.
+      ingredientes: "Alcachofas, jamón serrano, ajo",
+      alergenos: []
+    },
+    {
+      nombre: "Fresas con nata",
+      imagen: "./src/media/comidas/fresas_nata.jpg",
+      receta: `1. Lavar y cortar las fresas.
            2. Montar la nata con azúcar hasta obtener una textura firme.
            3. Servir las fresas con nata montada.`,
-        ingredientes: "Fresas, nata, azúcar",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Gnocchis con salsa de gorgonzola",
-        imagen: "./src/media/comidas/gnocchis_gorgonzola.jpg",
-        receta: `1. Cocer los gnocchis en agua con sal.
+      ingredientes: "Fresas, nata, azúcar",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Gnocchis con salsa de gorgonzola",
+      imagen: "./src/media/comidas/gnocchis_gorgonzola.jpg",
+      receta: `1. Cocer los gnocchis en agua con sal.
            2. Preparar la salsa con gorgonzola y nata.
            3. Mezclar los gnocchis con la salsa y servir.`,
-        ingredientes: "Gnocchis, queso gorgonzola, nata",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Profiteroles de chocolate",
-        imagen: "./src/media/comidas/profiteroles.jpg",
-        receta: `1. Preparar la masa choux y formar bolitas.
+      ingredientes: "Gnocchis, queso gorgonzola, nata",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Profiteroles de chocolate",
+      imagen: "./src/media/comidas/profiteroles.jpg",
+      receta: `1. Preparar la masa choux y formar bolitas.
            2. Hornear hasta que estén doradas.
            3. Rellenar con crema y cubrir con chocolate derretido.`,
-        ingredientes: "Harina, huevos, crema pastelera, chocolate",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Zumo de naranja y zanahoria",
-        imagen: "./src/media/comidas/zumo_naranja_zanahoria.jpg",
-        receta: `1. Exprimir el jugo de naranjas frescas.
+      ingredientes: "Harina, huevos, crema pastelera, chocolate",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Zumo de naranja y zanahoria",
+      imagen: "./src/media/comidas/zumo_naranja_zanahoria.jpg",
+      receta: `1. Exprimir el jugo de naranjas frescas.
            2. Triturar zanahorias y mezclar con el jugo.
            3. Servir con hielo.`,
-        ingredientes: "Naranjas, zanahorias",
-        alergenos: []
-      },
-      {
-        nombre: "Ensalada caprese",
-        imagen: "./src/media/comidas/ensalada_caprese.jpg",
-        receta: `1. Cortar rodajas de tomate y mozzarella.
+      ingredientes: "Naranjas, zanahorias",
+      alergenos: []
+    },
+    {
+      nombre: "Ensalada caprese",
+      imagen: "./src/media/comidas/ensalada_caprese.jpg",
+      receta: `1. Cortar rodajas de tomate y mozzarella.
            2. Alternar las rodajas en un plato y añadir albahaca.
            3. Rociar con aceite de oliva y vinagre balsámico.`,
-        ingredientes: "Tomate, mozzarella, albahaca, aceite de oliva",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Panacota de frambuesa",
-        imagen: "./src/media/comidas/panacota_framuesa.jpg",
-        receta: `1. Calentar nata con azúcar y gelatina.
+      ingredientes: "Tomate, mozzarella, albahaca, aceite de oliva",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Panacota de frambuesa",
+      imagen: "./src/media/comidas/panacota_framuesa.jpg",
+      receta: `1. Calentar nata con azúcar y gelatina.
            2. Verter en moldes y dejar enfriar en la nevera.
            3. Servir con salsa de frambuesas.`,
-        ingredientes: "Nata, frambuesas, azúcar, gelatina",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Batido tropical de mango y coco",
-        imagen: "./src/media/comidas/batido_tropical.jpg",
-        receta: `1. Triturar mango, leche de coco y piña.
+      ingredientes: "Nata, frambuesas, azúcar, gelatina",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Batido tropical de mango y coco",
+      imagen: "./src/media/comidas/batido_tropical.jpg",
+      receta: `1. Triturar mango, leche de coco y piña.
            2. Añadir hielo y endulzar al gusto.
            3. Servir frío con menta fresca.`,
-        ingredientes: "Mango, leche de coco, piña",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Cocktail Bellini",
-        imagen: "./src/media/comidas/bellini.jpg",
-        receta: `1. Triturar melocotones hasta obtener un puré fino.
+      ingredientes: "Mango, leche de coco, piña",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Cocktail Bellini",
+      imagen: "./src/media/comidas/bellini.jpg",
+      receta: `1. Triturar melocotones hasta obtener un puré fino.
            2. Mezclar con prosecco frío.
            3. Servir en copas altas.`,
-        ingredientes: "Melocotones, prosecco",
-        alergenos: []
-      },
-      {
-        nombre: "Croquetas de bacalao",
-        imagen: "./src/media/comidas/croquetas_bacalao.jpg",
-        receta: `1. Desmenuzar el bacalao y mezclarlo con bechamel.
+      ingredientes: "Melocotones, prosecco",
+      alergenos: []
+    },
+    {
+      nombre: "Croquetas de bacalao",
+      imagen: "./src/media/comidas/croquetas_bacalao.jpg",
+      receta: `1. Desmenuzar el bacalao y mezclarlo con bechamel.
            2. Formar las croquetas y pasarlas por pan rallado.
            3. Freír hasta dorar.`,
-        ingredientes: "Bacalao, harina, pan rallado, bechamel",
-        alergenos: ["Gluten", "Pescado"]
-      },
-      {
-        nombre: "Tarta de lima y merengue",
-        imagen: "./src/media/comidas/tarta_lima.jpg",
-        receta: `1. Preparar una base de galletas trituradas.
+      ingredientes: "Bacalao, harina, pan rallado, bechamel",
+      alergenos: ["Gluten", "Pescado"]
+    },
+    {
+      nombre: "Tarta de lima y merengue",
+      imagen: "./src/media/comidas/tarta_lima.jpg",
+      receta: `1. Preparar una base de galletas trituradas.
            2. Hacer una crema de lima y cubrir con merengue.
            3. Gratinar el merengue antes de servir.`,
-        ingredientes: "Galletas, lima, huevos, azúcar",
-        alergenos: ["Gluten", "Huevo"]
-      },
-      {
-        nombre: "Tostadas francesas",
-        imagen: "./src/media/comidas/tostadas_francesas.jpg",
-        receta: `1. Remojar pan en una mezcla de leche y huevos.
+      ingredientes: "Galletas, lima, huevos, azúcar",
+      alergenos: ["Gluten", "Huevo"]
+    },
+    {
+      nombre: "Tostadas francesas",
+      imagen: "./src/media/comidas/tostadas_francesas.jpg",
+      receta: `1. Remojar pan en una mezcla de leche y huevos.
            2. Cocinar en una sartén hasta dorar.
            3. Servir con sirope de arce o miel.`,
-        ingredientes: "Pan, leche, huevos, sirope",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Gelatina de fresa y yogur",
-        imagen: "./src/media/comidas/gelatina_fresa.jpg",
-        receta: `1. Preparar gelatina de fresa siguiendo las instrucciones.
+      ingredientes: "Pan, leche, huevos, sirope",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Gelatina de fresa y yogur",
+      imagen: "./src/media/comidas/gelatina_fresa.jpg",
+      receta: `1. Preparar gelatina de fresa siguiendo las instrucciones.
            2. Mezclar con yogur natural y refrigerar.
            3. Servir con trozos de fresa fresca.`,
-        ingredientes: "Gelatina de fresa, yogur",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Ensalada de frutas exóticas",
-        imagen: "./src/media/comidas/ensalada_frutas.jpg",
-        receta: `1. Cortar piña, mango, papaya y kiwi en trozos.
+      ingredientes: "Gelatina de fresa, yogur",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Ensalada de frutas exóticas",
+      imagen: "./src/media/comidas/ensalada_frutas.jpg",
+      receta: `1. Cortar piña, mango, papaya y kiwi en trozos.
            2. Añadir granada y hojas de menta.
            3. Rociar con jugo de naranja.`,
-        ingredientes: "Piña, mango, papaya, kiwi, granada",
-        alergenos: []
-      },
-      {
-        nombre: "Mojito de sandía",
-        imagen: "./src/media/comidas/mojito_sandia.jpg",
-        receta: `1. Triturar sandía y mezclar con ron, menta y lima.
+      ingredientes: "Piña, mango, papaya, kiwi, granada",
+      alergenos: []
+    },
+    {
+      nombre: "Mojito de sandía",
+      imagen: "./src/media/comidas/mojito_sandia.jpg",
+      receta: `1. Triturar sandía y mezclar con ron, menta y lima.
            2. Añadir hielo y agua con gas.
            3. Servir con rodajas de sandía.`,
-        ingredientes: "Sandía, ron, menta, lima",
-        alergenos: []
-      },
-      {
-        nombre: "Pavlova de frutos rojos",
-        imagen: "./src/media/comidas/pavlova_frutos_rojos.jpg",
-        receta: `1. Batir claras de huevo con azúcar hasta obtener un merengue firme.
+      ingredientes: "Sandía, ron, menta, lima",
+      alergenos: []
+    },
+    {
+      nombre: "Pavlova de frutos rojos",
+      imagen: "./src/media/comidas/pavlova_frutos_rojos.jpg",
+      receta: `1. Batir claras de huevo con azúcar hasta obtener un merengue firme.
            2. Hornear a baja temperatura.
            3. Cubrir con nata montada y frutos rojos.`,
-        ingredientes: "Claras de huevo, azúcar, nata, frutos rojos",
-        alergenos: ["Huevo", "Lácteos"]
-      },
-      {
-        nombre: "Carpaccio de ternera con parmesano",
-        imagen: "./src/media/comidas/carpaccio_ternera.jpg",
-        receta: `1. Cortar la ternera en láminas muy finas.
+      ingredientes: "Claras de huevo, azúcar, nata, frutos rojos",
+      alergenos: ["Huevo", "Lácteos"]
+    },
+    {
+      nombre: "Carpaccio de ternera con parmesano",
+      imagen: "./src/media/comidas/carpaccio_ternera.jpg",
+      receta: `1. Cortar la ternera en láminas muy finas.
            2. Aliñar con aceite de oliva, limón y pimienta.
            3. Espolvorear con lascas de queso parmesano y albahaca.`,
-        ingredientes: "Ternera, queso parmesano, aceite de oliva, limón",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Tartar de salmón y aguacate",
-        imagen: "./src/media/comidas/tartar_salmon.jpg",
-        receta: `1. Cortar el salmón fresco y el aguacate en cubos pequeños.
+      ingredientes: "Ternera, queso parmesano, aceite de oliva, limón",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Tartar de salmón y aguacate",
+      imagen: "./src/media/comidas/tartar_salmon.jpg",
+      receta: `1. Cortar el salmón fresco y el aguacate en cubos pequeños.
            2. Mezclar con cebolla morada, jugo de limón y eneldo.
            3. Servir con tostadas o pan crujiente.`,
-        ingredientes: "Salmón, aguacate, cebolla morada, pan",
-        alergenos: ["Pescado", "Gluten"]
-      },
-      {
-        nombre: "Bolas de mozzarella marinadas",
-        imagen: "./src/media/comidas/bolas_mozzarella.jpg",
-        receta: `1. Marinar bolas de mozzarella en aceite de oliva, ajo y albahaca.
+      ingredientes: "Salmón, aguacate, cebolla morada, pan",
+      alergenos: ["Pescado", "Gluten"]
+    },
+    {
+      nombre: "Bolas de mozzarella marinadas",
+      imagen: "./src/media/comidas/bolas_mozzarella.jpg",
+      receta: `1. Marinar bolas de mozzarella en aceite de oliva, ajo y albahaca.
            2. Dejar reposar 30 minutos antes de servir.
            3. Acompañar con pan tostado.`,
-        ingredientes: "Mozzarella, ajo, albahaca, aceite de oliva",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Crema catalana",
-        imagen: "./src/media/comidas/crema_catalana.jpg",
-        receta: `1. Calentar leche con cáscara de limón y canela.
+      ingredientes: "Mozzarella, ajo, albahaca, aceite de oliva",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Crema catalana",
+      imagen: "./src/media/comidas/crema_catalana.jpg",
+      receta: `1. Calentar leche con cáscara de limón y canela.
            2. Batir yemas de huevo con azúcar y añadir la leche caliente.
            3. Cocinar hasta espesar y caramelizar azúcar por encima.`,
-        ingredientes: "Leche, yemas de huevo, azúcar, limón",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Granizado de sandía y menta",
-        imagen: "./src/media/comidas/granizado_sandia.jpg",
-        receta: `1. Triturar sandía fresca con hojas de menta y azúcar.
+      ingredientes: "Leche, yemas de huevo, azúcar, limón",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Granizado de sandía y menta",
+      imagen: "./src/media/comidas/granizado_sandia.jpg",
+      receta: `1. Triturar sandía fresca con hojas de menta y azúcar.
            2. Congelar y remover cada 30 minutos hasta formar cristales.
            3. Servir con hojas de menta fresca.`,
-        ingredientes: "Sandía, menta, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Mousse de maracuyá",
-        imagen: "./src/media/comidas/mousse_maracuya.jpg",
-        receta: `1. Triturar pulpa de maracuyá con azúcar.
+      ingredientes: "Sandía, menta, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Mousse de maracuyá",
+      imagen: "./src/media/comidas/mousse_maracuya.jpg",
+      receta: `1. Triturar pulpa de maracuyá con azúcar.
            2. Mezclar con nata montada y gelatina disuelta.
            3. Refrigerar durante 4 horas antes de servir.`,
-        ingredientes: "Maracuyá, nata, azúcar, gelatina",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Tostadas con aguacate y huevo escalfado",
-        imagen: "./src/media/comidas/tostadas_aguacate.jpg",
-        receta: `1. Tostar pan integral y cubrir con aguacate triturado.
+      ingredientes: "Maracuyá, nata, azúcar, gelatina",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Tostadas con aguacate y huevo escalfado",
+      imagen: "./src/media/comidas/tostadas_aguacate.jpg",
+      receta: `1. Tostar pan integral y cubrir con aguacate triturado.
            2. Escalfar un huevo y colocarlo encima.
            3. Espolvorear con pimienta y semillas de sésamo.`,
-        ingredientes: "Pan integral, aguacate, huevo, sésamo",
-        alergenos: ["Gluten", "Huevo", "Sésamo"]
-      },
-      {
-        nombre: "Gelatina de naranja y frambuesas",
-        imagen: "./src/media/comidas/gelatina_naranja.jpg",
-        receta: `1. Preparar gelatina de naranja y verter en moldes.
+      ingredientes: "Pan integral, aguacate, huevo, sésamo",
+      alergenos: ["Gluten", "Huevo", "Sésamo"]
+    },
+    {
+      nombre: "Gelatina de naranja y frambuesas",
+      imagen: "./src/media/comidas/gelatina_naranja.jpg",
+      receta: `1. Preparar gelatina de naranja y verter en moldes.
            2. Añadir frambuesas frescas antes de refrigerar.
            3. Dejar enfriar hasta cuajar.`,
-        ingredientes: "Gelatina de naranja, frambuesas",
-        alergenos: []
-      },
-      {
-        nombre: "Paletas de mango y coco",
-        imagen: "./src/media/comidas/paletas_mango_coco.jpg",
-        receta: `1. Triturar mango fresco con leche de coco y azúcar.
+      ingredientes: "Gelatina de naranja, frambuesas",
+      alergenos: []
+    },
+    {
+      nombre: "Paletas de mango y coco",
+      imagen: "./src/media/comidas/paletas_mango_coco.jpg",
+      receta: `1. Triturar mango fresco con leche de coco y azúcar.
            2. Verter en moldes de paletas y congelar.
            3. Servir frías.`,
-        ingredientes: "Mango, leche de coco, azúcar",
-        alergenos: ["Soja"]
-      },
-      {
-        nombre: "Bebida refrescante de pepino y limón",
-        imagen: "./src/media/comidas/bebida_pepino_limon.jpg",
-        receta: `1. Triturar pepino con jugo de limón y azúcar.
+      ingredientes: "Mango, leche de coco, azúcar",
+      alergenos: ["Soja"]
+    },
+    {
+      nombre: "Bebida refrescante de pepino y limón",
+      imagen: "./src/media/comidas/bebida_pepino_limon.jpg",
+      receta: `1. Triturar pepino con jugo de limón y azúcar.
            2. Añadir agua con gas y hielo.
            3. Servir con rodajas de pepino.`,
-        ingredientes: "Pepino, limón, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Tarta de frutas frescas",
-        imagen: "./src/media/comidas/tarta_frutas_frescas.jpg",
-        receta: `1. Preparar una base de masa quebrada.
+      ingredientes: "Pepino, limón, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Tarta de frutas frescas",
+      imagen: "./src/media/comidas/tarta_frutas_frescas.jpg",
+      receta: `1. Preparar una base de masa quebrada.
            2. Cubrir con crema pastelera y frutas frescas.
            3. Refrigerar antes de servir.`,
-        ingredientes: "Masa quebrada, crema pastelera, frutas",
-        alergenos: ["Gluten", "Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Macarons franceses",
-        imagen: "./src/media/comidas/macarons.jpg",
-        receta: `1. Batir claras de huevo con azúcar y almendra molida.
+      ingredientes: "Masa quebrada, crema pastelera, frutas",
+      alergenos: ["Gluten", "Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Macarons franceses",
+      imagen: "./src/media/comidas/macarons.jpg",
+      receta: `1. Batir claras de huevo con azúcar y almendra molida.
            2. Formar los macarons y hornear a baja temperatura.
            3. Rellenar con ganache de chocolate o crema.`,
-        ingredientes: "Almendra, claras de huevo, azúcar, chocolate",
-        alergenos: ["Frutos secos", "Huevo"]
-      },
-      {
-        nombre: "Ceviche de mango y camarones",
-        imagen: "./src/media/comidas/ceviche_mango_camarones.jpg",
-        receta: `1. Marinar los camarones en jugo de limón.
+      ingredientes: "Almendra, claras de huevo, azúcar, chocolate",
+      alergenos: ["Frutos secos", "Huevo"]
+    },
+    {
+      nombre: "Ceviche de mango y camarones",
+      imagen: "./src/media/comidas/ceviche_mango_camarones.jpg",
+      receta: `1. Marinar los camarones en jugo de limón.
            2. Añadir mango en cubos y cebolla morada.
            3. Servir con cilantro fresco.`,
-        ingredientes: "Camarones, mango, limón, cebolla",
-        alergenos: ["Mariscos"]
-      },
-      {
-        nombre: "Cóctel Mimosa",
-        imagen: "./src/media/comidas/mimosa.jpg",
-        receta: `1. Mezclar partes iguales de champán y jugo de naranja.
+      ingredientes: "Camarones, mango, limón, cebolla",
+      alergenos: ["Mariscos"]
+    },
+    {
+      nombre: "Cóctel Mimosa",
+      imagen: "./src/media/comidas/mimosa.jpg",
+      receta: `1. Mezclar partes iguales de champán y jugo de naranja.
            2. Servir frío en copas altas.
            3. Decorar con una rodaja de naranja.`,
-        ingredientes: "Champán, jugo de naranja",
-        alergenos: []
-      },
-      {
-        nombre: "Pasta con pesto de espinacas",
-        imagen: "./src/media/comidas/pasta_pesto_espinacas.jpg",
-        receta: `1. Cocer la pasta al dente.
+      ingredientes: "Champán, jugo de naranja",
+      alergenos: []
+    },
+    {
+      nombre: "Pasta con pesto de espinacas",
+      imagen: "./src/media/comidas/pasta_pesto_espinacas.jpg",
+      receta: `1. Cocer la pasta al dente.
            2. Preparar un pesto con espinacas, piñones y queso parmesano.
            3. Mezclar la pasta con el pesto.`,
-        ingredientes: "Pasta, espinacas, piñones, queso parmesano",
-        alergenos: ["Gluten", "Frutos secos", "Lácteos"]
-      },
-      {
-        nombre: "Sorbete de limón",
-        imagen: "./src/media/comidas/sorbete_limon.jpg",
-        receta: `1. Triturar jugo de limón con azúcar y agua.
+      ingredientes: "Pasta, espinacas, piñones, queso parmesano",
+      alergenos: ["Gluten", "Frutos secos", "Lácteos"]
+    },
+    {
+      nombre: "Sorbete de limón",
+      imagen: "./src/media/comidas/sorbete_limon.jpg",
+      receta: `1. Triturar jugo de limón con azúcar y agua.
            2. Congelar y remover cada 30 minutos.
            3. Servir en copas frías.`,
-        ingredientes: "Limón, azúcar, agua",
-        alergenos: []
-      },
-      {
-        nombre: "Helado de fresa casero",
-        imagen: "./src/media/comidas/helado_fresa.jpg",
-        receta: `1. Triturar fresas con nata y azúcar.
+      ingredientes: "Limón, azúcar, agua",
+      alergenos: []
+    },
+    {
+      nombre: "Helado de fresa casero",
+      imagen: "./src/media/comidas/helado_fresa.jpg",
+      receta: `1. Triturar fresas con nata y azúcar.
            2. Congelar y remover cada 30 minutos.
            3. Servir con trozos de fresa.`,
-        ingredientes: "Fresas, nata, azúcar",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Pastel de zanahoria con nueces",
-        imagen: "./src/media/comidas/pastel_zanahoria.jpg",
-        receta: `1. Mezclar zanahorias ralladas, harina, huevos y nueces.
+      ingredientes: "Fresas, nata, azúcar",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Pastel de zanahoria con nueces",
+      imagen: "./src/media/comidas/pastel_zanahoria.jpg",
+      receta: `1. Mezclar zanahorias ralladas, harina, huevos y nueces.
            2. Hornear a 180°C hasta que esté cocido.
            3. Cubrir con glaseado de queso crema.`,
-        ingredientes: "Zanahorias, harina, huevos, nueces",
-        alergenos: ["Gluten", "Frutos secos", "Huevo"]
-      },
-      {
-        nombre: "Trufas de chocolate y coco",
-        imagen: "./src/media/comidas/trufas_chocolate_coco.jpg",
-        receta: `1. Derretir chocolate negro y mezclar con nata.
+      ingredientes: "Zanahorias, harina, huevos, nueces",
+      alergenos: ["Gluten", "Frutos secos", "Huevo"]
+    },
+    {
+      nombre: "Trufas de chocolate y coco",
+      imagen: "./src/media/comidas/trufas_chocolate_coco.jpg",
+      receta: `1. Derretir chocolate negro y mezclar con nata.
            2. Formar bolitas y rebozar en coco rallado.
            3. Refrigerar antes de servir.`,
-        ingredientes: "Chocolate, nata, coco",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Ensalada de quinoa y granada",
-        imagen: "./src/media/comidas/ensalada_quinoa.jpg",
-        receta: `1. Cocer la quinoa y dejarla enfriar.
+      ingredientes: "Chocolate, nata, coco",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Ensalada de quinoa y granada",
+      imagen: "./src/media/comidas/ensalada_quinoa.jpg",
+      receta: `1. Cocer la quinoa y dejarla enfriar.
            2. Mezclar con granada, pepino y menta fresca.
            3. Aliñar con aceite de oliva y limón.`,
-        ingredientes: "Quinoa, granada, pepino, menta",
-        alergenos: []
-      },
-      {
-        nombre: "Rollitos vietnamitas de gambas",
-        imagen: "./src/media/comidas/rollitos_vietnamitas.jpg",
-        receta: `1. Hidratar papel de arroz y rellenarlo con gambas, fideos y menta.
+      ingredientes: "Quinoa, granada, pepino, menta",
+      alergenos: []
+    },
+    {
+      nombre: "Rollitos vietnamitas de gambas",
+      imagen: "./src/media/comidas/rollitos_vietnamitas.jpg",
+      receta: `1. Hidratar papel de arroz y rellenarlo con gambas, fideos y menta.
            2. Enrollar firmemente y servir con salsa de maní.`,
-        ingredientes: "Gambas, papel de arroz, fideos, menta",
-        alergenos: ["Mariscos", "Soja"]
-      },
-      {
-        nombre: "Sopa de tomate y albahaca",
-        imagen: "./src/media/comidas/sopa_tomate.jpg",
-        receta: `1. Sofreír cebolla y ajo en aceite de oliva.
+      ingredientes: "Gambas, papel de arroz, fideos, menta",
+      alergenos: ["Mariscos", "Soja"]
+    },
+    {
+      nombre: "Sopa de tomate y albahaca",
+      imagen: "./src/media/comidas/sopa_tomate.jpg",
+      receta: `1. Sofreír cebolla y ajo en aceite de oliva.
            2. Añadir tomates pelados y caldo de verduras.
            3. Triturar y servir con hojas de albahaca.`,
-        ingredientes: "Tomates, cebolla, ajo, caldo de verduras",
-        alergenos: []
-      },
-      {
-        nombre: "Tarta de peras y almendras",
-        imagen: "./src/media/comidas/tarta_peras_almendras.jpg",
-        receta: `1. Preparar una base de masa quebrada.
+      ingredientes: "Tomates, cebolla, ajo, caldo de verduras",
+      alergenos: []
+    },
+    {
+      nombre: "Tarta de peras y almendras",
+      imagen: "./src/media/comidas/tarta_peras_almendras.jpg",
+      receta: `1. Preparar una base de masa quebrada.
            2. Rellenar con peras laminadas y crema de almendras.
            3. Hornear a 180°C durante 40 minutos.`,
-        ingredientes: "Peras, almendras, masa quebrada, azúcar",
-        alergenos: ["Gluten", "Frutos secos"]
-      },
-      {
-        nombre: "Vichyssoise",
-        imagen: "./src/media/comidas/vichyssoise.jpg",
-        receta: `1. Sofreír puerro y cebolla en mantequilla.
+      ingredientes: "Peras, almendras, masa quebrada, azúcar",
+      alergenos: ["Gluten", "Frutos secos"]
+    },
+    {
+      nombre: "Vichyssoise",
+      imagen: "./src/media/comidas/vichyssoise.jpg",
+      receta: `1. Sofreír puerro y cebolla en mantequilla.
            2. Añadir patatas y caldo de pollo.
            3. Triturar y enfriar antes de servir.`,
-        ingredientes: "Puerros, patatas, caldo de pollo, nata",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Ensalada Waldorf",
-        imagen: "./src/media/comidas/ensalada_waldorf.jpg",
-        receta: `1. Mezclar manzanas, apio, nueces y uvas.
+      ingredientes: "Puerros, patatas, caldo de pollo, nata",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Ensalada Waldorf",
+      imagen: "./src/media/comidas/ensalada_waldorf.jpg",
+      receta: `1. Mezclar manzanas, apio, nueces y uvas.
            2. Aliñar con mayonesa y zumo de limón.
            3. Decorar con hojas de lechuga.`,
-        ingredientes: "Manzanas, apio, nueces, mayonesa",
-        alergenos: ["Frutos secos", "Huevo"]
-      },
-      {
-        nombre: "Batido de frambuesa y yogur griego",
-        imagen: "./src/media/comidas/batido_framuesa.jpg",
-        receta: `1. Triturar frambuesas con yogur griego y miel.
+      ingredientes: "Manzanas, apio, nueces, mayonesa",
+      alergenos: ["Frutos secos", "Huevo"]
+    },
+    {
+      nombre: "Batido de frambuesa y yogur griego",
+      imagen: "./src/media/comidas/batido_framuesa.jpg",
+      receta: `1. Triturar frambuesas con yogur griego y miel.
            2. Añadir hielo y batir hasta obtener una textura cremosa.
            3. Servir frío.`,
-        ingredientes: "Frambuesas, yogur, miel",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Trufas de chocolate blanco y coco",
-        imagen: "./src/media/comidas/trufas_choco_blanco.jpg",
-        receta: `1. Derretir chocolate blanco y mezclar con nata.
+      ingredientes: "Frambuesas, yogur, miel",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Trufas de chocolate blanco y coco",
+      imagen: "./src/media/comidas/trufas_choco_blanco.jpg",
+      receta: `1. Derretir chocolate blanco y mezclar con nata.
            2. Formar bolitas y rebozar en coco rallado.
            3. Refrigerar antes de servir.`,
-        ingredientes: "Chocolate blanco, nata, coco",
-        alergenos: ["Lácteos"]
-      },
-      {
-        nombre: "Cheesecake de arándanos",
-        imagen: "./src/media/comidas/cheesecake_arandanos.jpg",
-        receta: `1. Preparar una base de galletas trituradas.
+      ingredientes: "Chocolate blanco, nata, coco",
+      alergenos: ["Lácteos"]
+    },
+    {
+      nombre: "Cheesecake de arándanos",
+      imagen: "./src/media/comidas/cheesecake_arandanos.jpg",
+      receta: `1. Preparar una base de galletas trituradas.
            2. Hacer una mezcla de queso crema y azúcar.
            3. Hornear y cubrir con mermelada de arándanos.`,
-        ingredientes: "Queso crema, galletas, arándanos",
-        alergenos: ["Gluten", "Lácteos"]
-      },
-      {
-        nombre: "Smoothie de espinacas y piña",
-        imagen: "./src/media/comidas/smoothie_espinacas_pina.jpg",
-        receta: `1. Triturar espinacas, piña y plátano.
+      ingredientes: "Queso crema, galletas, arándanos",
+      alergenos: ["Gluten", "Lácteos"]
+    },
+    {
+      nombre: "Smoothie de espinacas y piña",
+      imagen: "./src/media/comidas/smoothie_espinacas_pina.jpg",
+      receta: `1. Triturar espinacas, piña y plátano.
            2. Añadir agua de coco y miel al gusto.
            3. Servir frío.`,
-        ingredientes: "Espinacas, piña, plátano, agua de coco",
-        alergenos: []
-      },
-      {
-        nombre: "Flan de caramelo",
-        imagen: "./src/media/comidas/flan_caramelo.jpg",
-        receta: `1. Preparar caramelo y verter en moldes.
+      ingredientes: "Espinacas, piña, plátano, agua de coco",
+      alergenos: []
+    },
+    {
+      nombre: "Flan de caramelo",
+      imagen: "./src/media/comidas/flan_caramelo.jpg",
+      receta: `1. Preparar caramelo y verter en moldes.
            2. Mezclar leche, huevos y azúcar, y verter sobre el caramelo.
            3. Cocinar al baño maría y enfriar antes de servir.`,
-        ingredientes: "Leche, huevos, azúcar",
-        alergenos: ["Lácteos", "Huevo"]
-      },
-      {
-        nombre: "Panettone italiano",
-        imagen: "./src/media/comidas/panettone.jpg",
-        receta: `1. Mezclar harina, levadura, huevos, azúcar y mantequilla.
+      ingredientes: "Leche, huevos, azúcar",
+      alergenos: ["Lácteos", "Huevo"]
+    },
+    {
+      nombre: "Panettone italiano",
+      imagen: "./src/media/comidas/panettone.jpg",
+      receta: `1. Mezclar harina, levadura, huevos, azúcar y mantequilla.
            2. Incorporar frutas confitadas.
            3. Hornear a baja temperatura durante 45 minutos.`,
-        ingredientes: "Harina, huevos, frutas confitadas",
-        alergenos: ["Gluten", "Huevo"]
-      },
-      {
-        nombre: "Cóctel Daiquiri",
-        imagen: "./src/media/comidas/daiquiri.jpg",
-        receta: `1. Mezclar ron, jugo de lima y azúcar en una coctelera.
+      ingredientes: "Harina, huevos, frutas confitadas",
+      alergenos: ["Gluten", "Huevo"]
+    },
+    {
+      nombre: "Cóctel Daiquiri",
+      imagen: "./src/media/comidas/daiquiri.jpg",
+      receta: `1. Mezclar ron, jugo de lima y azúcar en una coctelera.
            2. Agitar con hielo y colar.
            3. Servir en una copa fría.`,
-        ingredientes: "Ron, lima, azúcar",
-        alergenos: []
-      },
-      {
-        nombre: "Ensalada César clásica",
-        imagen: "./src/media/comidas/ensalada_cesar_clasica.jpg",
-        receta: `1. Cortar lechuga romana y añadir croutons.
+      ingredientes: "Ron, lima, azúcar",
+      alergenos: []
+    },
+    {
+      nombre: "Ensalada César clásica",
+      imagen: "./src/media/comidas/ensalada_cesar_clasica.jpg",
+      receta: `1. Cortar lechuga romana y añadir croutons.
            2. Preparar un aliño con anchoas, mostaza y aceite.
            3. Espolvorear queso parmesano rallado.`,
-        ingredientes: "Lechuga, croutons, anchoas, queso parmesano",
-        alergenos: ["Gluten", "Lácteos", "Pescado"]
-      },
-      {
-        nombre: "Porridge de avena y plátano",
-        imagen: "./src/media/comidas/porridge.jpg",
-        receta: `1. Cocer la avena en leche o agua.
+      ingredientes: "Lechuga, croutons, anchoas, queso parmesano",
+      alergenos: ["Gluten", "Lácteos", "Pescado"]
+    },
+    {
+      nombre: "Porridge de avena y plátano",
+      imagen: "./src/media/comidas/porridge.jpg",
+      receta: `1. Cocer la avena en leche o agua.
            2. Añadir rodajas de plátano y nueces.
            3. Endulzar con miel o sirope de arce.`,
-        ingredientes: "Avena, leche, plátano, nueces",
-        alergenos: ["Lácteos", "Frutos secos"]
-      },
-      {
-        nombre: "Cocktail Caipirinha",
-        imagen: "./src/media/comidas/caipirinha.jpg",
-        receta: `1. Machacar lima con azúcar en un vaso.
+      ingredientes: "Avena, leche, plátano, nueces",
+      alergenos: ["Lácteos", "Frutos secos"]
+    },
+    {
+      nombre: "Cocktail Caipirinha",
+      imagen: "./src/media/comidas/caipirinha.jpg",
+      receta: `1. Machacar lima con azúcar en un vaso.
            2. Añadir hielo picado y cachaça.
            3. Remover bien antes de servir.`,
-        ingredientes: "Lima, azúcar, cachaça",
-        alergenos: []
-      },
-      {
-        nombre: "Crema de espinacas y almendras",
-        imagen: "./src/media/comidas/crema_espinacas.jpg",
-        receta: `1. Sofreír espinacas con cebolla y ajo.
+      ingredientes: "Lima, azúcar, cachaça",
+      alergenos: []
+    },
+    {
+      nombre: "Crema de espinacas y almendras",
+      imagen: "./src/media/comidas/crema_espinacas.jpg",
+      receta: `1. Sofreír espinacas con cebolla y ajo.
            2. Añadir caldo y almendras molidas.
            3. Triturar y servir caliente.`,
-        ingredientes: "Espinacas, almendras, caldo, cebolla",
-        alergenos: ["Frutos secos"]
-      },
-      {
-        nombre: "Cocktail Negroni",
-        imagen: "./src/media/comidas/negroni.jpg",
-        receta: `1. Mezclar partes iguales de ginebra, vermut rojo y Campari.
+      ingredientes: "Espinacas, almendras, caldo, cebolla",
+      alergenos: ["Frutos secos"]
+    },
+    {
+      nombre: "Cocktail Negroni",
+      imagen: "./src/media/comidas/negroni.jpg",
+      receta: `1. Mezclar partes iguales de ginebra, vermut rojo y Campari.
            2. Remover con hielo.
            3. Servir con una rodaja de naranja.`,
-        ingredientes: "Ginebra, vermut, Campari",
-        alergenos: []
-      },
-      {
-        nombre: "Pavlova de mango y maracuyá",
-        imagen: "./src/media/comidas/pavlova_mango.jpg",
-        receta: `1. Batir claras de huevo con azúcar hasta obtener un merengue.
+      ingredientes: "Ginebra, vermut, Campari",
+      alergenos: []
+    },
+    {
+      nombre: "Pavlova de mango y maracuyá",
+      imagen: "./src/media/comidas/pavlova_mango.jpg",
+      receta: `1. Batir claras de huevo con azúcar hasta obtener un merengue.
            2. Hornear a baja temperatura.
            3. Cubrir con nata montada y frutas tropicales.`,
-        ingredientes: "Claras de huevo, nata, azúcar, frutas tropicales",
-        alergenos: ["Huevo", "Lácteos"]
-      },
+      ingredientes: "Claras de huevo, nata, azúcar, frutas tropicales",
+      alergenos: ["Huevo", "Lácteos"]
+    },
 
-    ];
-  </script>
-  <script src="./src/funciones/filtrocomidas.js"></script>
+  ];
+</script>
 </body>
 
 </html>
