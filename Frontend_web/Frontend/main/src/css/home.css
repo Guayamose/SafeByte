@@ -136,11 +136,21 @@ form input:focus, form textarea:focus {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #3ea561;
   color: white;
   padding: 15px;
   text-align: center;
 }
+
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Ajusta este valor según la altura de tu footer */
+}
+
 
 footer a {
   color: #a8df65;

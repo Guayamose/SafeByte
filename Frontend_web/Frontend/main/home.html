@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+  <!-- botones para cambiar entre secciones -->
   <div class="navbar">
     <div class="logo">SafeByte</div>
     <ul class="nav-links">
@@ -22,7 +22,7 @@
     </ul>
   </div>
 
-  <!-- Secciones -->
+  <!-- Secciones para poder tener info en diferentes ventanas estando en un mismo html-->
   <section id="welcome-section" class="content-section">
     <h1>Bienvenido a SafeByte</h1>
     <p>
@@ -41,7 +41,7 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
-
+  <!-- Configuracion de alergenos con checkboxes para seleccionar y guardar la info esto se usa con el js de home que guarda la info en local y luego filtra la comida-->
   <section id="config-section" class="content-section hidden">
     <h2>Configuración de Usuario</h2>
     <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
@@ -85,6 +85,8 @@
   </footer>
 
   <script src="./src/ventanas/Home.js"></script>
+
+    <!-- script de js que almacena los alergenos guardados en local -->
   <script>
     document.getElementById("save-alergenos").addEventListener("click", () => {
       const alergenosSeleccionados = Array.from(
