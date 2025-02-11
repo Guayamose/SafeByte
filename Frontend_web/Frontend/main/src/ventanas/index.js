@@ -1,11 +1,14 @@
-// Botones de navegación
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
-const skip_login_btn = document.querySelector("#skip-login");
-
-// Contenedor del formulario
 const container = document.querySelector(".container");
 
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
 // Manejadores para cambiar entre Login y Sign Up
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
@@ -34,3 +37,4 @@ document.querySelector(".sign-up-form").addEventListener("submit", (e) => {
 skip_login_btn.addEventListener("click", () => {
   redirectToHome(); // Salta directamente al home
 });
+//ESTO ES TEMPORAL SE NECESITA USAR EL FORMULARIOLOGIN.JS PARA QUE FUNCIONE BIEN ESTO ES PARA PRUEBAS
