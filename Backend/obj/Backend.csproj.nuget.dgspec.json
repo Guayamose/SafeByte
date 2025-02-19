@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gonch\\Desktop\\david puto\\SafeByte\\Backend\\Backend.csproj": {}
+    "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gonch\\Desktop\\david puto\\SafeByte\\Backend\\Backend.csproj": {
+    "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gonch\\Desktop\\david puto\\SafeByte\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\gonch\\Desktop\\david puto\\SafeByte\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\gonch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gonch\\Desktop\\david puto\\SafeByte\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gonch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +42,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "BCrypt.Net-Next": {
               "target": "Package",
@@ -55,7 +55,7 @@
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[9.0.2, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -73,24 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -99,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
