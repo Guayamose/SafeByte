@@ -1,7 +1,0 @@
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.csproj.AssemblyReference.cache
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.AssemblyInfoInputs.cache
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.AssemblyInfo.cs
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.csproj.CoreCompileInputs.cache
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\gonch\Desktop\SafeByte\Backend\obj\Debug\net7.0\Backend.sourcelink.json

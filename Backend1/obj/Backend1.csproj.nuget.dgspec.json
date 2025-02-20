@@ -1,27 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\Backend1.csproj": {}
+    "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\Backend1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\Backend1.csproj": {
+    "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\Backend1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\Backend1.csproj",
+        "projectUniqueName": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\Backend1.csproj",
         "projectName": "Backend1",
-        "projectPath": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\Backend1.csproj",
-        "packagesPath": "C:\\Users\\gonch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\",
+        "projectPath": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\Backend1.csproj",
+        "packagesPath": "C:\\Users\\Rafa Pradillo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gonch\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Rafa Pradillo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +36,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
