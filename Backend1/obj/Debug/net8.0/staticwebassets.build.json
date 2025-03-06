@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "drEqMfsRIazoRJ9jM5KrNrbdvlNatDsyrZysH+kRtMg=",
+  "Hash": "enmr3eODoAp4z0fXLKHYAB8lZ3iq6V3ZnRl1GOcw0rw=",
   "Source": "Backend1",
   "BasePath": "_content/Backend1",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Backend1\\wwwroot",
       "Source": "Backend1",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend1.styles.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend1.styles.css",
       "SourceId": "Backend1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "Backend1.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend1.styles.css"
+      "OriginalItemSpec": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend1.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Backend1.bundle.scp.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Backend1.bundle.scp.css",
       "SourceId": "Backend1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "Backend1.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Backend1.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Backend1.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\comidas.html",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\comidas.html",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "comidas.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\comidas.html"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\favicon.ico",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\home.html",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\home.html",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "home.html",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\home.html"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\index.html",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\css\\comida.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\css\\comida.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/css/comida.css",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\src\\css\\comida.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\css\\home.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\css\\home.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/css/home.css",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\src\\css\\home.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\css\\inicio.css",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\css\\inicio.css",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/css/inicio.css",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\src\\css\\inicio.css"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\elementos\\formulariologin.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\elementos\\formulariologin.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/elementos/formulariologin.js",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\src\\elementos\\formulariologin.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\albondigas_suecas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\albondigas_suecas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/albondigas_suecas.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\albondigas_suecas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\albondigas_tomate.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\albondigas_tomate.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/albondigas_tomate.jpg",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\albondigas_tomate.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\arepas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\arepas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/arepas.jpg",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\arepas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\arroz_chaufa.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\arroz_chaufa.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/arroz_chaufa.jpg",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\arroz_chaufa.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\baba_ganoush.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\baba_ganoush.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/baba_ganoush.jpg",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\baba_ganoush.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bacalao_dorado.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bacalao_dorado.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/bacalao_dorado.jpg",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\bacalao_dorado.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bacalao_vizcaina.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bacalao_vizcaina.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/bacalao_vizcaina.jpg",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\bacalao_vizcaina.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\baklava.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\baklava.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/baklava.jpg",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\baklava.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\berenjenas_rellenas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\berenjenas_rellenas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/berenjenas_rellenas.jpg",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\berenjenas_rellenas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\biryani_cordero.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\biryani_cordero.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/biryani_cordero.jpg",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\biryani_cordero.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\biryani_pollo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\biryani_pollo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/biryani_pollo.jpg",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\biryani_pollo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bistec_pimienta.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\bistec_pimienta.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/bistec_pimienta.jpg",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\bistec_pimienta.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\boeuf_bourguignon.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\boeuf_bourguignon.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/boeuf_bourguignon.jpg",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\boeuf_bourguignon.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\calamares_romana.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\calamares_romana.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/calamares_romana.jpg",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\calamares_romana.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\canelones_atun.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\canelones_atun.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/canelones_atun.jpg",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\canelones_atun.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\canelones_espinacas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\canelones_espinacas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/canelones_espinacas.jpg",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\canelones_espinacas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\carbonara_tradicional.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\carbonara_tradicional.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/carbonara_tradicional.jpg",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\carbonara_tradicional.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cazuela_mariscos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cazuela_mariscos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/cazuela_mariscos.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\cazuela_mariscos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ceviche_camarones.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ceviche_camarones.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ceviche_camarones.jpg",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ceviche_camarones.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ceviche_mixto.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ceviche_mixto.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ceviche_mixto.jpg",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ceviche_mixto.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\chiles_nogada.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\chiles_nogada.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/chiles_nogada.jpg",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\chiles_nogada.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\churrasco.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\churrasco.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/churrasco.jpg",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\churrasco.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\coq_au_vin.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\coq_au_vin.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/coq_au_vin.jpg",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\coq_au_vin.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cordero_asado.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cordero_asado.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/cordero_asado.jpg",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\cordero_asado.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\crepes_jamon.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\crepes_jamon.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/crepes_jamon.jpg",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\crepes_jamon.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\croquetas_jamon.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\croquetas_jamon.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/croquetas_jamon.jpg",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\croquetas_jamon.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_coliflor.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_coliflor.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/curry_coliflor.jpg",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\curry_coliflor.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_cordero.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_cordero.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/curry_cordero.jpg",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\curry_cordero.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_garbanzos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_garbanzos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/curry_garbanzos.jpg",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\curry_garbanzos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_verde.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\curry_verde.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/curry_verde.jpg",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\curry_verde.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cuscus_vegetales.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\cuscus_vegetales.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/cuscus_vegetales.jpg",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\cuscus_vegetales.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\dulce_leche.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\dulce_leche.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/dulce_leche.jpg",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\dulce_leche.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\empanadas_argentinas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\empanadas_argentinas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/empanadas_argentinas.jpg",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\empanadas_argentinas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\empanadas_espinacas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\empanadas_espinacas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/empanadas_espinacas.jpg",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\empanadas_espinacas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\enchiladas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\enchiladas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/enchiladas.jpg",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\enchiladas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ensalada_cesar.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ensalada_cesar.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ensalada_cesar.jpg",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ensalada_cesar.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ensalada_griega.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ensalada_griega.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ensalada_griega.jpg",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ensalada_griega.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\estofado_ternera.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\estofado_ternera.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/estofado_ternera.jpg",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\estofado_ternera.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\fajitas_pollo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\fajitas_pollo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/fajitas_pollo.jpg",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\fajitas_pollo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\falafel.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\falafel.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/falafel.jpg",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\falafel.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\fideua.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\fideua.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/fideua.jpg",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\fideua.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\focaccia.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\focaccia.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/focaccia.jpg",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\focaccia.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gazpacho.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gazpacho.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/gazpacho.jpg",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\gazpacho.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gnocchi_pesto.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gnocchi_pesto.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/gnocchi_pesto.jpg",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\gnocchi_pesto.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gnocchis_patata.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gnocchis_patata.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/gnocchis_patata.jpg",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\gnocchis_patata.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\goulash.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\goulash.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/goulash.jpg",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\goulash.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gumbo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\gumbo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/gumbo.jpg",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\gumbo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\hamburguesa_clasica.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\hamburguesa_clasica.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/hamburguesa_clasica.jpg",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\hamburguesa_clasica.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\huevos_rancheros.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\huevos_rancheros.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/huevos_rancheros.jpg",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\huevos_rancheros.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\hummus.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\hummus.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/hummus.jpg",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\hummus.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\kebab_cordero.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\kebab_cordero.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/kebab_cordero.jpg",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\kebab_cordero.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\lasana_carne.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\lasana_carne.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/lasana_carne.jpg",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\lasana_carne.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\lentejas_chorizo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\lentejas_chorizo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/lentejas_chorizo.jpg",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\lentejas_chorizo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\macarrones_chorizo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\macarrones_chorizo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/macarrones_chorizo.jpg",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\macarrones_chorizo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\mejillones_vapor.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\mejillones_vapor.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/mejillones_vapor.jpg",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\mejillones_vapor.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\moussaka.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\moussaka.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/moussaka.jpg",
       "AssetKind": "All",
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\moussaka.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\paella_mariscos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\paella_mariscos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/paella_mariscos.jpg",
       "AssetKind": "All",
@@ -2373,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\paella_mariscos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\paella_mixta.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\paella_mixta.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/paella_mixta.jpg",
       "AssetKind": "All",
@@ -2392,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\paella_mixta.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pasta_esparragos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pasta_esparragos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pasta_esparragos.jpg",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pasta_esparragos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pasta_pesto.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pasta_pesto.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pasta_pesto.jpg",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pasta_pesto.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pato_naranja.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pato_naranja.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pato_naranja.jpg",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pato_naranja.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pavlova.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pavlova.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pavlova.jpg",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pavlova.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pierogi.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pierogi.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pierogi.jpg",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pierogi.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pimientos_rellenos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pimientos_rellenos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pimientos_rellenos.jpg",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pimientos_rellenos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pizza_margarita.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pizza_margarita.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pizza_margarita.jpg",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pizza_margarita.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\polenta_champinones.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\polenta_champinones.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/polenta_champinones.jpg",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\polenta_champinones.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_ajillo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_ajillo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_ajillo.jpg",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_ajillo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_brasas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_brasas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_brasas.jpg",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_brasas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_curry.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_curry.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_curry.jpg",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_curry.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_limon.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_limon.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_limon.jpg",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_limon.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_naranja.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_naranja.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_naranja.jpg",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_naranja.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_satay.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pollo_satay.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pollo_satay.jpg",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pollo_satay.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pulpo_gallega.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\pulpo_gallega.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/pulpo_gallega.jpg",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\pulpo_gallega.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\quesadillas_pollo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\quesadillas_pollo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/quesadillas_pollo.jpg",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\quesadillas_pollo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ragu_ternera.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ragu_ternera.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ragu_ternera.jpg",
       "AssetKind": "All",
@@ -2715,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ragu_ternera.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ramen.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ramen.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ramen.jpg",
       "AssetKind": "All",
@@ -2734,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ramen.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ratatouille.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ratatouille.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ratatouille.jpg",
       "AssetKind": "All",
@@ -2753,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ratatouille.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\raviolis_espinacas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\raviolis_espinacas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/raviolis_espinacas.jpg",
       "AssetKind": "All",
@@ -2772,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\raviolis_espinacas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\risotto_champinones.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\risotto_champinones.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/risotto_champinones.jpg",
       "AssetKind": "All",
@@ -2791,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\risotto_champinones.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\risotto_setas.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\risotto_setas.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/risotto_setas.jpg",
       "AssetKind": "All",
@@ -2810,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\risotto_setas.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\rollo_primavera.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\rollo_primavera.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/rollo_primavera.jpg",
       "AssetKind": "All",
@@ -2829,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\rollo_primavera.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salmon_teriyaki.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salmon_teriyaki.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/salmon_teriyaki.jpg",
       "AssetKind": "All",
@@ -2848,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\salmon_teriyaki.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salteado_tofu.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salteado_tofu.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/salteado_tofu.jpg",
       "AssetKind": "All",
@@ -2867,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\salteado_tofu.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salteado_verduras.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\salteado_verduras.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/salteado_verduras.jpg",
       "AssetKind": "All",
@@ -2886,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\salteado_verduras.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\samosas_verduras.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\samosas_verduras.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/samosas_verduras.jpg",
       "AssetKind": "All",
@@ -2905,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\samosas_verduras.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_cebolla.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_cebolla.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/sopa_cebolla.jpg",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\sopa_cebolla.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_fideos_china.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_fideos_china.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/sopa_fideos_china.jpg",
       "AssetKind": "All",
@@ -2943,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\sopa_fideos_china.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_minestrone.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_minestrone.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/sopa_minestrone.jpg",
       "AssetKind": "All",
@@ -2962,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\sopa_minestrone.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_miso.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sopa_miso.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/sopa_miso.jpg",
       "AssetKind": "All",
@@ -2981,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\sopa_miso.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sushi_variado.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\sushi_variado.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/sushi_variado.jpg",
       "AssetKind": "All",
@@ -3000,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\sushi_variado.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tabbouleh.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tabbouleh.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tabbouleh.jpg",
       "AssetKind": "All",
@@ -3019,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tabbouleh.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tacos_carne.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tacos_carne.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tacos_carne.jpg",
       "AssetKind": "All",
@@ -3038,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tacos_carne.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tacos_pastor.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tacos_pastor.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tacos_pastor.jpg",
       "AssetKind": "All",
@@ -3057,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tacos_pastor.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tallarines_alfredo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tallarines_alfredo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tallarines_alfredo.jpg",
       "AssetKind": "All",
@@ -3076,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tallarines_alfredo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_bakewell.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_bakewell.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tarta_bakewell.jpg",
       "AssetKind": "All",
@@ -3095,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tarta_bakewell.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_limon.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_limon.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tarta_limon.jpg",
       "AssetKind": "All",
@@ -3114,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tarta_limon.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_manzana.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_manzana.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tarta_manzana.jpg",
       "AssetKind": "All",
@@ -3133,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tarta_manzana.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_queso.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_queso.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tarta_queso.jpg",
       "AssetKind": "All",
@@ -3152,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tarta_queso.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_zanahoria.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tarta_zanahoria.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tarta_zanahoria.jpg",
       "AssetKind": "All",
@@ -3171,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tarta_zanahoria.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tartiflette.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tartiflette.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tartiflette.jpg",
       "AssetKind": "All",
@@ -3190,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tartiflette.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ternera_brocoli.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\ternera_brocoli.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/ternera_brocoli.jpg",
       "AssetKind": "All",
@@ -3209,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\ternera_brocoli.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tikka_masala.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tikka_masala.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tikka_masala.jpg",
       "AssetKind": "All",
@@ -3228,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tikka_masala.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tiramisu.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\tiramisu.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/tiramisu.jpg",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\tiramisu.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\zarzuela_mariscos.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\comidas\\zarzuela_mariscos.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/comidas/zarzuela_mariscos.jpg",
       "AssetKind": "All",
@@ -3266,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\comidas\\zarzuela_mariscos.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\log.svg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\log.svg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/log.svg",
       "AssetKind": "All",
@@ -3285,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\log.svg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\logo.jpg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\logo.jpg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/logo.jpg",
       "AssetKind": "All",
@@ -3304,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\logo.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\media\\register.svg",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\media\\register.svg",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/media/register.svg",
       "AssetKind": "All",
@@ -3323,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\src\\media\\register.svg"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\comida.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\comida.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/ventanas/comida.js",
       "AssetKind": "All",
@@ -3342,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\src\\ventanas\\comida.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\Home.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\Home.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/ventanas/Home.js",
       "AssetKind": "All",
@@ -3361,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\src\\ventanas\\Home.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\index.js",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\src\\ventanas\\index.js",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "src/ventanas/index.js",
       "AssetKind": "All",
@@ -3380,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\src\\ventanas\\index.js"
     },
     {
-      "Identity": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\Users.json",
+      "Identity": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\Users.json",
       "SourceId": "Backend1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rafa Pradillo\\Desktop\\Frontend pagina web\\SafeByte\\Backend1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\gonch\\Desktop\\SafeByte\\Backend1\\wwwroot\\",
       "BasePath": "_content/Backend1",
       "RelativePath": "Users.json",
       "AssetKind": "All",
