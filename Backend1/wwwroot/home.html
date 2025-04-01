@@ -115,51 +115,51 @@
 
     function startScanner() {
       Quagga.init({
-          inputStream: {
-              type: "LiveStream",
-              constraints: {
-                  facingMode: "environment"
-              },
-              target: document.querySelector("#video")
+        inputStream: {
+          type: "LiveStream",
+          constraints: {
+            facingMode: "environment"
           },
-          decoder: {
-              readers: ["ean_reader"]
-          }
+          target: document.querySelector("#video")
+        },
+        decoder: {
+          readers: ["ean_reader"]
+        }
       }, function(err) {
-          if (err) {
-              console.error("Error al iniciar Quagga:", err);
-              return;
-          }
-          Quagga.start();
+        if (err) {
+          console.error("Error al iniciar Quagga:", err);
+          return;
+        }
+        Quagga.start();
       });
 
       Quagga.onDetected(async function(result) {
-          Quagga.stop();
-          const codigoBarras = result.codeResult.code;
-          document.getElementById("result").innerHTML = <p>Código detectado: ${codigoBarras}</p>;
+        Quagga.stop();
+        const codigoBarras = result.codeResult.code;
+        document.getElementById("result").innerHTML = `<p>Código detectado: ${codigoBarras}</p>`;
 
-          const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json`;
-          try {
-              const response = await fetch(apiUrl);
-              const data = await response.json();
-              
-              if (data.status === 1) {
-                  const producto = data.product;
-                  document.getElementById("result").innerHTML += `
-                      <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
-                      <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
-                      <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
-                      <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
-                  `;
-              } else {
-                  document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
-              }
-          } catch (error) {
-              console.error("Error al consultar la API:", error);
-              document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
+        const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json`;
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          
+          if (data.status === 1) {
+            const producto = data.product;
+            document.getElementById("result").innerHTML += `
+              <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
+              <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
+              <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
+              <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
+            `;
+          } else {
+            document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
           }
+        } catch (error) {
+          console.error("Error al consultar la API:", error);
+          document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
+        }
       });
-  }
+    }
 
   </script>
 </body>
