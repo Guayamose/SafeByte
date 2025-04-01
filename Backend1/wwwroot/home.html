@@ -6,23 +6,23 @@
   <title>Scanner - SafeByte</title>
   <link rel="stylesheet" href="./src/css/home.css" />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <!-- Estilos para el recuadro del scanner -->
   <style>
+    /* Contenedor del scanner (cuadrado) */
     #scanner-container {
       position: relative;
-      width: 300px;  /* Ancho del cuadrado */
-      height: 300px; /* Alto del cuadrado */
+      width: 300px;
+      height: 300px;
       margin: 20px auto;
       border: 3px solid #333;
       overflow: hidden;
     }
-    /* El div que muestra el video ocupará todo el contenedor */
+    /* El video ocupa todo el contenedor */
     #video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    /* Estilos para la tabla de información nutricional */
+    /* Tabla para la información nutricional */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -35,8 +35,13 @@
       padding: 8px;
       text-align: left;
     }
+    /* Estilo para la entrada manual */
+    .manual-input {
+      text-align: center;
+      margin: 20px auto;
+    }
   </style>
-  <!-- Incluir QuaggaJS -->
+  <!-- Incluir QuaggaJS desde CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
 </head>
 <body>
@@ -56,10 +61,18 @@
   <!-- Sección del scanner -->
   <section id="scanner-section" class="content-section hidden">
     <h2>Escanear Código de Barras</h2>
+    <!-- Contenedor donde se muestra el video de la cámara -->
     <div id="scanner-container">
       <div id="video"></div>
     </div>
     <button onclick="startScanner()">Iniciar Escáner</button>
+    
+    <!-- Entrada manual de código -->
+    <div class="manual-input">
+      <p>O introduce el código manualmente:</p>
+      <input type="text" id="barcode-input" placeholder="Introduce el código de barras">
+      <button onclick="manualScan()">Buscar Producto</button>
+    </div>
     <div id="result"></div>
   </section>
 
@@ -79,11 +92,12 @@
   <section id="welcome-section" class="content-section">
     <h1>Bienvenido a SafeByte</h1>
     <p>
-      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora nuestras opciones y disfruta de una experiencia personalizada.
+      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias.
+      Explora nuestras opciones y disfruta de una experiencia personalizada.
     </p>
   </section>
 
-  <!-- Sección Configuración de Usuario -->
+  <!-- Sección de Configuración de Usuario -->
   <section id="config-section" class="content-section hidden">
     <h2>Configuración de Usuario</h2>
     <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
@@ -123,21 +137,63 @@
     <p>SafeByte 2025.</p>
   </footer>
 
-  <!-- Script para gestionar la navegación y preferencias -->
   <script src="./src/ventanas/Home.js"></script>
   <script>
+    // Guardar preferencias de alérgenos
     document.getElementById("save-alergenos").addEventListener("click", () => {
       const alergenosSeleccionados = Array.from(
         document.querySelectorAll('input[name="alergeno"]:checked')
       ).map((checkbox) => checkbox.value);
-
       localStorage.setItem("alergenosSeleccionados", JSON.stringify(alergenosSeleccionados));
-
       document.getElementById("confirmation-message").style.display = "block";
       setTimeout(() => {
         document.getElementById("confirmation-message").style.display = "none";
       }, 2000);
     });
+
+    // Función común para procesar el código de barras y consultar la API
+    async function processBarcode(barcode) {
+      document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${barcode}</p>`;
+      const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`;
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.status === 1) {
+          const producto = data.product;
+          let output = `
+            <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
+            <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
+            <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
+            <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
+          `;
+          if (producto.nutriments) {
+            let nutriments = producto.nutriments;
+            let tablaNutri = `<h3>Información Nutricional</h3>
+                              <table>
+                                <tr>
+                                  <th>Componente</th>
+                                  <th>Valor</th>
+                                </tr>`;
+            for (const key in nutriments) {
+              tablaNutri += `<tr>
+                              <td>${key}</td>
+                              <td>${nutriments[key]}</td>
+                            </tr>`;
+            }
+            tablaNutri += `</table>`;
+            output += tablaNutri;
+          } else {
+            output += `<p>No hay información nutricional disponible.</p>`;
+          }
+          document.getElementById("result").innerHTML += output;
+        } else {
+          document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
+        }
+      } catch (error) {
+        console.error("Error al consultar la API:", error);
+        document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
+      }
+    }
 
     // Función para iniciar el escáner con QuaggaJS
     function startScanner() {
@@ -163,55 +219,21 @@
         Quagga.start();
       });
 
-      Quagga.onDetected(async function(result) {
+      Quagga.onDetected(function(result) {
         Quagga.stop();
         const codigoBarras = result.codeResult.code;
-        document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${codigoBarras}</p>`;
-
-        const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json`;
-        try {
-          const response = await fetch(apiUrl);
-          const data = await response.json();
-          
-          if (data.status === 1) {
-            const producto = data.product;
-            let output = `
-              <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
-              <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
-              <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
-              <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
-            `;
-            
-            // Si existe información nutricional, la mostramos en una tabla
-            if (producto.nutriments) {
-              let nutriments = producto.nutriments;
-              let tablaNutri = `<h3>Información Nutricional</h3>
-                                <table>
-                                  <tr>
-                                    <th>Componente</th>
-                                    <th>Valor</th>
-                                  </tr>`;
-              for (const key in nutriments) {
-                tablaNutri += `<tr>
-                                <td>${key}</td>
-                                <td>${nutriments[key]}</td>
-                              </tr>`;
-              }
-              tablaNutri += `</table>`;
-              output += tablaNutri;
-            } else {
-              output += `<p>No hay información nutricional disponible.</p>`;
-            }
-            
-            document.getElementById("result").innerHTML += output;
-          } else {
-            document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
-          }
-        } catch (error) {
-          console.error("Error al consultar la API:", error);
-          document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
-        }
+        processBarcode(codigoBarras);
       });
+    }
+
+    // Función para procesar el código introducido manualmente
+    function manualScan() {
+      const barcode = document.getElementById("barcode-input").value.trim();
+      if (barcode !== "") {
+        processBarcode(barcode);
+      } else {
+        alert("Por favor, introduce un código de barras.");
+      }
     }
   </script>
 </body>
