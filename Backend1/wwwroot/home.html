@@ -17,18 +17,20 @@
       <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
       <li><a href="./comidas.html">Comidas</a></li>
       <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
+      <li><a href="#" data-section="scanner-section" class="nav-btn">Scanner</a></li>
       <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
       <li><a href="./index.html">Cerrar Sesión</a></li>
     </ul>
   </div>
 
   <!-- Secciones para poder tener info en diferentes ventanas estando en un mismo html-->
-  <section id="welcome-section" class="content-section">
-    <h1>Bienvenido a SafeByte</h1>
-    <p>
-      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora
-      nuestras opciones y disfruta de una experiencia personalizada.
-    </p>
+  <section id="scanner-section" class="content-section">
+    <h2>Escanear Código de Barras</h2>
+    <div id="scanner-container">
+        <div id="video"></div>
+        <button onclick="startScanner()">Iniciar Escáner</button>
+    </div>
+    <div id="result"></div>
   </section>
 
   <section id="contact-section" class="content-section hidden">
@@ -40,6 +42,14 @@
       <textarea placeholder="Tu mensaje" required></textarea>
       <button type="submit">Enviar</button>
     </form>
+  </section>
+   <!-- Seccion scanner comida -->
+  <section id="welcome-section" class="content-section">
+    <h1>Bienvenido a SafeByte</h1>
+    <p>
+      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora
+      nuestras opciones y disfruta de una experiencia personalizada.
+    </p>
   </section>
   <!-- Configuracion de alergenos con checkboxes para seleccionar y guardar la info esto se usa con el js de home que guarda la info en local y luego filtra la comida-->
   <section id="config-section" class="content-section hidden">
@@ -100,6 +110,57 @@
         document.getElementById("confirmation-message").style.display = "none";
       }, 2000);
     });
+
+
+
+    function startScanner() {
+      Quagga.init({
+          inputStream: {
+              type: "LiveStream",
+              constraints: {
+                  facingMode: "environment"
+              },
+              target: document.querySelector("#video")
+          },
+          decoder: {
+              readers: ["ean_reader"]
+          }
+      }, function(err) {
+          if (err) {
+              console.error("Error al iniciar Quagga:", err);
+              return;
+          }
+          Quagga.start();
+      });
+
+      Quagga.onDetected(async function(result) {
+          Quagga.stop();
+          const codigoBarras = result.codeResult.code;
+          document.getElementById("result").innerHTML = <p>Código detectado: ${codigoBarras}</p>;
+
+          const apiUrl = https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json;
+          try {
+              const response = await fetch(apiUrl);
+              const data = await response.json();
+              
+              if (data.status === 1) {
+                  const producto = data.product;
+                  document.getElementById("result").innerHTML += `
+                      <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
+                      <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
+                      <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
+                      <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
+                  `;
+              } else {
+                  document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
+              }
+          } catch (error) {
+              console.error("Error al consultar la API:", error);
+              document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
+          }
+      });
+  }
+
   </script>
 </body>
 
