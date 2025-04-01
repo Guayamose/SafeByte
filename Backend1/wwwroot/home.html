@@ -138,7 +138,7 @@
           const codigoBarras = result.codeResult.code;
           document.getElementById("result").innerHTML = <p>Código detectado: ${codigoBarras}</p>;
 
-          const apiUrl = https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json;
+          const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${codigoBarras}.json`;
           try {
               const response = await fetch(apiUrl);
               const data = await response.json();
