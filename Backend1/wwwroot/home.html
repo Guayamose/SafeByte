@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scanner - SafeByte</title>
+  <!-- Puedes incluir tu CSS externo aquí -->
   <link rel="stylesheet" href="./src/css/home.css" />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <title>Home - SafeByte</title>
+  <!-- Estilos adicionales para el recuadro del scanner -->
+  <style>
+    #scanner-container {
+      position: relative;
+      width: 300px;  /* Ancho del cuadrado */
+      height: 300px; /* Alto del cuadrado */
+      margin: 20px auto;
+      border: 3px solid #333;
+      overflow: hidden;
+    }
+    /* El div que muestra el video ocupará todo el contenedor */
+    #video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <!-- Incluir QuaggaJS desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
 </head>
-
 <body>
-  <!-- botones para cambiar entre secciones -->
+  <!-- Barra de navegación -->
   <div class="navbar">
     <div class="logo">SafeByte</div>
     <ul class="nav-links">
@@ -23,16 +41,17 @@
     </ul>
   </div>
 
-  <!-- Secciones para poder tener info en diferentes ventanas estando en un mismo html-->
+  <!-- Sección del scanner -->
   <section id="scanner-section" class="content-section hidden">
     <h2>Escanear Código de Barras</h2>
     <div id="scanner-container">
       <div id="video"></div>
-      <button onclick="startScanner()">Iniciar Escáner</button>
     </div>
+    <button onclick="startScanner()">Iniciar Escáner</button>
     <div id="result"></div>
   </section>
 
+  <!-- Sección de Contacto -->
   <section id="contact-section" class="content-section hidden">
     <h2>Contacta con Nosotros</h2>
     <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
@@ -43,19 +62,19 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
-   <!-- Seccion scanner comida -->
+
+  <!-- Sección Home -->
   <section id="welcome-section" class="content-section">
     <h1>Bienvenido a SafeByte</h1>
     <p>
-      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora
-      nuestras opciones y disfruta de una experiencia personalizada.
+      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias. Explora nuestras opciones y disfruta de una experiencia personalizada.
     </p>
   </section>
-  <!-- Configuracion de alergenos con checkboxes para seleccionar y guardar la info esto se usa con el js de home que guarda la info en local y luego filtra la comida-->
+
+  <!-- Sección de Configuración de Usuario -->
   <section id="config-section" class="content-section hidden">
     <h2>Configuración de Usuario</h2>
     <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
-
     <form id="alergenos-form">
       <div class="checkbox-container">
         <label class="custom-checkbox">
@@ -83,10 +102,8 @@
           <span class="checkmark"></span> Soja
         </label>
       </div>
-
       <button type="button" id="save-alergenos">Guardar preferencias</button>
     </form>
-
     <p id="confirmation-message" style="display: none; color: green;">Preferencias guardadas con éxito.</p>
   </section>
 
@@ -94,9 +111,8 @@
     <p>SafeByte 2025.</p>
   </footer>
 
+  <!-- Script para gestionar la navegación y preferencias -->
   <script src="./src/ventanas/Home.js"></script>
-
-    <!-- script de js que almacena los alergenos guardados en local -->
   <script>
     document.getElementById("save-alergenos").addEventListener("click", () => {
       const alergenosSeleccionados = Array.from(
@@ -111,16 +127,18 @@
       }, 2000);
     });
 
-
-
+    // Función para iniciar el escáner con QuaggaJS
     function startScanner() {
       Quagga.init({
         inputStream: {
+          name: "Live",
           type: "LiveStream",
+          target: document.querySelector("#video"),
           constraints: {
+            width: 300,   // Ancho del video (igual que el contenedor)
+            height: 300,  // Alto del video
             facingMode: "environment"
-          },
-          target: document.querySelector("#video")
+          }
         },
         decoder: {
           readers: ["ean_reader"]
@@ -160,8 +178,6 @@
         }
       });
     }
-
   </script>
 </body>
-
 </html>
