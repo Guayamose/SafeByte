@@ -22,7 +22,12 @@
       height: 100%;
       object-fit: cover;
     }
-    /* Tabla para la información nutricional */
+    /* Estilo para la entrada manual */
+    .manual-input {
+      text-align: center;
+      margin: 20px auto;
+    }
+    /* Otros estilos existentes */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -35,14 +40,11 @@
       padding: 8px;
       text-align: left;
     }
-    /* Estilo para la entrada manual */
-    .manual-input {
-      text-align: center;
-      margin: 20px auto;
-    }
   </style>
-  <!-- Incluir QuaggaJS desde CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+  <!-- Incluir ZXing desde CDN -->
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <!-- Conserva Quagga solo si fuese útil en otras secciones (aquí no la usamos para la detección) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script> -->
 </head>
 <body>
   <!-- Barra de navegación -->
@@ -61,13 +63,13 @@
   <!-- Sección del scanner -->
   <section id="scanner-section" class="content-section hidden">
     <h2>Escanear Código de Barras</h2>
-    <!-- Contenedor donde se muestra el video de la cámara -->
+    <!-- Contenedor del video donde se mostrará el stream de la cámara -->
     <div id="scanner-container">
-      <div id="video"></div>
+      <video id="video" autoplay muted></video>
     </div>
+    <!-- Botón para iniciar el escáner -->
     <button onclick="startScanner()">Iniciar Escáner</button>
-    
-    <!-- Entrada manual de código -->
+    <!-- Entrada manual de código (buscador) -->
     <div class="manual-input">
       <p>O introduce el código manualmente:</p>
       <input type="text" id="barcode-input" placeholder="Introduce el código de barras">
@@ -151,9 +153,41 @@
       }, 2000);
     });
 
-    // Función común para procesar el código de barras y consultar la API
+    // Función para procesar el código ingresado manualmente
+    function manualScan() {
+      const barcode = document.getElementById("barcode-input").value.trim();
+      if (barcode !== "") {
+        processBarcode(barcode);
+      } else {
+        alert("Por favor, introduce un código de barras.");
+      }
+    }
+
+    // Se crea un objeto de ZXing para la lectura de códigos
+    const codeReader = new ZXing.BrowserBarcodeReader();
+
+    // Función para iniciar el escáner, leer el código y solicitar la información del producto
+    function startScanner() {
+      console.log("Iniciando escáner...");
+      codeReader.decodeFromVideoDevice(null, 'video', (result, err) => {
+        if (result) {
+          console.log("Código detectado: " + result.text);
+          // Asigna el código detectado al campo de entrada
+          document.getElementById("barcode-input").value = result.text;
+          // Consulta la API con el código detectado
+          processBarcode(result.text);
+          // Detiene la lectura para evitar múltiples lecturas seguidas
+          codeReader.reset();
+        }
+        if (err && !(err instanceof ZXing.NotFoundException)) {
+          console.error(err);
+        }
+      });
+    }
+
+    // Función para consultar la API de Open Food Facts y mostrar la información del producto
     async function processBarcode(barcode) {
-      document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${barcode}</p>`;
+      document.getElementById("result").innerHTML = <p><strong>Código detectado:</strong> ${barcode}</p>;
       const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`;
       try {
         const response = await fetch(apiUrl);
@@ -183,7 +217,7 @@
             tablaNutri += `</table>`;
             output += tablaNutri;
           } else {
-            output += `<p>No hay información nutricional disponible.</p>`;
+            output += <p>No hay información nutricional disponible.</p>;
           }
           document.getElementById("result").innerHTML += output;
         } else {
@@ -192,47 +226,6 @@
       } catch (error) {
         console.error("Error al consultar la API:", error);
         document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
-      }
-    }
-
-    // Función para iniciar el escáner con QuaggaJS
-    function startScanner() {
-      Quagga.init({
-        inputStream: {
-          name: "Live",
-          type: "LiveStream",
-          target: document.querySelector("#video"),
-          constraints: {
-            width: 300,
-            height: 300,
-            facingMode: "environment"
-          }
-        },
-        decoder: {
-          readers: ["ean_reader" , "code_128_reader", "upc_reader"]
-        }
-      }, function(err) {
-        if (err) {
-          console.error("Error al iniciar Quagga:", err);
-          return;
-        }
-        Quagga.start();
-      });
-
-      Quagga.onDetected(function(result) {
-        Quagga.stop();
-        const codigoBarras = result.codeResult.code;
-        processBarcode(codigoBarras);
-      });
-    }
-
-    // Función para procesar el código introducido manualmente
-    function manualScan() {
-      const barcode = document.getElementById("barcode-input").value.trim();
-      if (barcode !== "") {
-        processBarcode(barcode);
-      } else {
-        alert("Por favor, introduce un código de barras.");
       }
     }
   </script>
