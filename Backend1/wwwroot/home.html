@@ -187,7 +187,7 @@
 
     // Función para consultar la API de Open Food Facts y mostrar la información del producto
     async function processBarcode(barcode) {
-      document.getElementById("result").innerHTML = <p><strong>Código detectado:</strong> ${barcode}</p>;
+      document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${barcode}</p>`;
       const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`;
       try {
         const response = await fetch(apiUrl);
@@ -217,7 +217,7 @@
             tablaNutri += `</table>`;
             output += tablaNutri;
           } else {
-            output += <p>No hay información nutricional disponible.</p>;
+            output += `<p>No hay información nutricional disponible.</p>`;
           }
           document.getElementById("result").innerHTML += output;
         } else {
