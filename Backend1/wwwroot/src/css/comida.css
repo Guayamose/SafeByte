@@ -143,3 +143,24 @@ h1 {
     transform: scale(1);
   }
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3ea561;
+  color: white;
+  padding: 0px;
+  text-align: center;
+}
+
+footer a {
+  color: #a8df65;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

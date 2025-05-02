@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scanner - SafeByte</title>
+  <title>Food DNA</title>
   <link rel="stylesheet" href="./src/css/home.css" />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <style>
@@ -49,9 +49,9 @@
 <body>
   <!-- Barra de navegación -->
   <div class="navbar">
-    <div class="logo">SafeByte</div>
+    <div class="logo">Food DNA</div>
     <ul class="nav-links">
-      <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
+      <li><a href="#" data-section="welcome-section" class="nav-btn">Inicio</a></li>
       <li><a href="./comidas.html">Comidas</a></li>
       <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
       <li><a href="#" data-section="scanner-section" class="nav-btn">Scanner</a></li>
@@ -80,54 +80,79 @@
 
   <!-- Sección de Contacto -->
   <section id="contact-section" class="content-section hidden">
-    <h2>Contacta con Nosotros</h2>
-    <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo" required />
-      <textarea placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="contact-container">
+      <h2>Contacta con Nosotros</h2>
+      <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   </section>
 
   <!-- Sección Home -->
   <section id="welcome-section" class="content-section">
-    <h1>Bienvenido a SafeByte</h1>
+    <h1>¡Bienvenido a Food DNA!</h1>
     <p>
       Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias.
+    </p>
+    <p>
       Explora nuestras opciones y disfruta de una experiencia personalizada.
     </p>
+    <div class="testimonials-section">
+      <div class="testimonial">
+        <img src="./src/media/mujerCeliaca.png" alt="Foto de Lucía, celíaca">
+        <div class="testimonial-text">
+          <h3>Lucía, 27 años (celíaca)</h3>
+          <p>
+            "Ser celíaca no es solo evitar el pan. Comer fuera o elegir productos en el supermercado es una batalla constante.
+            Food DNA me ayudaría a sentirme segura y confiada cada vez que como algo nuevo."
+          </p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="./src/media/hombreFrutosSecos.png" alt="Foto de Diego, alérgico a frutos secos">
+        <div class="testimonial-text">
+          <h3>Diego, 34 años (alérgico a frutos secos)</h3>
+          <p>
+            "Una reacción alérgica puede cambiarte el día... o la vida. Esta aplicación me daría tranquilidad y así evitaría estar leyendo cada etiqueta durante 5 minutos."
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Sección de Configuración de Usuario -->
-  <section id="config-section" class="content-section hidden">
-    <h2>Configuración de Usuario</h2>
+  <section id="config-section" class="config-container hidden">
+    <h2>Configuración de usuario</h2>
     <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
     <form id="alergenos-form">
       <div class="checkbox-container">
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Gluten" />
-          <span class="checkmark"></span> Gluten
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Gluten" hidden />
+          Gluten
         </label>
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Lácteos" />
-          <span class="checkmark"></span> Lácteos
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Lácteos" hidden />
+          Lácteos
         </label>
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Huevo" />
-          <span class="checkmark"></span> Huevo
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Huevo" hidden />
+          Huevo
         </label>
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Frutos secos" />
-          <span class="checkmark"></span> Frutos secos
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Frutos secos" hidden />
+          Frutos secos
         </label>
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Mariscos" />
-          <span class="checkmark"></span> Mariscos
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Mariscos" hidden />
+          Mariscos
         </label>
-        <label class="custom-checkbox">
-          <input type="checkbox" name="alergeno" value="Soja" />
-          <span class="checkmark"></span> Soja
+        <label class="alergeno-card">
+          <input type="checkbox" name="alergeno" value="Soja" hidden />
+          Soja
         </label>
       </div>
       <button type="button" id="save-alergenos">Guardar preferencias</button>
@@ -136,7 +161,7 @@
   </section>
 
   <footer>
-    <p>SafeByte 2025.</p>
+    <p>@ 2025 SafeByte.</p>
   </footer>
 
   <script src="./src/ventanas/Home.js"></script>
@@ -229,5 +254,25 @@
       }
     }
   </script>
+  <script>
+    document.querySelectorAll('.alergeno-card input[type="checkbox"]').forEach(input => {
+      input.addEventListener('change', () => {
+        input.parentElement.classList.toggle('selected', input.checked);
+      });
+    });
+  </script>
+  <script>
+    // Aplicar las preferencias guardadas al cargar
+    function aplicarPreferenciasGuardadas() {
+      const guardados = JSON.parse(localStorage.getItem("alergenosSeleccionados")) || [];
+      document.querySelectorAll('.alergeno-card input[type="checkbox"]').forEach(input => {
+        input.checked = guardados.includes(input.value);
+        input.parentElement.classList.toggle('selected', input.checked);
+      });
+    }
+  
+    // Llama a la función al cargar la página
+    window.addEventListener("DOMContentLoaded", aplicarPreferenciasGuardadas);
+  </script>  
 </body>
 </html>
