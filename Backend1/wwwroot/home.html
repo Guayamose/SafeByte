@@ -62,20 +62,30 @@
 
   <!-- Sección del scanner -->
   <section id="scanner-section" class="content-section hidden">
-    <h2>Escanear Código de Barras</h2>
+    <h2>Escaneo código de barras</h2>
     <!-- Contenedor del video donde se mostrará el stream de la cámara -->
-    <div id="scanner-container">
-      <video id="video" autoplay muted></video>
-    </div>
-    <!-- Botón para iniciar el escáner -->
-    <button onclick="startScanner()">Iniciar Escáner</button>
-    <!-- Entrada manual de código (buscador) -->
-    <div class="manual-input">
-      <p>O introduce el código manualmente:</p>
-      <input type="text" id="barcode-input" placeholder="Introduce el código de barras">
-      <button onclick="manualScan()">Buscar Producto</button>
-    </div>
-    <div id="result"></div>
+    <div class="scanner-wrapper">
+      <div class="scanner-left">
+        <div id="scanner-container">
+          <video id="video" autoplay muted></video>
+        </div>
+        <button onclick="startScanner()">Iniciar Escáner</button>
+      </div>
+    
+      <!-- Separador vertical -->
+      <div class="scanner-separator"></div>
+    
+      <div class="scanner-right">
+        <div class="manual-input">
+          <p>O introduce el código manualmente:</p>
+          <input type="text" id="barcode-input" placeholder="Introduce aquí el código de barras">
+          <button onclick="manualScan()">Buscar producto</button>
+        </div>
+      </div>      
+    </div>           
+    <div id="result">
+      <div id="product-info"></div>
+    </div>    
   </section>
 
   <!-- Sección de Contacto -->
@@ -125,7 +135,7 @@
   </section>
 
   <!-- Sección de Configuración de Usuario -->
-  <section id="config-section" class="config-container hidden">
+  <section id="config-section" class="config-container content-section hidden">
     <h2>Configuración de usuario</h2>
     <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
     <form id="alergenos-form">
@@ -183,6 +193,7 @@
       const barcode = document.getElementById("barcode-input").value.trim();
       if (barcode !== "") {
         processBarcode(barcode);
+        document.getElementById("result").scrollIntoView({ behavior: "smooth" });
       } else {
         alert("Por favor, introduce un código de barras.");
       }
@@ -201,6 +212,7 @@
           document.getElementById("barcode-input").value = result.text;
           // Consulta la API con el código detectado
           processBarcode(result.text);
+          document.getElementById("result").scrollIntoView({ behavior: "smooth" });
           // Detiene la lectura para evitar múltiples lecturas seguidas
           codeReader.reset();
         }
@@ -212,7 +224,11 @@
 
     // Función para consultar la API de Open Food Facts y mostrar la información del producto
     async function processBarcode(barcode) {
-      document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${barcode}</p>`;
+      const resultContainer = document.getElementById("result");
+
+      resultContainer.innerHTML = `<div id="product-info"><p><strong>Código detectado:</strong> ${barcode}</p></div>`;
+      const productInfo = document.getElementById("product-info");
+
       const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`;
       try {
         const response = await fetch(apiUrl);
@@ -245,6 +261,7 @@
             output += `<p>No hay información nutricional disponible.</p>`;
           }
           document.getElementById("result").innerHTML += output;
+          productInfo.scrollIntoView({ behavior: "smooth" });
         } else {
           document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
         }
@@ -273,6 +290,7 @@
   
     // Llama a la función al cargar la página
     window.addEventListener("DOMContentLoaded", aplicarPreferenciasGuardadas);
-  </script>  
+  </script> 
+   <script src="./src/ventanas/Home.js"></script>
 </body>
 </html>

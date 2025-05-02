@@ -374,3 +374,58 @@ form button:hover {
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.scanner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Importante para igualar altura */
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  min-height: 300px;
+}
+
+.scanner-left,
+.scanner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente el contenido */
+  gap: 20px;
+  flex: 1;
+}
+
+.scanner-separator {
+  width: 2px;
+  background-color: #ccc;
+  border-radius: 2px;
+  align-self: stretch; /* Esto lo hace ocupar todo el alto */
+}
+
+.manual-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.manual-input p {
+  margin-bottom: 8px; /* Antes era probablemente más grande */
+}
+
+.manual-input input[type="text"] {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: 2px solid #1e5631;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.manual-input input[type="text"]:focus {
+  border-color: #a8df65;
+  box-shadow: 0 0 8px rgba(168, 223, 101, 0.6);
+}
