@@ -62,7 +62,6 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 10px;
-  padding-bottom: 60px; /* 🧩 Este es el nuevo espacio para evitar que el footer tape contenido */
 }
 
 .comida-item {
@@ -143,37 +142,4 @@ h1 {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background-color: #3ea561;
-  color: white;
-  display: flex;              /* 💡 Flexbox */
-  align-items: center;        /* Centrado vertical */
-  justify-content: center;    /* Centrado horizontal */
-  font-size: 14px;
-}
-
-footer a {
-  color: #a8df65;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-#top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 999; /* Debe estar sobre otros elementos */
-  background: linear-gradient(to right, #d0f2d1, #f0f9f4);
-  padding-top: 20px;
-  padding-bottom: 10px;
 }
