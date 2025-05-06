@@ -41,3 +41,46 @@ C:\Users\gonch\Desktop\SafeByte\Backend1\obj\Debug\net8.0\refint\Backend1.dll
 C:\Users\gonch\Desktop\SafeByte\Backend1\obj\Debug\net8.0\Backend1.pdb
 C:\Users\gonch\Desktop\SafeByte\Backend1\obj\Debug\net8.0\Backend1.genruntimeconfig.cache
 C:\Users\gonch\Desktop\SafeByte\Backend1\obj\Debug\net8.0\ref\Backend1.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\appsettings.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.staticwebassets.runtime.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.exe
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.deps.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.runtimeconfig.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Backend1.pdb
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.csproj.AssemblyReference.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.AssemblyInfoInputs.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.AssemblyInfo.cs
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.csproj.CoreCompileInputs.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.RazorAssemblyInfo.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.RazorAssemblyInfo.cs
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.sourcelink.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets\msbuild.Backend1.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets\msbuild.build.Backend1.props
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Backend1.props
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Backend1.props
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\scopedcss\bundle\Backend1.styles.css
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\scopedcss\projectbundle\Backend1.bundle.scp.css
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.csproj.CopyComplete
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\refint\Backend1.dll
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.pdb
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\Backend1.genruntimeconfig.cache
+C:\Users\Rafa Pradillo\SafeByte-9\Backend1\obj\Debug\net8.0\ref\Backend1.dll

@@ -16,7 +16,7 @@ namespace Backend1.Controllers
         public IActionResult Index()
         {
             // Redirige al archivo home.html (ubicado en wwwroot)
-            return Redirect("/home.html");
+            return Redirect("/index.html");
         }
 
         public IActionResult Privacy()
