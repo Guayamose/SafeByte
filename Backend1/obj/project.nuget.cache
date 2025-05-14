@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hCfWW8DnumEN9wz+lKTayKt+0WROcLo/3xVORz0+Kw1lkvaBkIlsg1xCrOKC0mLxXbnYYXS8OTYqEzw/vHW39w==",
+  "dgSpecHash": "HPbE2onQ6H5Psh7q8b6AtzjfOO+UAoK2LzD+P/JQ3Dl8dkLiWD0uP5CF+4LVWuRg0ESNxvp2M/UHltUbUdGgVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafa Pradillo\\SafeByte-9\\Backend1\\Backend1.csproj",
+  "projectFilePath": "C:\\Users\\Rafa Pradillo\\SafeByte-11\\backend1\\Backend1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafa Pradillo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Rafa Pradillo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",

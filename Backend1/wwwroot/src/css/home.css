@@ -385,3 +385,153 @@ form button:hover {
   border-color: #a8df65;
   box-shadow: 0 0 8px rgba(168, 223, 101, 0.6);
 }
+#contact-section {
+  background-color: #e9f5e9;
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1e5631;
+}
+
+#contact-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #4d4d4d;
+}
+
+#contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+#contact-section input,
+#contact-section textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact-section button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #1e5631;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-section button:hover {
+  background-color: #a8df65;
+}
+
+#config-section {
+  background-color: #e9f5e9;
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#config-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1e5631;
+}
+
+#config-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #4d4d4d;
+}
+
+#alergenos-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.alergeno-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  user-select: none;
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  position: relative;
+}
+
+.alergeno-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.alergeno-card:hover {
+  border-color: #1e5631;
+  background-color: #f1fff1;
+}
+
+.alergeno-card.selected {
+  background-color: #1e5631;
+  color: white;
+  border-color: #1e5631;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(30, 86, 49, 0.3);
+}
+
+#save-alergenos {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #1e5631;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#save-alergenos:hover {
+  background-color: #a8df65;
+}
+
+#scanner-section {
+  padding-top: 30px;
+  margin-top: 0;
+}
+
+#scanner-section h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
