@@ -5,3 +5,4 @@ node_modules/
 .vscode/
 secrets/
 *firebase-adminsdk*.json
+.env
