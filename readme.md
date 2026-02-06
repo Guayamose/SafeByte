@@ -1,1 +1,0 @@
-Buenos días vamos a empezar con el desarrollo de la solución al problema planteado

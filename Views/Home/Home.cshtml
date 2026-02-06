@@ -1,0 +1,289 @@
+@{
+  Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scanner - SafeByte</title>
+  <link rel="stylesheet" href="/src/css/home.css" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+  <style>
+    /* Contenedor del scanner (cuadrado) */
+    #scanner-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      border: 3px solid #333;
+      overflow: hidden;
+    }
+    /* El video ocupa todo el contenedor */
+    #video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Estilo para la entrada manual */
+    .manual-input {
+      text-align: center;
+      margin: 20px auto;
+    }
+    /* Otros estilos existentes */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+  <!-- Incluir ZXing desde CDN -->
+  <script src="https://unpkg.com/@@zxing/library@@latest"></script>
+  <!-- Conserva Quagga solo si fuese útil en otras secciones (aquí no la usamos para la detección) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script> -->
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <div class="navbar">
+    <div class="logo">Food DNA</div>
+    <ul class="nav-links">
+      <li><a href="#" data-section="welcome-section" class="nav-btn">Home</a></li>
+      <li><a asp-controller="Home" asp-action="Comidas">Comidas</a></li>
+      <li><a href="#" data-section="contact-section" class="nav-btn">Contacta con Nosotros</a></li>
+      <li><a href="#" data-section="scanner-section" class="nav-btn">Scanner</a></li>
+      <li><a href="#" data-section="config-section" class="nav-btn">Configuración de Usuario</a></li>
+      <li><a asp-controller="Home" asp-action="Index">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+
+   <!-- Sección del scanner -->
+   <section id="scanner-section" class="content-section hidden">
+    <h2>Escaneo código de barras</h2>
+    <!-- Contenedor del video donde se mostrará el stream de la cámara -->
+    <div class="scanner-wrapper">
+      <div class="scanner-left">
+        <div id="scanner-container">
+          <video id="video" autoplay muted></video>
+        </div>
+        <button onclick="startScanner()">Iniciar Escáner</button>
+      </div>
+    
+      <!-- Separador vertical -->
+      <div class="scanner-separator"></div>
+    
+      <div class="scanner-right">
+        <div class="manual-input">
+          <p>O introduce el código manualmente:</p>
+          <input type="text" id="barcode-input" placeholder="Introduce aquí el código de barras">
+          <button onclick="manualScan()">Buscar producto</button>
+        </div>
+      </div>      
+    </div>           
+    <div id="result">
+      <div id="product-info"></div>
+    </div>    
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contact-section" class="content-section hidden">
+    <h2>Contacta con Nosotros</h2>
+    <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Sección Home -->
+  <section id="welcome-section" class="content-section">
+    <h1>¡Bienvenido a Food DNA!</h1>
+    <p>
+      Nuestra aplicación está diseñada para ofrecerte comidas seguras basadas en tus alergias alimentarias.
+      Explora nuestras opciones y disfruta de una experiencia personalizada.
+    </p>
+      <div class="testimonials-section">
+        <div class="testimonial">
+          <img src="/src/media/mujerCeliaca.png" alt="Foto de Lucía, celíaca">
+          <div class="testimonial-text">
+            <h3>Lucía, 27 años (celíaca)</h3>
+            <p>
+              "Ser celíaca no es solo evitar el pan. Comer fuera o elegir productos en el supermercado es una batalla constante.
+              Food DNA me ayudaría a sentirme segura y confiada cada vez que como algo nuevo."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="/src/media/hombreFrutosSecos.png" alt="Foto de Diego, alérgico a frutos secos">
+          <div class="testimonial-text">
+            <h3>Diego, 34 años (alérgico a frutos secos)</h3>
+            <p>
+              "Una reacción alérgica puede cambiarte el día... o la vida. Esta aplicación me daría tranquilidad y así evitaría estar leyendo cada etiqueta durante 5 minutos."
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+    <!-- Sección de Configuración de Usuario -->
+    <section id="config-section" class="config-container content-section hidden">
+      <h2>Configuración de usuario</h2>
+      <p>Selecciona los alérgenos que deseas evitar en las comidas.</p>
+      <form id="alergenos-form">
+        <div class="checkbox-container">
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Gluten" hidden />
+            Gluten
+          </label>
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Lácteos" hidden />
+            Lácteos
+          </label>
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Huevo" hidden />
+            Huevo
+          </label>
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Frutos secos" hidden />
+            Frutos secos
+          </label>
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Mariscos" hidden />
+            Mariscos
+          </label>
+          <label class="alergeno-card">
+            <input type="checkbox" name="alergeno" value="Soja" hidden />
+            Soja
+          </label>
+        </div>
+        <button type="button" id="save-alergenos">Guardar preferencias</button>
+      </form>
+      <p id="confirmation-message" style="display: none; color: green;">Preferencias guardadas con éxito.</p>
+    </section>
+
+  <footer class="footer">
+    <p class="textofooter">SafeByte 2025</p>
+  </footer>
+
+  <script src="/src/ventanas/Home.js"></script>
+  <script>
+    // Guardar preferencias de alérgenos
+    document.getElementById("save-alergenos").addEventListener("click", () => {
+      const alergenosSeleccionados = Array.from(
+        document.querySelectorAll('input[name="alergeno"]:checked')
+      ).map((checkbox) => checkbox.value);
+      localStorage.setItem("alergenosSeleccionados", JSON.stringify(alergenosSeleccionados));
+      document.getElementById("confirmation-message").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("confirmation-message").style.display = "none";
+      }, 2000);
+    });
+
+    // Función para procesar el código ingresado manualmente
+    function manualScan() {
+      const barcode = document.getElementById("barcode-input").value.trim();
+      if (barcode !== "") {
+        processBarcode(barcode);
+      } else {
+        alert("Por favor, introduce un código de barras.");
+      }
+    }
+
+    // Se crea un objeto de ZXing para la lectura de códigos
+    const codeReader = new ZXing.BrowserBarcodeReader();
+
+    // Función para iniciar el escáner, leer el código y solicitar la información del producto
+    function startScanner() {
+      console.log("Iniciando escáner...");
+      codeReader.decodeFromVideoDevice(null, 'video', (result, err) => {
+        if (result) {
+          console.log("Código detectado: " + result.text);
+          // Asigna el código detectado al campo de entrada
+          document.getElementById("barcode-input").value = result.text;
+          // Consulta la API con el código detectado
+          processBarcode(result.text);
+          // Detiene la lectura para evitar múltiples lecturas seguidas
+          codeReader.reset();
+        }
+        if (err && !(err instanceof ZXing.NotFoundException)) {
+          console.error(err);
+        }
+      });
+    }
+
+    // Función para consultar la API de Open Food Facts y mostrar la información del producto
+    async function processBarcode(barcode) {
+      document.getElementById("result").innerHTML = `<p><strong>Código detectado:</strong> ${barcode}</p>`;
+      const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`;
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.status === 1) {
+          const producto = data.product;
+          let output = `
+            <p><strong>Nombre:</strong> ${producto.product_name || "Desconocido"}</p>
+            <p><strong>Ingredientes:</strong> ${producto.ingredients_text || "No disponible"}</p>
+            <p><strong>Alérgenos:</strong> ${producto.allergens || "No especificado"}</p>
+            <img src="${producto.image_url || ''}" alt="Imagen del producto" width="150">
+          `;
+          if (producto.nutriments) {
+            let nutriments = producto.nutriments;
+            let tablaNutri = `<h3>Información Nutricional</h3>
+                              <table>
+                                <tr>
+                                  <th>Componente</th>
+                                  <th>Valor</th>
+                                </tr>`;
+            for (const key in nutriments) {
+              tablaNutri += `<tr>
+                              <td>${key}</td>
+                              <td>${nutriments[key]}</td>
+                            </tr>`;
+            }
+            tablaNutri += `</table>`;
+            output += tablaNutri;
+          } else {
+            output += `<p>No hay información nutricional disponible.</p>`;
+          }
+          document.getElementById("result").innerHTML += output;
+        } else {
+          document.getElementById("result").innerHTML += "<p>Producto no encontrado.</p>";
+        }
+      } catch (error) {
+        console.error("Error al consultar la API:", error);
+        document.getElementById("result").innerHTML += "<p>Error al obtener información.</p>";
+      }
+    }
+  </script>
+  <script>
+    // Aplicar las preferencias guardadas al cargar
+    function aplicarPreferenciasGuardadas() {
+      const guardados = JSON.parse(localStorage.getItem("alergenosSeleccionados")) || [];
+      document.querySelectorAll('.alergeno-card input[type="checkbox"]').forEach(input => {
+        input.checked = guardados.includes(input.value);
+        input.parentElement.classList.toggle('selected', input.checked);
+      });
+    }
+  
+    // Llama a la función al cargar la página
+    window.addEventListener("DOMContentLoaded", aplicarPreferenciasGuardadas);
+  </script> 
+  <script>
+    document.querySelectorAll('.alergeno-card input[type="checkbox"]').forEach(input => {
+      input.addEventListener('change', () => {
+        input.parentElement.classList.toggle('selected', input.checked);
+      });
+    });
+  </script>
+  <script src="/src/ventanas/Home.js"></script>
+</body>
+</html>

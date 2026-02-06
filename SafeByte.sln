@@ -2,9 +2,7 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend1", "Backend1\Backend1.csproj", "{062562A2-4C2E-409F-80C9-0678CA7B1883}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeByte", "SafeByte.csproj", "{062562A2-4C2E-409F-80C9-0678CA7B1883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,10 +10,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{062562A2-4C2E-409F-80C9-0678CA7B1883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{062562A2-4C2E-409F-80C9-0678CA7B1883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{062562A2-4C2E-409F-80C9-0678CA7B1883}.Release|Any CPU.ActiveCfg = Release|Any CPU

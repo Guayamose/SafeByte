@@ -1,0 +1,7 @@
+bin/
+obj/
+node_modules/
+.DS_Store
+.vscode/
+secrets/
+*firebase-adminsdk*.json

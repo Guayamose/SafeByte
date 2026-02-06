@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 0,
+    "Username": "sfd",
+    "Email": "sdf@fsd.com",
+    "Password": "12",
+    "UserAllergens": []
+  },
+  {
+    "Id": 0,
+    "Username": "pepe",
+    "Email": "pepe@pepe.pepe",
+    "Password": "pepe",
+    "UserAllergens": []
+  },
+  {
+    "Id": 0,
+    "Username": "demo",
+    "Email": "demo@fooddna.local",
+    "Password": "demo123",
+    "UserAllergens": []
+  }
+]
