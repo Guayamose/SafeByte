@@ -1,8 +1,8 @@
-# Guia De Instalacion Y Setup.
+# Guia De Instalacion Y Setup..
 
 **Objetivo**
 Dejar el proyecto funcionando en cualquier maquina desde cero, con Firestore activo, semillas cargadas y el servidor levantado.
-
+iuhkufgytgh
 **Resumen Rapido**
 1. Instala .NET 8 SDK.
 2. Crea la base de datos de Firestore en Firebase.
